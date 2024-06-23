@@ -1,8 +1,8 @@
 const infoPrismaContent = [
   {
-    link: "",
+    link: "PRISMA",
     imgClass: ["section-img", "section-reveal-img", "prisma"],
-    imageSrc: "/images/previews/preview.png",
+    imageSrc: "/images/previews/pw1-prisma.png",
     imageAlt: "image of article",
     companyName: "Prisma Labs",
     companyLogos: [
@@ -22,9 +22,9 @@ const infoPrismaContent = [
     ],
   },
   {
-    link: "",
+    link: "LENSA",
     imgClass: ["section-img", "si-small", "prisma"],
-    imageSrc: "/images/previews/lensa.png",
+    imageSrc: "/images/previews/pw2-prisma.png",
     imageAlt: "image of article",
     companyName: "Prisma Labs: Lensa™",
     companyLogos: [
@@ -51,7 +51,7 @@ const infoPrismaContent = [
   {
     link: "",
     imgClass: ["section-img", "si-small", "prisma"],
-    imageSrc: "/images/previews/pw3.png",
+    imageSrc: "/images/previews/pw3-prisma.png",
     imageAlt: "image of article",
     companyName: "Prisma Labs",
     companyLogos: [
@@ -70,7 +70,7 @@ const infoPrismaContent = [
   {
     link: "",
     imgClass: ["section-img", "si-small", "prisma", "sis-fix"],
-    imageSrc: "/images/previews/pw4.png",
+    imageSrc: "/images/previews/pw4-prisma.png",
     imageAlt: "image of article",
     companyName: "Prisma Labs",
     companyLogos: [

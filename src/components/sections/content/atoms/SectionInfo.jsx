@@ -5,7 +5,6 @@ import SectionInfoCell from "./SectionInfoCell";
 import SectionInfoCompany from "./SectionInfoCompany";
 
 const SectionInfo = ({ useLink = true, content, animate }) => {
-  console.log("Animate state:", animate); // Отладка состояния анимации
   const {
     link,
     title,

@@ -1,11 +1,12 @@
 import React from "react";
 import IconArrowRotate from "../../../icons/IconArrowRotate";
 
-const SectionImg = ({ useLink = true, content }) => {
+const SectionImg = ({ content, useLink }) => {
   const { imgClass, link, imageSrc, imageAlt } = content;
   const classes = imgClass.join(" ");
-  const WrapperComponent = link ? "a" : "div";
-  const wrapperProps = link
+
+  const WrapperComponent = useLink ? "a" : "div";
+  const wrapperProps = useLink
     ? { href: link, className: classes }
     : { className: classes };
 

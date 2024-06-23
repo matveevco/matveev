@@ -1,11 +1,11 @@
 import React from "react";
 
 const BottomNavigation = () => (
-  <div class="nav nav-bottom">
-    <div class="left-nav-links">
+  <div className="nav nav-bottom">
+    <div className="left-nav-links">
       {" "}
       {/*lnl-dark ДЛЯ ТЕМНОГО ФОНА*/}
-      <a class="bs nav-links-text" href="">
+      <a className="bs nav-links-text" href="">
         Aleksei Matveev
       </a>
     </div>
