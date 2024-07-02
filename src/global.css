@@ -5,26 +5,25 @@ body {
 }
 
 @font-face {
-    font-family: 'GT Planar Light';
-    src: url('fonts/GT-Planar-Light.woff2') format('woff2');
+    font-family: "GT Planar Light";
+    src: url("fonts/GT-Planar-Light.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: 'GT Planar Regular';
-    src: url('fonts/GT-Planar-Regular.woff2') format('woff2');
+    font-family: "GT Planar Regular";
+    src: url("fonts/GT-Planar-Regular.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: 'GT Super Italic';
-    src: url('fonts/GT-Super-Display-Regular-Italic.woff2') format('woff2');
+    font-family: "GT Super Italic";
+    src: url("fonts/GT-Super-Display-Regular-Italic.woff2") format("woff2");
 }
 
 :root {
-
     /* fonts */
-    --font-planar-light: 'GT Planar Light', sans-serif;
-    --font-planar-regular: 'GT Planar Regular', sans-serif;
-    --font-super-italic: 'GT Super Italic', sans-serif;
+    --font-planar-light: "GT Planar Light", sans-serif;
+    --font-planar-regular: "GT Planar Regular", sans-serif;
+    --font-super-italic: "GT Super Italic", sans-serif;
 
     /* font sizes */
     --title-large: 80px;
@@ -74,6 +73,7 @@ body {
     --color-white-8: rgba(255, 255, 255, 0.08);
 
     /* blur */
+    --blur-20: blur(20px);
     --blur-50: blur(50px);
     --blur-100: blur(100px);
 
@@ -101,5 +101,4 @@ body {
     --gap-3xs: 36px;
     --gap-xs: 12px;
     --gap-xxs: 8px;
-
 }

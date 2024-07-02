@@ -6,8 +6,8 @@ import "./index.css";
 import TopNavigation from "./components/navs/TopNavigation";
 import BottomNavigation from "./components/navs/BottomNavigation";
 import SideNavigation from "./components/navs/SideNavigation";
+// import TestSection from "./components/sections/TestSection";
 import ArticleSection from "./components/sections/ArticleSection";
-// import TestComp from "./components/sections/content/TestComp";
 // import Footer from "./components/navs/Footer";
 // import App from "./components/App";
 
@@ -18,7 +18,7 @@ root.render(
     <TopNavigation />
     <BottomNavigation />
     <SideNavigation />
-    {/* <TestComp /> */}
+    {/* <TestSection /> */}
     <ArticleSection />
     {/*
     <Footer /> */}

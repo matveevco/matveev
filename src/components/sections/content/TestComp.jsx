@@ -35,6 +35,27 @@ const TestComp = ({ images, isActive, scrollDirection }) => {
     }
   }, [isActive, scrollDirection]);
 
+  useEffect(() => {
+    const container = containerRef.current;
+
+    const handleScroll = () => {
+      const { scrollTop, scrollHeight, clientHeight } = container;
+      if (scrollTop === 0) {
+        container.classList.add("bounce-top");
+      } else if (scrollTop + clientHeight >= scrollHeight) {
+        container.classList.add("bounce-bottom");
+      } else {
+        container.classList.remove("bounce-top", "bounce-bottom");
+      }
+    };
+
+    container.addEventListener("scroll", handleScroll);
+
+    return () => {
+      container.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="section">
       <div className="section-info">Header</div>
