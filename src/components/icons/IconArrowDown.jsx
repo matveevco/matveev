@@ -2,7 +2,7 @@ import React from "react";
 
 const IconArrowDown = () => (
   <svg
-    class="icon-fill"
+    className="icon-fill"
     width="30"
     height="30"
     viewBox="0 0 30 30"

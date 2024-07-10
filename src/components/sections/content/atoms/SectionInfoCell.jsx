@@ -7,8 +7,10 @@ const SectionInfoCell = ({ animate, awesomeness }) => {
       <div
         className={
           animate
-            ? "animate-end info-body-text"
-            : "animate-start info-body-text"
+            ? // ? "animate-end info-body-text"
+              // : "animate-start info-body-text"
+              " info-body-text"
+            : " info-body-text"
         }
       >
         {awesomeness}

@@ -1,4 +1,4 @@
-const infoLinkmuseContent = [
+const InfoLinkmuseContent = [
   {
     link: "1",
     sectionClass: [""],
@@ -114,4 +114,4 @@ const infoLinkmuseContent = [
   },
 ];
 
-export default infoLinkmuseContent;
+export default InfoLinkmuseContent;

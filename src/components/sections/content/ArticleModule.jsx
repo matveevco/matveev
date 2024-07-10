@@ -3,22 +3,22 @@ import SectionInfo from "./atoms/SectionInfo";
 import SectionImg from "./atoms/SectionImg";
 import SectionReveal from "./atoms/SectionReveal";
 
-const ArticleModule = ({ data, isActive, scrollDirection }) => {
+const ArticleModule = ({ data, isActive }) => {
   const containerRef = useRef(null);
-  const [currentContent, setCurrentContent] = useState(data[0]); // Текущий контент для отображения
+  const [currentContent, setCurrentContent] = useState(data[0]);
   const [animateChange, setAnimateChange] = useState(true);
 
   useEffect(() => {
     const updateHeight = () => {
       if (containerRef.current) {
-        const sectionRowWidth = containerRef.current.offsetWidth; // Вычисляем ширину section-row
-        const imageHeight = sectionRowWidth; // Устанавливаем высоту изображения равной ширине контейнера
+        const sectionRowWidth = containerRef.current.offsetWidth;
+        const imageHeight = sectionRowWidth;
         const viewportHeight = window.innerHeight;
-        const padding = (viewportHeight - imageHeight) / 2; // Вычисляем отступ для центрирования первого и последнего изображения
+        const padding = (viewportHeight - imageHeight) / 2;
 
         containerRef.current.style.paddingTop = `${padding}px`;
         containerRef.current.style.paddingBottom = `${padding}px`;
-        containerRef.current.style.height = `calc(100vh - ${padding * 2}px)`; // Высота контейнера подгоняется под видимую часть экрана
+        containerRef.current.style.height = `calc(100vh - ${padding * 2}px)`;
       }
     };
 
@@ -30,52 +30,21 @@ const ArticleModule = ({ data, isActive, scrollDirection }) => {
     };
   }, []);
 
-  useEffect(() => {
-    if (isActive) {
-      if (scrollDirection === "down") {
-        containerRef.current.scrollTo(0, 0);
-      } else if (scrollDirection === "up") {
-        containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
-      }
-    }
-  }, [isActive, scrollDirection]);
-
-  useEffect(() => {
-    const container = containerRef.current;
-
-    const handleScroll = () => {
-      const { scrollTop, scrollHeight, clientHeight } = container;
-      if (scrollTop === 0) {
-        container.classList.add("bounce-top");
-      } else if (scrollTop + clientHeight >= scrollHeight) {
-        container.classList.add("bounce-bottom");
-      } else {
-        container.classList.remove("bounce-top", "bounce-bottom");
-      }
-    };
-
-    container.addEventListener("scroll", handleScroll);
-
-    return () => {
-      container.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   const handleMouseEnter = (content) => {
     if (window.innerWidth > 1000) {
-      setAnimateChange(false); // Сначала удаляем анимацию
+      setAnimateChange(false);
       setTimeout(() => {
         setCurrentContent(content);
-        setAnimateChange(true); // Затем снова активируем анимацию
-      }, 100); // Минимальная задержка для повторного применения анимации
+        setAnimateChange(true);
+      }, 100);
     }
   };
 
   const handleMouseLeave = () => {
-    setAnimateChange(false); // Удаление анимации
+    setAnimateChange(false);
     setTimeout(() => {
-      setCurrentContent(data[0]); // Возврат к начальному контенту
-      setAnimateChange(true); // Восстановление анимации
+      setCurrentContent(data[0]);
+      setAnimateChange(true);
     }, 100);
   };
 
@@ -83,7 +52,6 @@ const ArticleModule = ({ data, isActive, scrollDirection }) => {
     const groups = [];
 
     for (let i = 1; i < data.length; i += 2) {
-      // Проверка наличия любых повторяющихся классов у двух подряд идущих элементов в sectionClass
       const classes1 = data[i].sectionClass;
       const classes2 = data[i + 1] ? data[i + 1].sectionClass : [];
       const commonClasses = classes1.filter((cls) => classes2.includes(cls));
@@ -131,7 +99,7 @@ const ArticleModule = ({ data, isActive, scrollDirection }) => {
       <div
         ref={containerRef}
         className="section-row"
-        style={{ overflowY: "auto" }}
+        style={{ overflowY: isActive ? "auto" : "hidden" }}
       >
         <SectionImg useLink={true} content={data[0]} />
         <div className="content-separator"></div>

@@ -4,26 +4,16 @@ import SectionImg from "./SectionImg";
 
 const SectionReveal = ({ content, onMouseEnter, onMouseLeave }) => {
   const { link } = content;
+  const WrapperComponent = link ? "a" : "div";
+  const wrapperProps = link
+    ? { className: "section-reveal", href: link, onMouseEnter, onMouseLeave }
+    : { className: "section-reveal", onMouseEnter, onMouseLeave };
 
-  return link ? (
-    <a
-      className="section-reveal"
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      href={link}
-    >
+  return (
+    <WrapperComponent {...wrapperProps}>
       <SectionInfo useLink={false} content={content} />
       <SectionImg useLink={false} content={content} />
-    </a>
-  ) : (
-    <div
-      className="section-reveal"
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-    >
-      <SectionInfo useLink={false} content={content} />
-      <SectionImg useLink={false} content={content} />
-    </div>
+    </WrapperComponent>
   );
 };
 

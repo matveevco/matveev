@@ -1,6 +1,6 @@
 const infoPrismaContent = [
   {
-    link: "1",
+    link: "prisma-onboarding",
     sectionClass: [""],
     imgClass: ["section-img", "section-reveal-img", "prisma"],
     imageSrc: "/images/previews/Card-Prisma-6.webp",
@@ -28,7 +28,7 @@ const infoPrismaContent = [
     ],
   },
   {
-    link: "2",
+    link: "prisma-faq",
     sectionClass: [""],
     imgClass: ["section-img", "si-small", "prisma"],
     imageSrc: "/images/previews/Card-Prisma-5.webp",

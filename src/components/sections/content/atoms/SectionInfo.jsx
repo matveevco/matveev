@@ -15,10 +15,13 @@ const SectionInfo = ({ useLink = true, content, animate }) => {
     companyName,
     additionalClass,
   } = content;
-  const WrapperComponent = link ? "a" : "div";
-  const wrapperProps = link
-    ? { href: link, className: "section-info" }
-    : { className: "section-info" };
+
+  // Use a div instead of an anchor if `useLink` is false
+  const WrapperComponent = useLink && link ? "a" : "div";
+  const wrapperProps =
+    useLink && link
+      ? { href: link, className: "section-info" }
+      : { className: "section-info" };
 
   return (
     <WrapperComponent {...wrapperProps}>
@@ -29,7 +32,9 @@ const SectionInfo = ({ useLink = true, content, animate }) => {
           additionalClass={additionalClass}
         />
         <div className="section-info-header">
-          <h2 className={animate ? "animate-end" : "animate-start"}>{title}</h2>
+          <h2 /*className={animate ? "animate-end" : "animate-start"}*/>
+            {title}
+          </h2>
           <HeaderTags animate={animate} tags={tags} />
         </div>
       </div>
@@ -37,7 +42,10 @@ const SectionInfo = ({ useLink = true, content, animate }) => {
         <h3>{subTitle}</h3>
         <div className="section-info-row">
           {awesomeness.map((text, index) => (
-            <SectionInfoCell animate={animate} key={index} awesomeness={text} />
+            <SectionInfoCell
+              /*animate={animate}*/ key={index}
+              awesomeness={text}
+            />
           ))}
         </div>
       </div>

@@ -1,21 +1,32 @@
 import React, { useRef, useEffect } from "react";
 import Scrollbar from "smooth-scrollbar";
+import OverscrollPlugin from "smooth-scrollbar/plugins/overscroll";
 
-const SmoothScrollContainer = ({ children }) => {
+Scrollbar.use(OverscrollPlugin);
+
+const SmoothScrollContainer = ({ children, onScroll }) => {
   const scrollRef = useRef(null);
 
   useEffect(() => {
     let scrollbar;
     if (scrollRef.current) {
       scrollbar = Scrollbar.init(scrollRef.current, {
-        damping: 0.3, // Значение инерции скролла, можно настроить по желанию
-        renderByPixels: true, // Рендерить ли пиксели
-        alwaysShowTracks: false, // Показывать ли полосы прокрутки всегда
-        continuousScrolling: true, // Прокрутка без остановки
-        overscrollEffect: "bounce", // Эффект упругости при достижении краёв
-        overscrollDamping: 0.3, // Уровень демпфирования эффекта упругости
-        maxOverscroll: 150, // Максимальное значение эффекта упругости
+        damping: 0.05, // Значение для управления скоростью скролла
+        renderByPixels: true,
+        alwaysShowTracks: false,
+        continuousScrolling: true,
+        plugins: {
+          overscroll: {
+            effect: "bounce",
+            damping: 0.1,
+            maxOverscroll: 150,
+          },
+        },
       });
+
+      if (onScroll) {
+        scrollbar.addListener(onScroll);
+      }
     }
 
     return () => {
@@ -23,9 +34,13 @@ const SmoothScrollContainer = ({ children }) => {
         scrollbar.destroy();
       }
     };
-  }, []);
+  }, [onScroll]);
 
-  return <div ref={scrollRef}>{children}</div>;
+  return (
+    <div ref={scrollRef} className="smooth-scroll-container">
+      {children}
+    </div>
+  );
 };
 
 export default SmoothScrollContainer;

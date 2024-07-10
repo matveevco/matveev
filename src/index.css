@@ -163,6 +163,11 @@ h3 {
     /* Растягиваем на всю ширину */
 }
 
+.heading-about {
+    height: auto;
+    padding: var(--padding-3xl) var(--padding-3l) var(--padding-xl);
+}
+
 .heading-row {
     display: flex;
     flex-direction: column;
@@ -217,7 +222,7 @@ h3 {
     fill: var(--color-white-100);
 }
 
-.icon-fill-disable path {
+.about-disable .icon-fill path {
     fill: var(--color-white-30);
 }
 
@@ -603,9 +608,9 @@ h3 {
 }
 
 .section-dark {
-    /* background-color: var(--color-dark-100); */
-    height: auto;
-    padding: var(--padding-3xl) var(--padding-3l) var(--padding-xl);
+    background-color: var(--color-dark-100);
+    /* height: auto;
+    padding: var(--padding-3xl) var(--padding-3l) var(--padding-xl); */
 }
 
 .section-dark h1 {

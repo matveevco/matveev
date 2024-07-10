@@ -1,7 +1,14 @@
+.smooth-scroll-container {
+    height: 100vh;
+    overflow: hidden;
+}
+
 body {
     margin: 0;
     line-height: normal;
     -webkit-font-smoothing: antialiased;
+    background-color: var(--color-tint-orange-100);
+    transition: background-color 1s;
 }
 
 @font-face {

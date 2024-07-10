@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import ArticleModule from "./content/ArticleModule";
 import InfoPrismaContent from "../data/InfoPrisma";
 import InfoVTBContent from "../data/InfoVTB";
-import infoLinkmuseContent from "../data/InfoLinkmuse";
+import InfoLinkmuseContent from "../data/InfoLinkmuse";
 
 const ArticleSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -61,7 +61,7 @@ const ArticleSection = () => {
     "var(--color-tint-pink-100)",
   ];
 
-  const modulesData = [InfoPrismaContent, InfoVTBContent, infoLinkmuseContent];
+  const modulesData = [InfoPrismaContent, InfoVTBContent, InfoLinkmuseContent];
 
   return (
     <div style={{ position: "relative", height: "100vh" }}>

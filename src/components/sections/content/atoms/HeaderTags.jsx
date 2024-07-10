@@ -16,7 +16,8 @@ const HeaderTags = ({ animate, tags }) => {
   return (
     <div
       className={
-        animate ? "animate-end header-tags" : "animate-start header-tags"
+        // animate ? "animate-end header-tags" : "animate-start header-tags"
+        animate ? "header-tags" : "header-tags"
       }
     >
       {renderTags()}
