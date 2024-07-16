@@ -1,89 +1,65 @@
-import React, { useRef, useEffect, useState } from "react";
-import { useSpring, animated } from "react-spring";
-import MainSection from "./sections/MainSection";
-import AboutSection from "./sections/AboutSection";
+import React, { useRef, useState, useEffect } from "react";
+import SmoothScrollContainer from "./automation/functions/addSmoothScroll";
+import HeaderModule from "./system/pages/HeaderModule";
+import InfoModule from "./system/pages/InfoModule";
+import FooterModule from "./system/pages/FooterModule";
+import CardImageModule from "./system/pages/CardImageModule";
+import CardTextModule from "./system/pages/CardTextModule";
+import previewPrisma from "./data/previewData/corePrisma";
+import previewVTB from "./data/previewData/coreVTB";
+import previewLinkmuse from "./data/previewData/coreLinkmuse";
+import previewGains from "./data/previewData/extraGains";
+import previewPublic from "./data/previewData/extraPublic";
+import { addColorChangeEffect } from "./automation/functions/addColorChange";
 
 const App = () => {
-  const mainSectionRef = useRef(null);
-  const aboutSectionRef = useRef(null);
-  const [scrollable, setScrollable] = useState("auto");
+  const [handleScroll, setHandleScroll] = useState(() => () => {});
 
-  const [{ backgroundColor, opacityMain, opacityAbout }, set] = useSpring(
-    () => ({
-      backgroundColor: "var(--color-tint-orange-100)",
-      opacityMain: 1,
-      opacityAbout: 0,
-    }),
-  );
+  const mainSectionRef = useRef(null);
+  const articleModuleRefs = [useRef(null), useRef(null), useRef(null)];
+  const sectionsRef = useRef([null, null, null, null]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setScrollable("hidden"); // Блокировка скролла
-            const isMainSection = entry.target.id === "mainSection";
-
-            // Установка фона и прозрачности с индивидуальными настройками
-            set({
-              backgroundColor: entry.target.getAttribute("data-bg-color"),
-              config: { duration: 500, delay: 0 }, // настройка для изменения фона
-            });
-
-            set({
-              opacityMain: isMainSection ? 1 : 0,
-              opacityAbout: isMainSection ? 0 : 1,
-              onRest: () => setScrollable("auto"), // Восстановление скролла
-              config: {
-                duration: 400, // Плавная анимация прозрачности
-                delay: isMainSection ? 0 : 0, // Различные задержки для разных секций
-              },
-            });
-
-            // Доскролл до активной секции
-            window.scrollTo({
-              top: entry.target.offsetTop,
-              behavior: "smooth",
-            });
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.05,
-      },
-    );
-
-    if (mainSectionRef.current) {
-      observer.observe(mainSectionRef.current);
-    }
-    if (aboutSectionRef.current) {
-      observer.observe(aboutSectionRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+    addColorChangeEffect(sectionsRef, setHandleScroll);
+  }, [sectionsRef]);
 
   return (
-    <animated.div style={{ overflow: scrollable, backgroundColor }}>
-      <animated.div
-        style={{ opacity: opacityMain }}
-        ref={mainSectionRef}
-        id="mainSection"
-        data-bg-color="var(--color-tint-orange-100)"
-      >
-        <MainSection />
-      </animated.div>
-      <animated.div
-        style={{ opacity: opacityAbout }}
-        ref={aboutSectionRef}
-        id="aboutSection"
-        data-bg-color="var(--color-dark-100)"
-      >
-        <AboutSection />
-      </animated.div>
-    </animated.div>
+    <SmoothScrollContainer onScroll={handleScroll}>
+      <div>
+        <div ref={(el) => (sectionsRef.current[0] = el)}>
+          <div ref={mainSectionRef}>
+            <HeaderModule />
+          </div>
+        </div>
+        <div ref={(el) => (sectionsRef.current[1] = el)}>
+          <div ref={articleModuleRefs[0]}>
+            <CardImageModule data={previewPrisma} />
+          </div>
+        </div>
+        <div ref={(el) => (sectionsRef.current[2] = el)}>
+          <div ref={articleModuleRefs[1]}>
+            <CardImageModule data={previewVTB} />
+          </div>
+        </div>
+        <div ref={(el) => (sectionsRef.current[3] = el)}>
+          <div ref={articleModuleRefs[2]}>
+            <CardImageModule data={previewLinkmuse} />
+          </div>
+        </div>
+      </div>
+      <div>
+        <InfoModule />
+      </div>
+      <div ref={(el) => (sectionsRef.current[4] = el)}>
+        <CardTextModule content={previewGains} />
+      </div>
+      <div>
+        <CardTextModule content={previewPublic} />
+      </div>
+      <div>
+        <FooterModule />
+      </div>
+    </SmoothScrollContainer>
   );
 };
 

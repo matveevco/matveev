@@ -27,12 +27,10 @@ body {
 }
 
 :root {
-    /* fonts */
     --font-planar-light: "GT Planar Light", sans-serif;
     --font-planar-regular: "GT Planar Regular", sans-serif;
     --font-super-italic: "GT Super Italic", sans-serif;
 
-    /* font sizes */
     --title-large: 80px;
     --title-medium: 64px;
     --title-small: 40px;

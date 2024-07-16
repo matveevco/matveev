@@ -548,7 +548,7 @@ h3 {
     line-height: 102%;
 }
 
-.section-img:hover .object-image {
+.section .section-row .section-img:hover .object-image {
     scale: 1.02;
     transition: scale 0.3s ease-out;
 }
@@ -661,7 +661,10 @@ h3 {
 
 .about:hover {
     background-color: var(--color-white-10);
-    transition: background-color 0.2s ease-out;
+    box-shadow: inset 0 0 0 1px var(--color-white-8);
+    transition:
+        background-color 0.2s ease-out,
+        box-shadow 0.2s ease-out;
 }
 
 .about:hover .section-img-button .button-icon {
@@ -900,6 +903,7 @@ h3 {
 }
 
 .content-info-right-cell {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: var(--gap-xs);
@@ -926,13 +930,37 @@ h3 {
     height: 1px;
 }
 
+.content .content-separator {
+    display: block;
+}
+
 .credits {
     justify-content: space-between;
 }
 
+.credits-disable {
+    justify-content: space-between;
+}
+
+.credits-disable .section-img-button {
+    justify-content: space-between;
+    padding: 0 var(--padding-m) var(--padding-m) var(--padding-l);
+}
+
+.credits-disable .section-img-button .nav-links-text {
+    padding: 10px 0px 0px;
+}
+
+.credits-disable .icon-fill path {
+    fill: var(--color-dark-30);
+}
+
 .credits:hover {
     background-color: var(--color-dark-10);
-    transition: background-color 0.2s ease-out;
+    box-shadow: inset 0 0 0 1px var(--color-dark-8);
+    transition:
+        background-color 0.2s ease-out,
+        box-shadow 0.2s ease-out;
 }
 
 .credits .section-img-button {
@@ -983,7 +1011,7 @@ h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: inset 0 0 0 1px var(--color-dark-8);
+    /* box-shadow: inset 0 0 0 1px var(--color-dark-8); */
     /* Создает внутреннюю обводку */
     pointer-events: none;
     /* Позволяет кликать по изображению под псевдоэлементом */
