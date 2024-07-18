@@ -1,5 +1,6 @@
 import React from "react";
 import IconCopy from "../atoms/IconCopy";
+import ButtonCopy from "../atoms/ButtonCopy";
 import DetailsCompany from "./DetailsCompany";
 import DetailsTags from "./DetailsTags";
 import useAnimateChange from "../../automation/hooks/useAnimateChange";
@@ -42,17 +43,12 @@ const HeaderArticle = ({
         </div>
       </div>
       <div className="content-info-right">
-        <a
-          className="button"
-          href={linkButton}
+        <ButtonCopy
+          title="Share"
+          link={linkButton}
           target="_blank"
           rel="noopener noreferrer"
-        >
-          Share
-          <div className="button-icon">
-            <IconCopy />
-          </div>
-        </a>
+        />
       </div>
     </div>
   );

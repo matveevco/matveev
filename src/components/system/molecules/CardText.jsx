@@ -1,4 +1,5 @@
 import React from "react";
+import { Squircle } from "corner-smoothing";
 import IconArrowRotate from "../atoms/IconArrowRotate";
 import CardTextCompany from "../molecules/CardTextCompany";
 import CardTextPhoto from "../molecules/CardTextPhoto";
@@ -33,7 +34,13 @@ const CardText = ({ content }) => {
   const avatarLogos = cardLogos.filter((logo) => logo.src.includes("avatars"));
 
   return (
-    <WrapperComponent {...wrapperProps}>
+    <Squircle
+      as={WrapperComponent}
+      {...wrapperProps}
+      cornerRadius={40}
+      cornerSmoothing={1}
+      preserveSmoothing={true}
+    >
       <div className="section-img-top">
         {companyLogos.length > 0 && (
           <CardTextCompany
@@ -55,7 +62,7 @@ const CardText = ({ content }) => {
           <IconArrowRotate />
         </div>
       </div>
-    </WrapperComponent>
+    </Squircle>
   );
 };
 

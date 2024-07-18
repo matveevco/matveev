@@ -13,7 +13,7 @@ const CardImageModule = ({ data, isActive }) => {
   useUpdateHeight(containerRef);
 
   return (
-    <div className="section">
+    <div className="section visible-nav">
       <Details
         useLink={true}
         content={currentContent}

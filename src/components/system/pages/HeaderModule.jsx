@@ -1,6 +1,7 @@
 import React from "react";
 import IconArrowDown from "../atoms/IconArrowDown";
 import IconArrowRotate from "../atoms/IconArrowRotate";
+import Button from "../atoms/Button";
 
 const HeaderModule = () => {
   return (
@@ -18,18 +19,20 @@ const HeaderModule = () => {
         </h1>
       </div>
       <div className="button-row">
-        <a className="button" href="" target="_blank" rel="noopener noreferrer">
-          Download CV
-          <div className="button-icon">
-            <IconArrowDown />
-          </div>
-        </a>
-        <a className="button" href="" target="_blank" rel="noopener noreferrer">
-          LinkedIn
-          <div className="button-icon">
-            <IconArrowRotate />
-          </div>
-        </a>
+        <Button
+          title="Download CV"
+          link=""
+          icon="down"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
+        <Button
+          title="LinkedIn"
+          link=""
+          icon="rotate"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
       </div>
     </div>
   );

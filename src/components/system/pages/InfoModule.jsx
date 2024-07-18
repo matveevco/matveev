@@ -1,7 +1,7 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-const InfoModule = () => (
-  <div className="heading heading-about section-dark">
+const InfoModule = forwardRef((props, ref) => (
+  <div id="about" className="heading heading-about section-dark" ref={ref}>
     <h1>
       I've been designing since I was a teenager and from 16 I was already
       working in design studios, gradually moving into product development.
@@ -22,6 +22,6 @@ const InfoModule = () => (
       businesses in the UK, being Co-founder and CEO of Wisart Ltd.
     </h1>
   </div>
-);
+));
 
 export default InfoModule;

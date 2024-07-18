@@ -1,10 +1,9 @@
-import React from "react";
-import IconArrowRotate from "../atoms/IconArrowRotate";
-import IconArrowDown from "../atoms/IconArrowDown";
-import IconCopy from "../atoms/IconCopy";
+import React, { forwardRef } from "react";
+import Button from "../atoms/Button";
+import ButtonCopy from "../atoms/ButtonCopy";
 
-const FooterModule = () => (
-  <div className="heading section-dark">
+const FooterModule = forwardRef((props, ref) => (
+  <div id="contacts" className="heading section-dark" ref={ref}>
     <div className="heading-row">
       <h1>
         Get <span className="highlight-text">in touch</span>.
@@ -13,26 +12,31 @@ const FooterModule = () => (
       <h1>Copyrights 2018-24.</h1>
     </div>
     <div className="button-row">
-      <a className="button" href="" target="_blank" rel="noopener noreferrer">
-        Download CV
-        <div className="button-icon bi-dark">
-          <IconArrowDown />
-        </div>
-      </a>
-      <a className="button" href="" target="_blank" rel="noopener noreferrer">
-        LinkedIn
-        <div className="button-icon bi-dark">
-          <IconArrowRotate />
-        </div>
-      </a>
-      <a className="button" href="" target="_blank" rel="noopener noreferrer">
-        Email
-        <div className="button-icon bi-dark">
-          <IconCopy />
-        </div>
-      </a>
+      <Button
+        title="Download CV"
+        link=""
+        icon="down"
+        additionalClass="bi-dark"
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+      <Button
+        title="LinkedIn"
+        link=""
+        icon="rotate"
+        additionalClass="bi-dark"
+        target="_blank"
+        rel="noopener noreferrer"
+      />
+      <ButtonCopy
+        title="Email"
+        link="matveev.dsgn@gmail.com"
+        additionalClass="bi-dark"
+        target="_blank"
+        rel="noopener noreferrer"
+      />
     </div>
   </div>
-);
+));
 
 export default FooterModule;

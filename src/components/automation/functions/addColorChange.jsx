@@ -8,6 +8,8 @@ export const addColorChangeEffect = (sectionsRef, setHandleScroll) => {
   ];
 
   const handleSmoothScroll = ({ offset }) => {
+    if (!offset || !sectionsRef.current) return;
+
     const scrollPosition = offset.y;
     const indexedSections = sectionsRef.current.map((section, index) => [
       index,
@@ -16,15 +18,12 @@ export const addColorChangeEffect = (sectionsRef, setHandleScroll) => {
     const validSections = indexedSections.filter(
       ([, section]) => section !== null,
     );
-    const sectionOffsets = validSections.map(
-      ([, section]) => section.offsetTop,
-    );
 
     for (let i = validSections.length - 1; i >= 0; i--) {
       const [originalIndex, section] = validSections[i];
       if (scrollPosition >= section.offsetTop) {
-        document.body.style.backgroundColor =
-          colors[originalIndex % colors.length];
+        const newColor = colors[originalIndex % colors.length];
+        document.body.style.backgroundColor = newColor;
         break;
       }
     }

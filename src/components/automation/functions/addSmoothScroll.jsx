@@ -6,12 +6,12 @@ Scrollbar.use(OverscrollPlugin);
 
 const SmoothScrollContainer = ({ children, onScroll }) => {
   const scrollRef = useRef(null);
+  const scrollbarInstance = useRef(null);
 
   useEffect(() => {
-    let scrollbar;
-    if (scrollRef.current) {
-      scrollbar = Scrollbar.init(scrollRef.current, {
-        damping: 0.05, // Значение для управления скоростью скролла
+    if (!scrollbarInstance.current) {
+      scrollbarInstance.current = Scrollbar.init(scrollRef.current, {
+        damping: 0.05,
         renderByPixels: true,
         alwaysShowTracks: false,
         continuousScrolling: true,
@@ -25,13 +25,16 @@ const SmoothScrollContainer = ({ children, onScroll }) => {
       });
 
       if (onScroll) {
-        scrollbar.addListener(onScroll);
+        scrollbarInstance.current.addListener(({ offset, limit }) => {
+          onScroll({ offset, limit });
+        });
       }
     }
 
     return () => {
-      if (scrollbar) {
-        scrollbar.destroy();
+      if (scrollbarInstance.current) {
+        scrollbarInstance.current.destroy();
+        scrollbarInstance.current = null;
       }
     };
   }, [onScroll]);

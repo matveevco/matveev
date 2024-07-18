@@ -13,9 +13,13 @@ const componentMap = {
 const ArticleDynamicLoader = ({ componentName, data }) => {
   const Component = componentMap[componentName];
 
+  if (!Component) {
+    return null;
+  }
+
   return (
-    <Suspense fallback={<div>Loading component...</div>}>
-      {Component ? <Component {...data} /> : <p>Component not found</p>}
+    <Suspense>
+      <Component {...data} />
     </Suspense>
   );
 };

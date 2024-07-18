@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { useNavigation } from "../../automation/hooks/useNavigationContext";
 import { useParams } from "react-router-dom";
 import SmoothScrollContainer from "../../automation/functions/addSmoothScroll";
 import ArticleDynamicLoader from "../organisms/ArticleDynamicLoader";
@@ -8,6 +9,7 @@ import preview from "../../data/previewData";
 import { addColorChangeEffect } from "../../automation/functions/addColorChange";
 
 const ArticleLayout = () => {
+  const { navRef, resetDarkSectionOn, handleNavigation } = useNavigation();
   const { articleID } = useParams();
   const articleComponents = articles[articleID];
   const [handleScroll, setHandleScroll] = useState(() => () => {});
@@ -17,31 +19,53 @@ const ArticleLayout = () => {
     addColorChangeEffect(sectionsRef, setHandleScroll);
   }, [sectionsRef]);
 
-  const headerData = preview.find((info) => info.link === articleID);
+  const headerData = preview
+    ? preview.find((info) => info.link === articleID)
+    : null;
 
-  if (!articleComponents || !headerData) {
-    return <div>Loading article data...</div>;
-  }
+  const headerArticleFromArticles = articleComponents
+    ? articleComponents.find((comp) => comp.componentName === "HeaderArticle")
+    : null;
 
-  const headerArticleFromArticles = articleComponents.find(
-    (comp) => comp.componentName === "HeaderArticle",
-  );
+  const headerArticleData =
+    headerData && headerArticleFromArticles
+      ? {
+          componentName: "HeaderArticle",
+          ...headerData,
+          ...headerArticleFromArticles,
+        }
+      : null;
 
-  const headerArticleData = {
-    componentName: "HeaderArticle",
-    ...headerData,
-    ...headerArticleFromArticles,
+  const componentsToLoad = headerArticleData
+    ? [
+        headerArticleData,
+        ...articleComponents.filter(
+          (comp) => comp.componentName !== "HeaderArticle",
+        ),
+      ]
+    : [];
+
+  const handleSmoothScroll = ({ offset, limit }) => {
+    const scrollEvent = new CustomEvent("smooth-scroll", {
+      detail: {
+        offset: offset.y,
+        limit: limit.y,
+      },
+    });
+    window.dispatchEvent(scrollEvent);
+    handleScroll({ offset, limit });
   };
 
-  const componentsToLoad = [
-    headerArticleData,
-    ...articleComponents.filter(
-      (comp) => comp.componentName !== "HeaderArticle",
-    ),
-  ];
+  useEffect(() => {
+    resetDarkSectionOn();
+  }, [resetDarkSectionOn]);
+
+  if (!articleComponents || !headerData) {
+    return null; // You can return a loading spinner or message if you want
+  }
 
   return (
-    <SmoothScrollContainer onScroll={handleScroll}>
+    <SmoothScrollContainer onScroll={handleSmoothScroll}>
       <div ref={(el) => (sectionsRef.current[0] = el)}>
         <div className="content">
           {componentsToLoad.map((component, index) => (
@@ -54,7 +78,9 @@ const ArticleLayout = () => {
         </div>
       </div>
       <div ref={(el) => (sectionsRef.current[4] = el)}>
-        <FooterModule />
+        <div ref={navRef}>
+          <FooterModule />
+        </div>
       </div>
     </SmoothScrollContainer>
   );

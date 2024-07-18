@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
+import { useNavigation } from "./automation/hooks/useNavigationContext";
 import SmoothScrollContainer from "./automation/functions/addSmoothScroll";
 import HeaderModule from "./system/pages/HeaderModule";
 import InfoModule from "./system/pages/InfoModule";
@@ -12,52 +13,48 @@ import previewGains from "./data/previewData/extraGains";
 import previewPublic from "./data/previewData/extraPublic";
 import { addColorChangeEffect } from "./automation/functions/addColorChange";
 
-const App = () => {
-  const [handleScroll, setHandleScroll] = useState(() => () => {});
+const NavWrapper = React.forwardRef(({ children }, ref) => (
+  <div ref={ref}>{children}</div>
+));
 
-  const mainSectionRef = useRef(null);
-  const articleModuleRefs = [useRef(null), useRef(null), useRef(null)];
-  const sectionsRef = useRef([null, null, null, null]);
+const App = () => {
+  const { navRef, setIsApp, updateCurrentSection } = useNavigation();
+  const [handleScroll, setHandleScroll] = useState(() => () => {});
+  const sectionsRef = useRef([null, null, null, null, null]);
+
+  useEffect(() => {
+    setIsApp(true);
+    return () => setIsApp(false);
+  }, [setIsApp]);
 
   useEffect(() => {
     addColorChangeEffect(sectionsRef, setHandleScroll);
-  }, [sectionsRef]);
+    updateCurrentSection(sectionsRef);
+  }, [sectionsRef, updateCurrentSection]);
 
   return (
     <SmoothScrollContainer onScroll={handleScroll}>
       <div>
         <div ref={(el) => (sectionsRef.current[0] = el)}>
-          <div ref={mainSectionRef}>
-            <HeaderModule />
-          </div>
+          <HeaderModule />
         </div>
-        <div ref={(el) => (sectionsRef.current[1] = el)}>
-          <div ref={articleModuleRefs[0]}>
-            <CardImageModule data={previewPrisma} />
-          </div>
+        <div id="works" ref={(el) => (sectionsRef.current[1] = el)}>
+          <CardImageModule data={previewPrisma} />
         </div>
         <div ref={(el) => (sectionsRef.current[2] = el)}>
-          <div ref={articleModuleRefs[1]}>
-            <CardImageModule data={previewVTB} />
-          </div>
+          <CardImageModule data={previewVTB} />
         </div>
         <div ref={(el) => (sectionsRef.current[3] = el)}>
-          <div ref={articleModuleRefs[2]}>
-            <CardImageModule data={previewLinkmuse} />
-          </div>
+          <CardImageModule data={previewLinkmuse} />
         </div>
       </div>
-      <div>
-        <InfoModule />
-      </div>
       <div ref={(el) => (sectionsRef.current[4] = el)}>
-        <CardTextModule content={previewGains} />
-      </div>
-      <div>
-        <CardTextModule content={previewPublic} />
-      </div>
-      <div>
-        <FooterModule />
+        <NavWrapper ref={navRef}>
+          <InfoModule />
+          <CardTextModule content={previewGains} />
+          <CardTextModule content={previewPublic} />
+          <FooterModule />
+        </NavWrapper>
       </div>
     </SmoothScrollContainer>
   );

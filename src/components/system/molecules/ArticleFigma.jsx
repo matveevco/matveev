@@ -1,5 +1,6 @@
 import React from "react";
-import IconArrowRotate from "../atoms/IconArrowRotate";
+import { Squircle } from "corner-smoothing";
+import Button from "../atoms/Button";
 
 const Figma = ({ shareLink, iframeLink }) => (
   <div className="content-info ci-fix">
@@ -11,20 +12,21 @@ const Figma = ({ shareLink, iframeLink }) => (
           scenarios for this task in the Figma preview.
         </div>
       </div>
-      <a
-        className="button"
-        href={shareLink}
+      <Button
+        title="Open Figma"
+        link={shareLink}
+        icon="rotate"
         target="_blank"
         rel="noopener noreferrer"
-      >
-        Open Figma
-        <div className="button-icon">
-          <IconArrowRotate />
-        </div>
-      </a>
+      />
     </div>
     <div className="section-row">
-      <div className="section-img si-figma">
+      <Squircle
+        className="section-img si-figma"
+        cornerRadius={40}
+        cornerSmoothing={1}
+        preserveSmoothing={true}
+      >
         <iframe
           className="figma"
           style={{ border: "1px solid rgba(0, 0, 0, 0.1)" }}
@@ -34,7 +36,7 @@ const Figma = ({ shareLink, iframeLink }) => (
           title="Figma Design Preview"
         ></iframe>
         <div className="figma-link"></div>
-      </div>
+      </Squircle>
     </div>
   </div>
 );
