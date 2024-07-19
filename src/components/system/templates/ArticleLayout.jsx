@@ -61,7 +61,7 @@ const ArticleLayout = () => {
   }, [resetDarkSectionOn]);
 
   if (!articleComponents || !headerData) {
-    return null; // You can return a loading spinner or message if you want
+    return null;
   }
 
   return (
