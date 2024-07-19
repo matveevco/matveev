@@ -10,14 +10,15 @@ const NavSide = () => {
     [currentSection],
   );
 
+  const sideNavClass = "nr-a";
+
   return (
     <>
       {isApp && (
         <div
-          className="nav nav-right"
+          className={`nav nav-right ${showSideNav ? sideNavClass : ""}`}
           style={{
             opacity: showSideNav ? 1 : 0,
-            transition: "opacity 0.5s ease",
           }}
         >
           <div

@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 
 const useCurrentSection = () => {
   const [currentSection, setCurrentSection] = useState(null);
+  const [isVisibleNav, setIsVisibleNav] = useState(false);
 
   const updateCurrentSection = useCallback((sectionsRef) => {
     if (!sectionsRef.current) return;
@@ -14,12 +15,18 @@ const useCurrentSection = () => {
     const observer = new IntersectionObserver((entries) => {
       const intersectingSections = entries
         .filter((entry) => entry.isIntersecting)
-        .map((entry) => entry.target.id || entry.target.className);
+        .map((entry) => entry.target);
 
-      if (intersectingSections.length > 0) {
-        setCurrentSection(intersectingSections[0]);
+      const visibleNavSection = intersectingSections.find((section) =>
+        section.classList.contains("visible-nav"),
+      );
+
+      if (visibleNavSection) {
+        setCurrentSection(visibleNavSection.className);
+        setIsVisibleNav(true);
       } else {
         setCurrentSection(null);
+        setIsVisibleNav(false);
       }
     }, observerOptions);
 
@@ -43,7 +50,11 @@ const useCurrentSection = () => {
     [updateCurrentSection],
   );
 
-  return { currentSection, updateCurrentSection: memoizedUpdateCurrentSection };
+  return {
+    currentSection,
+    isVisibleNav,
+    updateCurrentSection: memoizedUpdateCurrentSection,
+  };
 };
 
 export default useCurrentSection;

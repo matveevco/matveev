@@ -1,8 +1,8 @@
 import React from "react";
 
-const IconCheck = () => (
+const IconCheck = ({ isBouncing }) => (
   <svg
-    className="icon-fill"
+    className={`icon-fill ${isBouncing ? "icon-bounce" : ""}`}
     width="30"
     height="30"
     viewBox="0 0 30 30"

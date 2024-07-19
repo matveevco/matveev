@@ -62,6 +62,9 @@ h3 {
     background-color: var(--color-dark-30);
     width: 40px;
     height: 1.2px;
+    transition:
+        opacity 0.3s ease-out,
+        width 0.6s ease-out;
 }
 
 .sw {
@@ -90,7 +93,57 @@ h3 {
     background-color: var(--color-tint-orange-80);
     padding: var(--padding-2m) var(--padding-3l);
     width: 100%;
-    transition: background-color 0.2s ease-out;
+    transition:
+        background-color 0.2s ease-out,
+        position 0.4s ease-out;
+}
+
+.bs-nlt-fix {
+    transition:
+        opacity 0.3s ease-out,
+        display 0.4s ease-out;
+}
+
+.nav-link-hide {
+    left: 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-m);
+}
+
+.nav-link-vis {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-m);
+    position: relative;
+    left: 0;
+    transition: left 0.4s ease-out;
+}
+
+.s-a-default {
+    width: 40px;
+}
+
+.s-a {
+    width: 0;
+    transition:
+        opacity 0.3s ease-out,
+        width 0.6s ease-out;
+}
+
+.nl-hide-a {
+    left: -40px;
+    transition:
+        opacity 0.3s ease-out,
+        left 0.4s ease-out;
+}
+
+.nl-vis-a {
+    left: -146px;
+    transition: left 0.4s ease-out;
 }
 
 .nc-dark {
@@ -100,7 +153,18 @@ h3 {
 
 .nav-bottom {
     bottom: 0;
+    left: -40px;
     padding: 0 var(--padding-3l) var(--padding-2m);
+    transition:
+        opacity 0.3s ease-out,
+        left 0.4s ease-out;
+}
+
+.nb-a {
+    left: 0;
+    transition:
+        opacity 0.3s ease-out,
+        left 0.4s ease-out;
 }
 
 .nav-right {
@@ -108,13 +172,22 @@ h3 {
     display: flex;
     position: fixed;
     padding: 0;
-    right: 54px;
+    right: 14px;
     top: 0;
     width: 100vh;
     align-items: center;
     justify-content: center;
     z-index: 5;
-    transition: opacity 0.3s ease-out;
+    transition:
+        right 0.4s ease-out,
+        opacity 0.3s ease-out;
+}
+
+.nr-a {
+    right: 54px;
+    transition:
+        right 0.4s ease-out,
+        opacity 0.3s ease-out;
 }
 
 .lnf-fix {
@@ -229,6 +302,26 @@ h3 {
     transition: border 0.2s ease-out;
 }
 
+@keyframes icon-but-bounce {
+    0%,
+    20%,
+    50%,
+    100% {
+        transform: scale(0.9);
+    }
+    20% {
+        transform: scale(1.2);
+    }
+    60% {
+        transform: scale(1.05);
+    }
+}
+
+.icon-bounce {
+    display: inline-block;
+    animation: icon-but-bounce 0.4s;
+}
+
 .icon-fill path {
     fill: var(--color-white-100);
 }
@@ -249,6 +342,10 @@ h3 {
 
 .button:active .button-icon {
     border: 1px solid var(--color-white-10);
+}
+
+.button:active .button-icon .icon-fill {
+    transform: scale(0.9);
 }
 
 /* HEADING */
@@ -588,6 +685,10 @@ h3 {
     border: 1px solid var(--color-dark-10);
 }
 
+.prisma:active .bi-dark .icon-fill {
+    transform: scale(0.9);
+}
+
 .vtb:hover {
     background-color: var(--color-accent-blue-40);
     transition: background-color 0.2s ease-out;
@@ -611,6 +712,10 @@ h3 {
     border: 1px solid var(--color-dark-10);
 }
 
+.vtb:active .bi-dark .icon-fill {
+    transform: scale(0.9);
+}
+
 .lm:hover {
     background-color: var(--color-accent-pink-40);
     transition: background-color 0.2s ease-out;
@@ -632,6 +737,10 @@ h3 {
 
 .lm:active .bi-dark {
     border: 1px solid var(--color-dark-10);
+}
+
+.lm:active .bi-dark .icon-fill {
+    transform: scale(0.9);
 }
 
 .section-dark {
@@ -698,6 +807,10 @@ h3 {
 
 .about:active .section-img-button .button-icon {
     border: 1px solid var(--color-white-10);
+}
+
+.about:active .section-img-button .button-icon .icon-fill {
+    transform: scale(0.9);
 }
 
 .section-img-top {
@@ -1013,6 +1126,10 @@ h3 {
 
 .credits:active .section-img-button .button-icon {
     border: 1px solid var(--color-dark-10);
+}
+
+.credits:active .section-img-button .button-icon .icon-fill {
+    transform: scale(0.9);
 }
 
 .image-container {
