@@ -6,7 +6,13 @@ import useAnimateChange from "../../automation/hooks/useAnimateChange";
 import useScrollHandler from "../../automation/hooks/useScrollHandler";
 import useUpdateHeight from "../../automation/hooks/useUpdateHeight";
 
-const CardImageModule = ({ data, isActive, scrollDirection }) => {
+const CardImageModule = ({
+  data,
+  isActive,
+  scrollDirection,
+  idSection,
+  classSection,
+}) => {
   const containerRef = useRef(null);
   const { currentContent, animateChange, handleMouseEnter, handleMouseLeave } =
     useAnimateChange(data[0], data);
@@ -15,7 +21,7 @@ const CardImageModule = ({ data, isActive, scrollDirection }) => {
   useScrollHandler(containerRef, isActive, scrollDirection);
 
   return (
-    <div className="section visible-nav">
+    <div className={`section visible-nav ${classSection}`} id={idSection}>
       <Details
         useLink={true}
         content={currentContent}

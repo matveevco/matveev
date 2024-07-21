@@ -19,7 +19,7 @@ const InfoModule = forwardRef((props, ref) => (
       In my free time, I code, develop the{" "}
       <span className="highlight-text">CHSL</span> app for a great time with
       friends and <span className="highlight-text">TaxKeeper</span> for small
-      businesses in the UK, being Co-founder and CEO of Wisart Ltd.
+      businesses in the UK.
     </h1>
   </div>
 ));

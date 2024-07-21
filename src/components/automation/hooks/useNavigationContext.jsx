@@ -40,10 +40,7 @@ export const NavigationProvider = ({ children }) => {
   usePopStateEffect(resetDarkSectionOn);
 
   useEffect(() => {
-    const sectionsRef = {
-      current: document.querySelectorAll(".section"),
-    };
-    updateCurrentSection(sectionsRef);
+    updateCurrentSection();
   }, [updateCurrentSection]);
 
   return (

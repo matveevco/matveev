@@ -4,8 +4,8 @@ const useCurrentSection = () => {
   const [currentSection, setCurrentSection] = useState(null);
   const [isVisibleNav, setIsVisibleNav] = useState(false);
 
-  const updateCurrentSection = useCallback((sectionsRef) => {
-    if (!sectionsRef.current) return;
+  const updateCurrentSection = useCallback(() => {
+    const sections = document.querySelectorAll(".section, .visible-nav");
 
     const observerOptions = {
       rootMargin: "-50% 0px -50% 0px",
@@ -30,14 +30,8 @@ const useCurrentSection = () => {
       }
     }, observerOptions);
 
-    sectionsRef.current.forEach((section) => {
-      if (section) {
-        observer.observe(section);
-        const nestedSections = section.querySelectorAll(".visible-nav");
-        nestedSections.forEach((nestedSection) =>
-          observer.observe(nestedSection),
-        );
-      }
+    sections.forEach((section) => {
+      observer.observe(section);
     });
 
     return () => {

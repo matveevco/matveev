@@ -3,7 +3,7 @@ import Button from "../atoms/Button";
 
 const HeaderModule = () => {
   return (
-    <div className="heading">
+    <div className="heading s-orange">
       <div className="heading-row">
         <h1>
           Hi, I’m Aleksei a{" "}

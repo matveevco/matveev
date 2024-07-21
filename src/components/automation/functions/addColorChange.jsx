@@ -1,31 +1,35 @@
-export const addColorChangeEffect = (sectionsRef, setHandleScroll) => {
-  const colors = [
-    "var(--color-tint-orange-100)",
-    "var(--color-tint-orange-100)",
-    "var(--color-tint-blue-100)",
-    "var(--color-tint-pink-100)",
-    "var(--color-dark-100)",
+export const addColorChangeEffect = (setHandleScroll) => {
+  const colorClasses = [
+    { className: "s-orange", color: "var(--color-tint-orange-100)" },
+    { className: "s-blue", color: "var(--color-tint-blue-100)" },
+    { className: "s-pink", color: "var(--color-tint-pink-100)" },
+    { className: "s-dark", color: "var(--color-dark-100)" },
   ];
 
   const handleSmoothScroll = ({ offset }) => {
-    if (!offset || !sectionsRef.current) return;
+    if (!offset) return;
 
     const scrollPosition = offset.y;
-    const indexedSections = sectionsRef.current.map((section, index) => [
-      index,
-      section,
-    ]);
-    const validSections = indexedSections.filter(
-      ([, section]) => section !== null,
-    );
+    let newColor = null;
 
-    for (let i = validSections.length - 1; i >= 0; i--) {
-      const [originalIndex, section] = validSections[i];
-      if (scrollPosition >= section.offsetTop) {
-        const newColor = colors[originalIndex % colors.length];
-        document.body.style.backgroundColor = newColor;
+    for (let i = colorClasses.length - 1; i >= 0; i--) {
+      const { className, color } = colorClasses[i];
+      const elements = document.querySelectorAll(`.${className}`);
+
+      for (const element of elements) {
+        if (element.offsetTop <= scrollPosition) {
+          newColor = color;
+          break;
+        }
+      }
+
+      if (newColor) {
         break;
       }
+    }
+
+    if (newColor) {
+      document.body.style.backgroundColor = newColor;
     }
   };
 

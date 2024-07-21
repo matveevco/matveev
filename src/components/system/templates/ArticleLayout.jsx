@@ -13,11 +13,10 @@ const ArticleLayout = () => {
   const { articleID } = useParams();
   const articleComponents = articles[articleID];
   const [handleScroll, setHandleScroll] = useState(() => () => {});
-  const sectionsRef = useRef([null, null, null, null]);
 
   useEffect(() => {
-    addColorChangeEffect(sectionsRef, setHandleScroll);
-  }, [sectionsRef]);
+    addColorChangeEffect(setHandleScroll);
+  }, []);
 
   const headerData = preview
     ? preview.find((info) => info.link === articleID)
@@ -66,21 +65,17 @@ const ArticleLayout = () => {
 
   return (
     <SmoothScrollContainer onScroll={handleSmoothScroll}>
-      <div ref={(el) => (sectionsRef.current[0] = el)}>
-        <div className="content">
-          {componentsToLoad.map((component, index) => (
-            <ArticleDynamicLoader
-              key={index}
-              componentName={component.componentName}
-              data={component}
-            />
-          ))}
-        </div>
+      <div className="content s-orange">
+        {componentsToLoad.map((component, index) => (
+          <ArticleDynamicLoader
+            key={index}
+            componentName={component.componentName}
+            data={component}
+          />
+        ))}
       </div>
-      <div ref={(el) => (sectionsRef.current[4] = el)}>
-        <div ref={navRef}>
-          <FooterModule />
-        </div>
+      <div className="s-dark" ref={navRef}>
+        <FooterModule />
       </div>
     </SmoothScrollContainer>
   );

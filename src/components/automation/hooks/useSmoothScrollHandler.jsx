@@ -16,6 +16,11 @@ const smoothScrollHandler = (smoothScrollInstance) => {
     initialContainerScrollTop: 0,
   }));
 
+  let lastLoggedGlobalScrollTop = 0;
+  let lastLoggedContainerScrollTop = Array.from(visibleNavElements).map(
+    () => 0,
+  );
+
   const handleGlobalScroll = ({ offset }) => {
     const globalScrollTop = offset.y;
 
@@ -33,7 +38,10 @@ const smoothScrollHandler = (smoothScrollInstance) => {
         scrollState.isInsideVisibleNav = true;
         scrollState.initialGlobalScrollTop = globalScrollTop;
         scrollState.initialContainerScrollTop = sectionRow.scrollTop;
-        console.log("Entering visible-nav section");
+        console.log(`Entering visible-nav section ${index}`);
+        console.log(
+          `Initial position of section-row: ${scrollState.initialContainerScrollTop}`,
+        );
       }
 
       if (scrollState.isInsideVisibleNav) {
@@ -42,13 +50,28 @@ const smoothScrollHandler = (smoothScrollInstance) => {
           scrollState.initialGlobalScrollTop +
           scrollState.initialContainerScrollTop;
         sectionRow.scrollTop = scrollDistance;
-        console.log("Scrolling inside container", {
-          containerScrollTop: sectionRow.scrollTop,
-        });
+
+        if (Math.abs(globalScrollTop - lastLoggedGlobalScrollTop) >= 100) {
+          lastLoggedGlobalScrollTop = globalScrollTop;
+          console.log(`Global scroll position: ${globalScrollTop}`);
+        }
+
+        if (
+          Math.abs(
+            sectionRow.scrollTop - lastLoggedContainerScrollTop[index],
+          ) >= 100
+        ) {
+          lastLoggedContainerScrollTop[index] = sectionRow.scrollTop;
+          console.log(
+            `Section-row scroll position for visible-nav ${index}: ${sectionRow.scrollTop}`,
+          );
+        }
       }
 
       if (scrollState.isInsideVisibleNav && containerTop > 0) {
         scrollState.isInsideVisibleNav = false;
+        console.log(`Exiting visible-nav section ${index}`);
+        console.log(`Final position of section-row: ${sectionRow.scrollTop}`);
       }
     });
   };
