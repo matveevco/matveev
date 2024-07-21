@@ -1,4 +1,6 @@
-export const addColorChangeEffect = (setHandleScroll) => {
+import { useEffect, useCallback } from "react";
+
+export const useColorChangeEffect = () => {
   const colorClasses = [
     { className: "s-orange", color: "var(--color-tint-orange-100)" },
     { className: "s-blue", color: "var(--color-tint-blue-100)" },
@@ -6,10 +8,8 @@ export const addColorChangeEffect = (setHandleScroll) => {
     { className: "s-dark", color: "var(--color-dark-100)" },
   ];
 
-  const handleSmoothScroll = ({ offset }) => {
-    if (!offset) return;
-
-    const scrollPosition = offset.y;
+  const handleScroll = useCallback(() => {
+    const scrollPosition = window.scrollY;
     let newColor = null;
 
     for (let i = colorClasses.length - 1; i >= 0; i--) {
@@ -17,7 +17,7 @@ export const addColorChangeEffect = (setHandleScroll) => {
       const elements = document.querySelectorAll(`.${className}`);
 
       for (const element of elements) {
-        if (element.offsetTop <= scrollPosition) {
+        if (element.getBoundingClientRect().top <= 0) {
           newColor = color;
           break;
         }
@@ -31,7 +31,14 @@ export const addColorChangeEffect = (setHandleScroll) => {
     if (newColor) {
       document.body.style.backgroundColor = newColor;
     }
-  };
+  }, [colorClasses]);
 
-  setHandleScroll(() => handleSmoothScroll);
+  useEffect(() => {
+    const scrollHandler = () => handleScroll();
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, [handleScroll]);
 };

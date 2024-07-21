@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { useNavigation } from "../../automation/hooks/useNavigationContext";
+import { addNavigation } from "../../automation/functions/addNavigationContext";
 import useScrollProgress from "../../automation/hooks/useScrollProgress";
 import SmallButton from "../atoms/SmallButton";
 
@@ -11,7 +11,7 @@ const NavTop = () => {
     scrollToTop,
     handleNavigation,
     currentSection,
-  } = useNavigation();
+  } = addNavigation();
   const scrollWidth = useScrollProgress();
 
   const showTopNav = useMemo(

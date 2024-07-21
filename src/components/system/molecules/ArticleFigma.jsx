@@ -1,9 +1,9 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { Squircle } from "corner-smoothing";
 import Button from "../atoms/Button";
 
-const Figma = ({ shareLink, iframeLink }) => (
-  <div className="content-info ci-fix">
+const Figma = forwardRef(({ shareLink, iframeLink }, ref) => (
+  <div ref={ref} className="content-info ci-fix">
     <div className="content-info-left cilc-fix">
       <div className="content-info-left-cell">
         <h3>Figma Screens</h3>
@@ -39,6 +39,6 @@ const Figma = ({ shareLink, iframeLink }) => (
       </Squircle>
     </div>
   </div>
-);
+));
 
 export default Figma;

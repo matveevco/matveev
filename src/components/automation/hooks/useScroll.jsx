@@ -1,36 +1,34 @@
-import { useCallback, useRef } from "react";
-import Scrollbar from "smooth-scrollbar";
+import { useCallback } from "react";
 
-const useScroll = (updateDarkSectionOn, scrollRef) => {
+const useScroll = (updateDarkSectionOn) => {
   const scrollToTop = useCallback(() => {
-    const container = document.querySelector(".smooth-scroll-container");
-    const scrollbar = Scrollbar.get(container);
+    window.scrollTo({ top: 0, behavior: "smooth" });
 
-    if (scrollbar) {
-      scrollRef.current = true;
-      scrollbar.scrollTo(0, 0, 600);
-      setTimeout(() => {
-        scrollRef.current = false;
+    const handleScrollEnd = () => {
+      if (window.scrollY === 0) {
         updateDarkSectionOn();
-      }, 600);
-    }
+        window.removeEventListener("scroll", handleScrollEnd);
+      }
+    };
+
+    window.addEventListener("scroll", handleScrollEnd);
   }, [updateDarkSectionOn]);
 
   const scrollToSection = useCallback(
     (sectionId) => {
-      const container = document.querySelector(".smooth-scroll-container");
-      const scrollbar = Scrollbar.get(container);
       const section = document.getElementById(sectionId);
+      if (section) {
+        const targetY = section.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo({ top: targetY, behavior: "smooth" });
 
-      if (scrollbar && section) {
-        const targetY =
-          section.getBoundingClientRect().top + scrollbar.offset.y;
-        scrollRef.current = true;
-        scrollbar.scrollTo(0, targetY, 600);
-        setTimeout(() => {
-          scrollRef.current = false;
-          updateDarkSectionOn();
-        }, 600);
+        const handleScrollEnd = () => {
+          if (Math.abs(window.scrollY - targetY) < 1) {
+            updateDarkSectionOn();
+            window.removeEventListener("scroll", handleScrollEnd);
+          }
+        };
+
+        window.addEventListener("scroll", handleScrollEnd);
       }
     },
     [updateDarkSectionOn],

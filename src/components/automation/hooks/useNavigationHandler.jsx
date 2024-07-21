@@ -3,11 +3,11 @@ import { useNavigate, useLocation } from "react-router-dom";
 
 const useNavigationHandler = (scrollToSection) => {
   const navigate = useNavigate();
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   const handleNavigation = useCallback(
     (sectionId) => {
-      if (location.pathname === "/") {
+      if (pathname === "/") {
         scrollToSection(sectionId);
       } else {
         navigate(`/#${sectionId}`);
@@ -16,7 +16,7 @@ const useNavigationHandler = (scrollToSection) => {
         }, 100);
       }
     },
-    [navigate, scrollToSection, location.pathname],
+    [navigate, pathname, scrollToSection],
   );
 
   return handleNavigation;

@@ -1,5 +1,7 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-const Separator = () => <div className="content-separator"></div>;
+const Separator = forwardRef((props, ref) => (
+  <div ref={ref} className="content-separator"></div>
+));
 
 export default Separator;

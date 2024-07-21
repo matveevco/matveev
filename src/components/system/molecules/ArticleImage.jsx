@@ -1,7 +1,7 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { Squircle } from "corner-smoothing";
 
-const Image = ({ imageSRC }) => {
+const Image = forwardRef(({ imageSRC }, ref) => {
   const isSvg = imageSRC.toLowerCase().endsWith(".svg");
   const imageClass = `object-image${isSvg ? " full-svg" : ""}`;
 
@@ -12,9 +12,14 @@ const Image = ({ imageSRC }) => {
       cornerSmoothing={1}
       preserveSmoothing={true}
     >
-      <img className={imageClass} src={imageSRC} alt="article image" />
+      <img
+        className={imageClass}
+        src={imageSRC}
+        alt="article image"
+        ref={ref}
+      />
     </Squircle>
   );
-};
+});
 
 export default Image;

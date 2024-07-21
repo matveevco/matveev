@@ -1,18 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 
 const useScrollHandler = (containerRef, isActive, scrollDirection) => {
+  const scrollContainer = useCallback(() => {
+    if (containerRef.current) {
+      const behavior = "smooth";
+      const top =
+        scrollDirection === "down" ? 0 : containerRef.current.scrollHeight;
+      containerRef.current.scrollTo({ top, behavior });
+    }
+  }, [scrollDirection, containerRef]);
+
   useEffect(() => {
     if (isActive) {
-      if (scrollDirection === "down") {
-        containerRef.current.scrollTo(0, 0);
-      } else if (scrollDirection === "up") {
-        containerRef.current.scrollTo(0, containerRef.current.scrollHeight);
-      }
+      scrollContainer();
     }
-  }, [isActive, scrollDirection, containerRef]);
+  }, [isActive, scrollContainer]);
 
   useEffect(() => {
     const container = containerRef.current;
+    if (!container) return;
 
     const handleScroll = () => {
       const { scrollTop, scrollHeight, clientHeight } = container;
@@ -26,7 +32,6 @@ const useScrollHandler = (containerRef, isActive, scrollDirection) => {
     };
 
     container.addEventListener("scroll", handleScroll);
-
     return () => {
       container.removeEventListener("scroll", handleScroll);
     };

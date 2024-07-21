@@ -1,22 +1,23 @@
-import React, { useRef, useState, useEffect } from "react";
-import { useNavigation } from "../../automation/hooks/useNavigationContext";
+import React, { useEffect, lazy, Suspense } from "react";
 import { useParams } from "react-router-dom";
-import SmoothScrollContainer from "../../automation/functions/addSmoothScroll";
-import ArticleDynamicLoader from "../organisms/ArticleDynamicLoader";
-import FooterModule from "../pages/FooterModule";
+import { addNavigation } from "../../automation/functions/addNavigationContext";
+import { useColorChangeEffect } from "../../automation/functions/addColorChange";
 import articles from "../../data/articleData";
 import preview from "../../data/previewData";
-import { addColorChangeEffect } from "../../automation/functions/addColorChange";
+import ArticleDynamicLoader from "../organisms/ArticleDynamicLoader";
+
+const FooterModule = lazy(() => import("../pages/FooterModule"));
 
 const ArticleLayout = () => {
-  const { navRef, resetDarkSectionOn, handleNavigation } = useNavigation();
+  const { navRef, resetDarkSectionOn, handleNavigation } = addNavigation();
   const { articleID } = useParams();
   const articleComponents = articles[articleID];
-  const [handleScroll, setHandleScroll] = useState(() => () => {});
+
+  useColorChangeEffect();
 
   useEffect(() => {
-    addColorChangeEffect(setHandleScroll);
-  }, []);
+    resetDarkSectionOn();
+  }, [resetDarkSectionOn]);
 
   const headerData = preview
     ? preview.find((info) => info.link === articleID)
@@ -44,27 +45,12 @@ const ArticleLayout = () => {
       ]
     : [];
 
-  const handleSmoothScroll = ({ offset, limit }) => {
-    const scrollEvent = new CustomEvent("smooth-scroll", {
-      detail: {
-        offset: offset.y,
-        limit: limit.y,
-      },
-    });
-    window.dispatchEvent(scrollEvent);
-    handleScroll({ offset, limit });
-  };
-
-  useEffect(() => {
-    resetDarkSectionOn();
-  }, [resetDarkSectionOn]);
-
   if (!articleComponents || !headerData) {
     return null;
   }
 
   return (
-    <SmoothScrollContainer onScroll={handleSmoothScroll}>
+    <>
       <div className="content s-orange">
         {componentsToLoad.map((component, index) => (
           <ArticleDynamicLoader
@@ -75,9 +61,11 @@ const ArticleLayout = () => {
         ))}
       </div>
       <div className="s-dark" ref={navRef}>
-        <FooterModule />
+        <Suspense fallback={null}>
+          <FooterModule />
+        </Suspense>
       </div>
-    </SmoothScrollContainer>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import ContentList from "./ArticleContentList";
 
-const Paragraph = ({ title, content, contentList }) => {
+const Paragraph = forwardRef(({ title, content, contentList }, ref) => {
   const hasTitle = Boolean(title);
   const hasContentList =
     contentList &&
@@ -11,6 +11,7 @@ const Paragraph = ({ title, content, contentList }) => {
 
   return (
     <div
+      ref={ref}
       className={
         hasTitle ? "content-info ci-fix ci-hor" : "content-info ci-fix"
       }
@@ -33,6 +34,6 @@ const Paragraph = ({ title, content, contentList }) => {
       </div>
     </div>
   );
-};
+});
 
 export default Paragraph;

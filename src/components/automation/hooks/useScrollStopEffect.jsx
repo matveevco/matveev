@@ -1,20 +1,16 @@
-import { useEffect } from "react";
-import Scrollbar from "smooth-scrollbar";
+import { useEffect, useCallback } from "react";
 
-const useScrollStopEffect = (updateDarkSectionOn, scrollRef) => {
+const useScrollStopEffect = (updateDarkSectionOn) => {
+  const handleScrollStop = useCallback(() => {
+    updateDarkSectionOn();
+  }, [updateDarkSectionOn]);
+
   useEffect(() => {
-    const container = document.querySelector(".smooth-scroll-container");
-    const scrollbar = Scrollbar.get(container);
-
-    if (scrollbar) {
-      const onScrollStop = () => {
-        scrollRef.current = false;
-        updateDarkSectionOn();
-      };
-      scrollbar.addListener(onScrollStop);
-      return () => scrollbar.removeListener(onScrollStop);
-    }
-  }, [updateDarkSectionOn, scrollRef]);
+    window.addEventListener("scroll", handleScrollStop);
+    return () => {
+      window.removeEventListener("scroll", handleScrollStop);
+    };
+  }, [handleScrollStop]);
 };
 
 export default useScrollStopEffect;

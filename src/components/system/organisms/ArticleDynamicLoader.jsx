@@ -1,4 +1,5 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useRef } from "react";
+import useIntersectionFadeIn from "../../automation/hooks/useIntersectionFadeIn";
 
 const componentMap = {
   HeaderArticle: lazy(() => import("../molecules/ArticleHeader")),
@@ -12,14 +13,16 @@ const componentMap = {
 
 const ArticleDynamicLoader = ({ componentName, data }) => {
   const Component = componentMap[componentName];
+  const fadeInRef = useRef(null);
+  useIntersectionFadeIn(fadeInRef);
 
   if (!Component) {
     return null;
   }
 
   return (
-    <Suspense>
-      <Component {...data} />
+    <Suspense fallback={null}>
+      <Component {...data} ref={fadeInRef} />
     </Suspense>
   );
 };

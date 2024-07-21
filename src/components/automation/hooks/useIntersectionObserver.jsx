@@ -1,30 +1,28 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const useIntersectionObserver = (navRef, handleIntersection) => {
+  const observerRef = useRef(null);
+
   useEffect(() => {
-    if (
-      !navRef ||
-      !navRef.current ||
-      typeof handleIntersection !== "function"
-    ) {
+    if (!navRef?.current || typeof handleIntersection !== "function") {
       return;
     }
 
     const observerOptions = {
-      rootMargin: "0px 0px -95% 0px",
-      threshold: [0, 1], // Combine both thresholds
+      rootMargin: "-5% 0px 0px 0px",
+      threshold: [0, 1],
     };
 
-    const observer = new IntersectionObserver(
+    observerRef.current = new IntersectionObserver(
       handleIntersection,
       observerOptions,
     );
-
-    const navElement = navRef.current;
-    observer.observe(navElement);
+    observerRef.current.observe(navRef.current);
 
     return () => {
-      observer.disconnect();
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
     };
   }, [navRef, handleIntersection]);
 };

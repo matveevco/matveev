@@ -1,53 +1,63 @@
-import { useState, useEffect, useCallback, useMemo } from "react";
+import { useState, useCallback, useMemo, useEffect, useRef } from "react";
 
 const useCurrentSection = () => {
   const [currentSection, setCurrentSection] = useState(null);
   const [isVisibleNav, setIsVisibleNav] = useState(false);
+  const observerRef = useRef(null);
 
   const updateCurrentSection = useCallback(() => {
-    const sections = document.querySelectorAll(".section, .visible-nav");
+    const checkAndInitialize = () => {
+      const sections = document.querySelectorAll(".section, .visible-nav");
 
-    const observerOptions = {
-      rootMargin: "-50% 0px -50% 0px",
-      threshold: [0, 0.5, 1],
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      const intersectingSections = entries
-        .filter((entry) => entry.isIntersecting)
-        .map((entry) => entry.target);
-
-      const visibleNavSection = intersectingSections.find((section) =>
-        section.classList.contains("visible-nav"),
-      );
-
-      if (visibleNavSection) {
-        setCurrentSection(visibleNavSection.className);
-        setIsVisibleNav(true);
-      } else {
-        setCurrentSection(null);
-        setIsVisibleNav(false);
+      if (sections.length === 0) {
+        console.error("Sections not found in the document");
+        return;
       }
-    }, observerOptions);
 
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
+      const observerOptions = {
+        rootMargin: "-50% 0px -50% 0px",
+        threshold: [0, 0.5, 1],
+      };
 
-    return () => {
-      observer.disconnect();
+      observerRef.current = new IntersectionObserver((entries) => {
+        const intersectingSections = entries
+          .filter((entry) => entry.isIntersecting)
+          .map((entry) => entry.target);
+
+        const visibleNavSection = intersectingSections.find((section) =>
+          section.classList.contains("visible-nav"),
+        );
+
+        setCurrentSection(
+          visibleNavSection ? visibleNavSection.className : null,
+        );
+        setIsVisibleNav(!!visibleNavSection);
+      }, observerOptions);
+
+      sections.forEach((section) => observerRef.current.observe(section));
+
+      return () => observerRef.current && observerRef.current.disconnect();
     };
+
+    const intervalId = setInterval(() => {
+      if (document.querySelectorAll(".section, .visible-nav").length > 0) {
+        clearInterval(intervalId);
+        checkAndInitialize();
+      }
+    }, 100);
+
+    return () => clearInterval(intervalId);
   }, []);
 
-  const memoizedUpdateCurrentSection = useMemo(
-    () => updateCurrentSection,
-    [updateCurrentSection],
-  );
+  useEffect(() => {
+    const cleanup = updateCurrentSection();
+    return cleanup;
+  }, [updateCurrentSection]);
 
   return {
     currentSection,
     isVisibleNav,
-    updateCurrentSection: memoizedUpdateCurrentSection,
+    updateCurrentSection,
   };
 };
 

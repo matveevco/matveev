@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
-import { useNavigation } from "../../automation/hooks/useNavigationContext";
+import { addNavigation } from "../../automation/functions/addNavigationContext";
 import SmallButton from "../atoms/SmallButton";
 
 const NavBottom = () => {
   const { isDarkSectionOn, isApp, currentSection, isVisibleNav } =
-    useNavigation();
+    addNavigation();
 
   const showBottomNav = useMemo(
     () => currentSection && currentSection.includes("visible-nav"),
