@@ -23,6 +23,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "jsdom": "^23.0.1",
     "vite": "^5.0.8",
+    "vite-plugin-static-copy": "^1.0.6",
     "vitest": "^1.1.1"
   },
   "description": "portfolio",

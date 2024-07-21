@@ -13,17 +13,17 @@ body {
 
 @font-face {
     font-family: "GT Planar Light";
-    src: url("fonts/GT-Planar-Light.woff2") format("woff2");
+    src: url("/fonts/GT-Planar-Light.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "GT Planar Regular";
-    src: url("fonts/GT-Planar-Regular.woff2") format("woff2");
+    src: url("/fonts/GT-Planar-Regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "GT Super Italic";
-    src: url("fonts/GT-Super-Display-Regular-Italic.woff2") format("woff2");
+    src: url("/fonts/GT-Super-Display-Regular-Italic.woff2") format("woff2");
 }
 
 :root {
