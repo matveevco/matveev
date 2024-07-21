@@ -10,7 +10,9 @@ const ButtonCopy = ({ title, link, additionalClass }) => {
   const handleCopy = () => {
     let copyText = link;
 
-    if (link.startsWith("/")) {
+    if (link === "/") {
+      copyText = window.location.href;
+    } else if (link.startsWith("/")) {
       copyText = `${window.location.origin}${link}`;
     }
 

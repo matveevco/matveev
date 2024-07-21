@@ -1,7 +1,7 @@
 const articlePrismaOnboarding = [
   {
     componentName: "HeaderArticle",
-    linkButton: "/some-link",
+    linkButton: "/",
   },
   {
     componentName: "Image",
