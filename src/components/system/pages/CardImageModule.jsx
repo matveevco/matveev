@@ -3,14 +3,16 @@ import Details from "../molecules/Details";
 import CardImage from "../molecules/CardImage";
 import CardImageGroups from "../organisms/CardImageGroups";
 import useAnimateChange from "../../automation/hooks/useAnimateChange";
+import useScrollHandler from "../../automation/hooks/useScrollHandler";
 import useUpdateHeight from "../../automation/hooks/useUpdateHeight";
 
-const CardImageModule = ({ data, isActive }) => {
+const CardImageModule = ({ data, isActive, scrollDirection }) => {
   const containerRef = useRef(null);
   const { currentContent, animateChange, handleMouseEnter, handleMouseLeave } =
     useAnimateChange(data[0], data);
 
   useUpdateHeight(containerRef);
+  useScrollHandler(containerRef, isActive, scrollDirection);
 
   return (
     <div className="section visible-nav">
@@ -22,7 +24,7 @@ const CardImageModule = ({ data, isActive }) => {
       <div
         ref={containerRef}
         className="section-row"
-        style={{ overflowY: isActive ? "auto" : "hidden" }}
+        style={{ overflowY: "auto" }}
       >
         <CardImage useLink={true} content={data[0]} />
         <div className="content-separator"></div>

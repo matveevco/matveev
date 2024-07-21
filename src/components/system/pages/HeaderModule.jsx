@@ -1,6 +1,4 @@
 import React from "react";
-import IconArrowDown from "../atoms/IconArrowDown";
-import IconArrowRotate from "../atoms/IconArrowRotate";
 import Button from "../atoms/Button";
 
 const HeaderModule = () => {
