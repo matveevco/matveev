@@ -42,7 +42,9 @@ const useDarkSection = (navRef) => {
     );
     observer.observe(navRef.current);
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+    };
   }, [navRef, handleIntersection]);
 
   return {

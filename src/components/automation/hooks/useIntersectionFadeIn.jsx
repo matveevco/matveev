@@ -1,6 +1,8 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const useIntersectionFadeIn = (ref) => {
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+
   useEffect(() => {
     const initializeObserver = () => {
       const element = ref.current;
@@ -10,33 +12,49 @@ const useIntersectionFadeIn = (ref) => {
         return;
       }
 
-      element.style.opacity = 0; // Initial opacity set to 0
+      const handleIntersect = (entries) => {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.style.transition = "opacity 1s";
-              entry.target.style.opacity = 1;
+        entries.forEach((entry) => {
+          const isScrollingDown = scrollTop > lastScrollTop;
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add("compVisible");
+            entry.target.classList.remove("compHideT");
+          } else {
+            if (isScrollingDown) {
+              if (entry.boundingClientRect.top < 0) {
+                entry.target.classList.add("compHideT");
+              }
+              entry.target.classList.remove("compVisible");
+            } else {
+              if (entry.boundingClientRect.bottom > window.innerHeight) {
+                entry.target.classList.remove("compVisible", "compHideT");
+              } else {
+                entry.target.classList.remove("compVisible");
+              }
             }
-          });
-        },
-        { threshold: 0.1 },
-      );
+          }
+        });
+
+        setLastScrollTop(scrollTop <= 0 ? 0 : scrollTop);
+      };
+
+      const observer = new IntersectionObserver(handleIntersect, {
+        threshold: 0.4,
+      });
 
       observer.observe(element);
-      console.log("Observer attached to element");
 
       return () => {
-        observer.unobserve(element);
-        console.log("Observer detached from element");
+        observer.disconnect();
       };
     };
 
     const mutationObserver = new MutationObserver(() => {
       if (ref.current) {
         initializeObserver();
-        mutationObserver.disconnect(); // Disconnect the mutation observer after initialization
+        mutationObserver.disconnect();
       }
     });
 
@@ -45,7 +63,9 @@ const useIntersectionFadeIn = (ref) => {
     return () => {
       mutationObserver.disconnect();
     };
-  }, [ref]);
+  }, [ref, lastScrollTop]);
+
+  return null;
 };
 
 export default useIntersectionFadeIn;

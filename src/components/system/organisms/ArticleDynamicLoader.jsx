@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useRef } from "react";
+import React, { Suspense, lazy, useRef, forwardRef } from "react";
 import useIntersectionFadeIn from "../../automation/hooks/useIntersectionFadeIn";
 
 const componentMap = {
@@ -21,7 +21,11 @@ const ArticleDynamicLoader = ({ componentName, data }) => {
   }
 
   return (
-    <Suspense fallback={null}>
+    <Suspense
+      fallback={
+        <div className="content-info" style={{ height: "250px" }}></div>
+      }
+    >
       <Component {...data} ref={fadeInRef} />
     </Suspense>
   );

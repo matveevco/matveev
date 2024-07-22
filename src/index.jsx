@@ -14,10 +14,12 @@ const NavBottom = lazy(
 
 import App from "./components/App";
 import ArticleLayout from "./components/system/templates/ArticleLayout";
+import NoMatch from "./components/system/templates/NoMatch";
 import {
   NavigationProvider,
   addNavigation,
 } from "./components/automation/functions/addNavigationContext";
+import PersistRoute from "./components/automation/functions/addPersistRoute";
 
 const MainApp = () => {
   const location = useLocation();
@@ -38,13 +40,14 @@ const MainApp = () => {
       <Suspense fallback={null}>
         <NavSide />
       </Suspense>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/:articleID" element={<ArticleLayout />} />
-      </Routes>
       <Suspense fallback={null}>
         <NavBottom />
       </Suspense>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/:articleID" element={<ArticleLayout />} />
+        <Route path="*" element={<NoMatch />} />
+      </Routes>
     </>
   );
 };

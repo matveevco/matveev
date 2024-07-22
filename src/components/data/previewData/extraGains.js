@@ -4,7 +4,9 @@ const previewGains = [
     companyLogos: [
       {
         alt: "photo",
-        src: "images/icons/icon-logo-avatar.png",
+        src: "images/icons/icon-logo-avatar.webp",
+        width: "128px",
+        height: "128px",
         additionalClass: [""],
       },
     ],
@@ -21,11 +23,15 @@ const previewGains = [
           {
             alt: "uk",
             src: "images/icons/icon-logo-uk.svg",
+            width: "32px",
+            height: "32px",
             additionalClass: ["cl-fix"],
           },
           {
             alt: "tech nation",
             src: "images/icons/icon-logo-tn.svg",
+            width: "32px",
+            height: "32px",
             additionalClass: [""],
           },
         ],
@@ -40,6 +46,8 @@ const previewGains = [
           {
             alt: "telegram",
             src: "images/icons/icon-logo-telegram.svg",
+            width: "32px",
+            height: "32px",
             additionalClass: [""],
           },
         ],
@@ -54,6 +62,8 @@ const previewGains = [
           {
             alt: "touchpoints",
             src: "images/icons-32/icon-32-logo-rtp.svg",
+            width: "142px",
+            height: "32px",
             additionalClass: [""],
           },
         ],
@@ -68,6 +78,8 @@ const previewGains = [
           {
             alt: "design awards",
             src: "images/icons-32/icon-32-logo-eda.svg",
+            width: "142px",
+            height: "32px",
             additionalClass: [""],
           },
         ],
@@ -82,6 +94,8 @@ const previewGains = [
           {
             alt: "windowswear",
             src: "images/icons-32/icon-32-logo-windowswear.svg",
+            width: "158px",
+            height: "32px",
             additionalClass: [""],
           },
         ],
@@ -96,6 +110,8 @@ const previewGains = [
           {
             alt: "forbes",
             src: "images/icons-32/icon-32-logo-forbes.svg",
+            width: "95px",
+            height: "32px",
             additionalClass: [""],
           },
         ],

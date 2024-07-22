@@ -5,7 +5,9 @@ const articlePrismaFAQ = [
   },
   {
     componentName: "Image",
-    imageSRC: "/images/articles/prisma-faq/iA1.png",
+    imageSRC: "/images/articles/prisma-faq/iA1.webp",
+    imageWidth: "3072px",
+    imageHeight: "1520px",
   },
   {
     componentName: "Paragraph",
@@ -16,6 +18,8 @@ const articlePrismaFAQ = [
   {
     componentName: "Image",
     imageSRC: "/images/articles/prisma-faq/iA2.svg",
+    imageWidth: "1278px",
+    imageHeight: "432px",
   },
   {
     componentName: "Paragraph",
@@ -26,7 +30,9 @@ const articlePrismaFAQ = [
   },
   {
     componentName: "Paragraph_and_Image",
-    imageSRC: "/images/articles/prisma-faq/iA3.png",
+    imageSRC: "/images/articles/prisma-faq/iA3.webp",
+    imageWidth: "1520px",
+    imageHeight: "1520px",
     title: "Hypothesis about user motivation",
     content: [
       "We knew from current data that Prisma onboarding was most often interacted with in step two and step three by 40.5% and 25.9% of users respectively.",
@@ -42,7 +48,9 @@ const articlePrismaFAQ = [
   },
   {
     componentName: "Paragraph_and_Image",
-    imageSRC: "/images/articles/prisma-faq/iA4.png",
+    imageSRC: "/images/articles/prisma-faq/iA4.webp",
+    imageWidth: "1520px",
+    imageHeight: "1520px",
     title: "The hypothesis was initially arrived at because of:",
     contentList: {
       list: [
@@ -54,7 +62,9 @@ const articlePrismaFAQ = [
   },
   {
     componentName: "Paragraph_and_Image",
-    imageSRC: "/images/articles/prisma-faq/iA5.png",
+    imageSRC: "/images/articles/prisma-faq/iA5.webp",
+    imageWidth: "1520px",
+    imageHeight: "1520px",
     title: "Interaction experience",
     content: [
       "For a more appropriate view of the changes in the photo, cards were chosen, alternating active actions as the scenario unfolded, so as not to be static and boring. And although the onboarding was rebuilt from scratch, it still replicated the classic interaction experience, making the negative consequences of the update, like getting lost and misunderstood, quite impossible for us to avoid.",
@@ -73,6 +83,8 @@ const articlePrismaFAQ = [
   {
     componentName: "Image",
     imageSRC: "/images/articles/prisma-faq/iA6.svg",
+    imageWidth: "1278px",
+    imageHeight: "432px",
   },
   {
     componentName: "Paragraph",
@@ -91,6 +103,8 @@ const articlePrismaFAQ = [
   {
     componentName: "Image",
     imageSRC: "/images/articles/prisma-faq/iA7.svg",
+    imageWidth: "1278px",
+    imageHeight: "432px",
   },
   {
     componentName: "Paragraph",
@@ -103,7 +117,9 @@ const articlePrismaFAQ = [
   },
   {
     componentName: "Paragraph_and_Image",
-    imageSRC: "/images/articles/prisma-faq/iA8.png",
+    imageSRC: "/images/articles/prisma-faq/iA8.webp",
+    imageWidth: "1520px",
+    imageHeight: "1520px",
     title:
       "Humans tend to remember things in practice, so the hypothesis consisted of several steps:",
     contentList: {
@@ -131,6 +147,8 @@ const articlePrismaFAQ = [
   {
     componentName: "Image",
     imageSRC: "/images/articles/prisma-faq/iA9.svg",
+    imageWidth: "1278px",
+    imageHeight: "432px",
   },
   {
     componentName: "Paragraph",
@@ -149,6 +167,8 @@ const articlePrismaFAQ = [
   {
     componentName: "Image",
     imageSRC: "/images/articles/prisma-faq/iA10.svg",
+    imageWidth: "1278px",
+    imageHeight: "432px",
   },
   {
     componentName: "Paragraph",
@@ -176,7 +196,9 @@ const articlePrismaFAQ = [
         cardLogos: [
           {
             alt: "photo",
-            src: "images/avatars/ava-am.png",
+            src: "images/avatars/ava-am.webp",
+            width: "240px",
+            height: "240px",
           },
         ],
         link: "https://www.linkedin.com/in/matveevco/",
@@ -188,7 +210,9 @@ const articlePrismaFAQ = [
         cardLogos: [
           {
             alt: "photo",
-            src: "images/avatars/ava-ak.png",
+            src: "images/avatars/ava-ak.webp",
+            width: "240px",
+            height: "240px",
           },
         ],
         link: "https://www.linkedin.com/in/alexkeda/",
@@ -200,7 +224,9 @@ const articlePrismaFAQ = [
         cardLogos: [
           {
             alt: "photo",
-            src: "images/avatars/ava-as.png",
+            src: "images/avatars/ava-as.webp",
+            width: "240px",
+            height: "240px",
           },
         ],
         link: "https://www.linkedin.com/in/alena-slobodianiuk-a3250794/",

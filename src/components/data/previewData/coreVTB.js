@@ -5,11 +5,15 @@ const previewVTB = [
     imgClass: ["section-img", "section-reveal-img", "vtb"],
     imageSrc: "/images/previews/Card-VTB-3.webp",
     imageAlt: "image of article",
+    imageWidth: "1520px",
+    imageHeight: "1520px",
     companyName: "B2B by VTB Bank",
     companyLogos: [
       {
         alt: "vtb",
         src: "images/icons/icon-logo-vtb.svg",
+        width: "32px",
+        height: "32px",
         additionalClass: ["cl-vtb"],
       },
     ],
@@ -28,11 +32,15 @@ const previewVTB = [
     imgClass: ["section-img", "vtb", "sis-fix"],
     imageSrc: "/images/previews/Card-VTB-2.webp",
     imageAlt: "image of article",
+    imageWidth: "1520px",
+    imageHeight: "744px",
     companyName: "B2B by VTB Bank",
     companyLogos: [
       {
         alt: "vtb",
         src: "images/icons/icon-logo-vtb.svg",
+        width: "32px",
+        height: "32px",
         additionalClass: ["cl-vtb"],
       },
     ],
@@ -51,11 +59,15 @@ const previewVTB = [
     imgClass: ["section-img", "vtb", "sis-fix"],
     imageSrc: "/images/previews/Card-VTB-1.webp",
     imageAlt: "image of article",
+    imageWidth: "1520px",
+    imageHeight: "744px",
     companyName: "B2B by VTB Bank",
     companyLogos: [
       {
         alt: "vtb",
         src: "images/icons/icon-logo-vtb.svg",
+        width: "32px",
+        height: "32px",
         additionalClass: ["cl-vtb"],
       },
     ],

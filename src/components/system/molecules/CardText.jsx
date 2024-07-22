@@ -49,7 +49,13 @@ const CardText = ({ content }) => {
           />
         )}
         {avatarLogos.map((logo, index) => (
-          <CardTextPhoto key={index} src={logo.src} alt={logo.alt} />
+          <CardTextPhoto
+            key={index}
+            src={logo.src}
+            alt={logo.alt}
+            width={logo.width}
+            height={logo.height}
+          />
         ))}
         <div className="section-img-title">
           <div className="info-body-text ibt-fix">{cardTitle}</div>

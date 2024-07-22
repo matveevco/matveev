@@ -15,12 +15,16 @@ const CardImageModule = lazy(() => import("./system/pages/CardImageModule"));
 const CardTextModule = lazy(() => import("./system/pages/CardTextModule"));
 
 const App = () => {
-  const { navRef, setIsApp } = addNavigation();
+  const { navRef, setIsApp, resetDarkSectionOn } = addNavigation();
 
   useEffect(() => {
     setIsApp(true);
     return () => setIsApp(false);
   }, [setIsApp]);
+
+  useEffect(() => {
+    resetDarkSectionOn();
+  }, [resetDarkSectionOn]);
 
   useNavigationModule();
   useColorChangeEffect();

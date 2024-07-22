@@ -33,7 +33,7 @@ const HeaderArticle = forwardRef(
     }
 
     return (
-      <div className="content-info" ref={ref}>
+      <div className="content-info compHide" ref={ref}>
         <div className="section-info-top content-info-left">
           <DetailsCompany
             companyLogos={companyLogos || []}

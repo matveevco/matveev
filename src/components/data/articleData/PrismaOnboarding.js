@@ -5,7 +5,9 @@ const articlePrismaOnboarding = [
   },
   {
     componentName: "Image",
-    imageSRC: "/images/articles/prisma-faq/iA1.png",
+    imageSRC: "/images/articles/prisma-faq/iA1.webp",
+    imageWidth: "3072px",
+    imageHeight: "1520px",
   },
   {
     componentName: "Paragraph",
@@ -18,7 +20,9 @@ const articlePrismaOnboarding = [
   },
   {
     componentName: "Paragraph_and_Image",
-    imageSRC: "/images/articles/prisma-faq/iA8.png",
+    imageSRC: "/images/articles/prisma-faq/iA8.webp",
+    imageWidth: "1520px",
+    imageHeight: "1520px",
     title: "Title",
     content: ["Description.", "Description."],
     contentList: {
@@ -44,7 +48,9 @@ const articlePrismaOnboarding = [
         cardLogos: [
           {
             alt: "photo",
-            src: "images/avatars/ava-am.png",
+            src: "images/avatars/ava-am.webp",
+            width: "240px",
+            height: "240px",
           },
         ],
         link: "https://www.linkedin.com/in/matveevco/",

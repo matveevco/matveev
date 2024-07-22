@@ -3,7 +3,7 @@ import CardText from "./CardText";
 import CardTextGroups from "../organisms/CardTextGroups";
 
 const Credits = forwardRef(({ card }, ref) => (
-  <div ref={ref} className="content-info ci-fix">
+  <div ref={ref} className="content-info ci-fix compHide">
     <div className="content-info-left cil-fix">
       <h3>Credits</h3>
       <div className="info-body-article">

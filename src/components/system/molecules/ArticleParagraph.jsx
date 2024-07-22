@@ -13,7 +13,9 @@ const Paragraph = forwardRef(({ title, content, contentList }, ref) => {
     <div
       ref={ref}
       className={
-        hasTitle ? "content-info ci-fix ci-hor" : "content-info ci-fix"
+        hasTitle
+          ? "content-info ci-fix compHide ci-hor"
+          : "content-info ci-fix compHide"
       }
     >
       <div

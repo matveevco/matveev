@@ -4,7 +4,9 @@ const previewPublic = [
     companyLogos: [
       {
         alt: "photo",
-        src: "images/icons/icon-logo-avatar.png",
+        src: "images/icons/icon-logo-avatar.webp",
+        width: "128px",
+        height: "128px",
         additionalClass: [""],
       },
     ],

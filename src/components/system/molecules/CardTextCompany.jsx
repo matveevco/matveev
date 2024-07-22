@@ -8,7 +8,13 @@ const CardTextCompany = ({ cardLogos, additionalClass }) => {
           key={index}
           className={`company-logo ${logo.additionalClass.join(" ")}`}
         >
-          <img className="icon-logo" alt={logo.alt} src={logo.src} />
+          <img
+            className="icon-logo"
+            alt={logo.alt}
+            src={logo.src}
+            width={logo.width}
+            height={logo.height}
+          />
         </div>
       ))}
     </div>

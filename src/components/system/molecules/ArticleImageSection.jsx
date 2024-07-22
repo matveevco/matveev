@@ -1,7 +1,7 @@
 import React from "react";
 import { Squircle } from "corner-smoothing";
 
-const ImageSection = ({ imageSRC }) => (
+const ImageSection = ({ imageSRC, imageWidth, imageHeight }) => (
   <div className="section-row">
     <Squircle
       className="section-img"
@@ -12,7 +12,10 @@ const ImageSection = ({ imageSRC }) => (
       <img
         className="object-image full-oi"
         src={imageSRC}
+        width={imageWidth}
+        height={imageHeight}
         alt="article image"
+        loading="lazy"
       />
     </Squircle>
   </div>
