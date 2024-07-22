@@ -4,7 +4,7 @@ const previewGains = [
     companyLogos: [
       {
         alt: "photo",
-        src: "images/icons/icon-logo-avatar.webp",
+        src: "/images/icons/icon-logo-avatar.webp",
         width: "128px",
         height: "128px",
         additionalClass: [""],
@@ -22,14 +22,14 @@ const previewGains = [
         cardLogos: [
           {
             alt: "uk",
-            src: "images/icons/icon-logo-uk.svg",
+            src: "/images/icons/icon-logo-uk.svg",
             width: "32px",
             height: "32px",
             additionalClass: ["cl-fix"],
           },
           {
             alt: "tech nation",
-            src: "images/icons/icon-logo-tn.svg",
+            src: "/images/icons/icon-logo-tn.svg",
             width: "32px",
             height: "32px",
             additionalClass: [""],
@@ -45,7 +45,7 @@ const previewGains = [
         cardLogos: [
           {
             alt: "telegram",
-            src: "images/icons/icon-logo-telegram.svg",
+            src: "/images/icons/icon-logo-telegram.svg",
             width: "32px",
             height: "32px",
             additionalClass: [""],
@@ -61,7 +61,7 @@ const previewGains = [
         cardLogos: [
           {
             alt: "touchpoints",
-            src: "images/icons-32/icon-32-logo-rtp.svg",
+            src: "/images/icons-32/icon-32-logo-rtp.svg",
             width: "142px",
             height: "32px",
             additionalClass: [""],
@@ -77,7 +77,7 @@ const previewGains = [
         cardLogos: [
           {
             alt: "design awards",
-            src: "images/icons-32/icon-32-logo-eda.svg",
+            src: "/images/icons-32/icon-32-logo-eda.svg",
             width: "142px",
             height: "32px",
             additionalClass: [""],
@@ -93,7 +93,7 @@ const previewGains = [
         cardLogos: [
           {
             alt: "windowswear",
-            src: "images/icons-32/icon-32-logo-windowswear.svg",
+            src: "/images/icons-32/icon-32-logo-windowswear.svg",
             width: "158px",
             height: "32px",
             additionalClass: [""],
@@ -109,7 +109,7 @@ const previewGains = [
         cardLogos: [
           {
             alt: "forbes",
-            src: "images/icons-32/icon-32-logo-forbes.svg",
+            src: "/images/icons-32/icon-32-logo-forbes.svg",
             width: "95px",
             height: "32px",
             additionalClass: [""],

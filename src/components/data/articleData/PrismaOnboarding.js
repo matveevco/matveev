@@ -48,7 +48,7 @@ const articlePrismaOnboarding = [
         cardLogos: [
           {
             alt: "photo",
-            src: "images/avatars/ava-am.webp",
+            src: "/images/avatars/ava-am.webp",
             width: "240px",
             height: "240px",
           },

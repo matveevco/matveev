@@ -6,7 +6,12 @@ const CardImageReveal = ({ content, onMouseEnter, onMouseLeave }) => {
   const { link } = content;
   const WrapperComponent = link ? "a" : "div";
   const wrapperProps = link
-    ? { className: "section-reveal", href: link, onMouseEnter, onMouseLeave }
+    ? {
+        className: "section-reveal",
+        href: `article/${link}`,
+        onMouseEnter,
+        onMouseLeave,
+      }
     : { className: "section-reveal", onMouseEnter, onMouseLeave };
 
   return (

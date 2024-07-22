@@ -11,7 +11,7 @@ const previewVTB = [
     companyLogos: [
       {
         alt: "vtb",
-        src: "images/icons/icon-logo-vtb.svg",
+        src: "/images/icons/icon-logo-vtb.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-vtb"],
@@ -38,7 +38,7 @@ const previewVTB = [
     companyLogos: [
       {
         alt: "vtb",
-        src: "images/icons/icon-logo-vtb.svg",
+        src: "/images/icons/icon-logo-vtb.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-vtb"],
@@ -65,7 +65,7 @@ const previewVTB = [
     companyLogos: [
       {
         alt: "vtb",
-        src: "images/icons/icon-logo-vtb.svg",
+        src: "/images/icons/icon-logo-vtb.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-vtb"],

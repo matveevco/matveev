@@ -18,7 +18,7 @@ const Details = ({ useLink = true, content, animate }) => {
   const WrapperComponent = useLink && link ? "a" : "div";
   const wrapperProps =
     useLink && link
-      ? { href: link, className: "section-info" }
+      ? { href: `article/${link}`, className: "section-info" }
       : { className: "section-info" };
 
   return (

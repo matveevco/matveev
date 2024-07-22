@@ -196,7 +196,7 @@ const articlePrismaFAQ = [
         cardLogos: [
           {
             alt: "photo",
-            src: "images/avatars/ava-am.webp",
+            src: "/images/avatars/ava-am.webp",
             width: "240px",
             height: "240px",
           },
@@ -210,7 +210,7 @@ const articlePrismaFAQ = [
         cardLogos: [
           {
             alt: "photo",
-            src: "images/avatars/ava-ak.webp",
+            src: "/images/avatars/ava-ak.webp",
             width: "240px",
             height: "240px",
           },
@@ -224,7 +224,7 @@ const articlePrismaFAQ = [
         cardLogos: [
           {
             alt: "photo",
-            src: "images/avatars/ava-as.webp",
+            src: "/images/avatars/ava-as.webp",
             width: "240px",
             height: "240px",
           },

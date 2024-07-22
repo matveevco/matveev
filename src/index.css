@@ -5,7 +5,7 @@
 h1 {
     font-size: var(--title-large);
     color: var(--color-dark-100);
-    font-family: var(--font-planar-light);
+    font-family: var(--font-wtf-light);
     letter-spacing: -0.02em;
     line-height: 102%;
     margin-block-start: 0;
@@ -18,7 +18,7 @@ h1 {
 h2 {
     font-size: var(--title-medium);
     color: var(--color-dark-100);
-    font-family: var(--font-super-italic);
+    font-family: var(--font-wtf-italic);
     letter-spacing: -0.01em;
     line-height: 102%;
     margin-block-start: 0;
@@ -31,7 +31,7 @@ h2 {
 h3 {
     font-size: var(--title-small);
     color: var(--color-dark-100);
-    font-family: var(--font-super-italic);
+    font-family: var(--font-wtf-italic);
     letter-spacing: -0.01em;
     line-height: 102%;
     margin-block-start: 0;
@@ -47,7 +47,7 @@ h3 {
 
 .bs {
     font-size: var(--button-small);
-    font-family: var(--font-planar-regular);
+    font-family: var(--font-wtf-regular);
     color: var(--color-dark-100);
     line-height: 98%;
 }
@@ -254,7 +254,7 @@ h3 {
 }
 
 .highlight-text {
-    font-family: var(--font-super-italic);
+    font-family: var(--font-wtf-italic);
     color: var(--color-accent-orange-100);
 }
 
@@ -271,7 +271,7 @@ h3 {
 }
 
 .highlight-gradient-one-text {
-    font-family: var(--font-super-italic);
+    font-family: var(--font-wtf-italic);
     background: linear-gradient(
         45deg,
         var(--color-accent-pink-100),
@@ -298,13 +298,40 @@ h3 {
 }
 
 .highlight-gradient-two-text {
-    font-family: var(--font-super-italic);
+    font-family: var(--font-wtf-italic);
     background: linear-gradient(
         45deg,
         var(--color-accent-pink-100),
         var(--color-accent-blue-100),
         var(--color-accent-pink-100),
         var(--color-accent-orange-100)
+    );
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimationTwo 10s ease infinite;
+}
+
+@keyframes gradientAnimationTwo {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.highlight-gradient-three-text {
+    font-family: var(--font-wtf-italic);
+    background: linear-gradient(
+        45deg,
+        var(--color-accent-orange-100),
+        var(--color-accent-pink-100),
+        var(--color-accent-blue-100),
+        var(--color-accent-pink-100)
     );
     background-size: 400% 400%;
     -webkit-background-clip: text;
@@ -322,6 +349,11 @@ h3 {
     content: "\200B";
 }
 
+.highlight-gradient-three-text::before,
+.highlight-gradient-three-text::after {
+    content: "\200B";
+}
+
 .button-row {
     width: 100%;
     display: flex;
@@ -336,7 +368,7 @@ h3 {
 }
 
 .button {
-    font-family: var(--font-planar-regular);
+    font-family: var(--font-wtf-regular);
     font-size: var(--button);
     color: var(--color-white-100);
     background-color: var(--color-dark-100);
@@ -683,7 +715,7 @@ h3 {
 .section-info-company-name {
     font-size: var(--caption);
     color: var(--color-dark-100);
-    font-family: var(--font-planar-regular);
+    font-family: var(--font-wtf-regular);
     letter-spacing: -0.01em;
     padding: 4px 0px 0px;
     line-height: 102%;
@@ -730,7 +762,7 @@ h3 {
 
 .info-body-text {
     font-size: var(--body-text);
-    font-family: var(--font-planar-regular);
+    font-family: var(--font-wtf-regular);
     color: var(--color-dark-100);
     flex: 1;
     width: 100%;
@@ -1096,7 +1128,7 @@ h3 {
 
 .info-body-article {
     font-size: var(--body-article);
-    font-family: var(--font-planar-regular);
+    font-family: var(--font-wtf-regular);
     color: var(--color-dark-100);
     flex: 1;
     width: 100%;
@@ -1281,11 +1313,14 @@ h3 {
 
 .PNF {
     height: 100vh;
-    width: 100vw;
-    background-color: var(--color-tint-orange-100);
+    background-color: var(--color-dark-100);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.PNF h1 {
+    color: var(--color-white-100);
 }
 
 /* ARTICLE */

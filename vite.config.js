@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { viteStaticCopy } from "vite-plugin-static-copy";
+import history from "connect-history-api-fallback";
+import cssnano from "cssnano";
 
 export default defineConfig({
   plugins: [
@@ -14,6 +16,15 @@ export default defineConfig({
       ],
     }),
   ],
+  css: {
+    postcss: {
+      plugins: [
+        cssnano({
+          preset: "default",
+        }),
+      ],
+    },
+  },
   build: {
     outDir: "dist",
     rollupOptions: {
@@ -26,7 +37,10 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    historyApiFallback: true,
+    open: true,
+    setup: (app) => {
+      app.use(history());
+    },
   },
   base: "/",
 });

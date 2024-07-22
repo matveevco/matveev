@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { addNavigation } from "../../automation/functions/addNavigationContext";
+import { useColorChangeEffect } from "../../automation/functions/addColorChange";
 
 const NoMatch = () => {
+  useColorChangeEffect("s-dark");
+
   return (
     <div className="PNF">
       <h1>

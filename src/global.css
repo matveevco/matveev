@@ -31,9 +31,9 @@ body {
 }
 
 :root {
-    --font-planar-light: "WTF Light", sans-serif;
-    --font-planar-regular: "WTF Regular", sans-serif;
-    --font-super-italic: "WTF Italic", sans-serif;
+    --font-wtf-light: "WTF Light", sans-serif;
+    --font-wtf-regular: "WTF Regular", sans-serif;
+    --font-wtf-italic: "WTF Italic", sans-serif;
 
     --title-large: 80px;
     --title-medium: 64px;

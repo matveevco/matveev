@@ -9,7 +9,7 @@ const CardImage = ({ content, useLink }) => {
 
   const WrapperComponent = useLink ? "a" : "div";
   const wrapperProps = useLink
-    ? { href: link, className: classes }
+    ? { href: `article/${link}`, className: classes }
     : { className: classes };
 
   return (

@@ -1,6 +1,6 @@
 import { useEffect, useCallback } from "react";
 
-export const useColorChangeEffect = () => {
+export const useColorChangeEffect = (initialColorClass) => {
   const colorClasses = [
     { className: "s-orange", color: "var(--color-tint-orange-100)" },
     { className: "s-blue", color: "var(--color-tint-blue-100)" },
@@ -34,11 +34,20 @@ export const useColorChangeEffect = () => {
   }, [colorClasses]);
 
   useEffect(() => {
+    if (initialColorClass) {
+      const initialColor = colorClasses.find(
+        (c) => c.className === initialColorClass,
+      )?.color;
+      if (initialColor) {
+        document.body.style.backgroundColor = initialColor;
+      }
+    }
+
     const scrollHandler = () => handleScroll();
     window.addEventListener("scroll", scrollHandler);
 
     return () => {
       window.removeEventListener("scroll", scrollHandler);
     };
-  }, [handleScroll]);
+  }, [handleScroll, initialColorClass, colorClasses]);
 };

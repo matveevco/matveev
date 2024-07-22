@@ -16,7 +16,7 @@ const InfoModule = forwardRef((props, ref) => (
     </h1>
     <h1>
       In my free time, I{" "}
-      <span className="highlight-gradient-one-text">love coding.</span> I'm
+      <span className="highlight-gradient-three-text">love coding.</span> I'm
       developing the CHSL app for fun times with friends and TaxKeeper for small
       businesses in the UK.
     </h1>

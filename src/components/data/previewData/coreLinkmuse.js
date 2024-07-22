@@ -11,7 +11,7 @@ const previewLinkmuse = [
     companyLogos: [
       {
         alt: "linkmuse",
-        src: "images/icons/icon-logo-linkmuse.svg",
+        src: "/images/icons/icon-logo-linkmuse.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-linkmuse"],
@@ -37,7 +37,7 @@ const previewLinkmuse = [
     companyLogos: [
       {
         alt: "linkmuse",
-        src: "images/icons/icon-logo-linkmuse.svg",
+        src: "/images/icons/icon-logo-linkmuse.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-linkmuse"],
@@ -63,7 +63,7 @@ const previewLinkmuse = [
     companyLogos: [
       {
         alt: "linkmuse",
-        src: "images/icons/icon-logo-linkmuse.svg",
+        src: "/images/icons/icon-logo-linkmuse.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-linkmuse"],
@@ -90,7 +90,7 @@ const previewLinkmuse = [
     companyLogos: [
       {
         alt: "linkmuse",
-        src: "images/icons/icon-logo-linkmuse.svg",
+        src: "/images/icons/icon-logo-linkmuse.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-linkmuse"],
@@ -117,7 +117,7 @@ const previewLinkmuse = [
     companyLogos: [
       {
         alt: "linkmuse",
-        src: "images/icons/icon-logo-linkmuse.svg",
+        src: "/images/icons/icon-logo-linkmuse.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-linkmuse"],

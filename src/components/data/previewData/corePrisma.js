@@ -11,14 +11,14 @@ const previewPrisma = [
     companyLogos: [
       {
         alt: "lensa",
-        src: "images/icons/icon-logo-lensa.svg",
+        src: "/images/icons/icon-logo-lensa.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-fix", "cl-prisma"],
       },
       {
         alt: "prisma",
-        src: "images/icons/icon-logo-prisma.svg",
+        src: "/images/icons/icon-logo-prisma.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-prisma"],
@@ -45,14 +45,14 @@ const previewPrisma = [
     companyLogos: [
       {
         alt: "lensa",
-        src: "images/icons/icon-logo-lensa.svg",
+        src: "/images/icons/icon-logo-lensa.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-fix", "cl-prisma"],
       },
       {
         alt: "prisma",
-        src: "images/icons/icon-logo-prisma.svg",
+        src: "/images/icons/icon-logo-prisma.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-prisma"],
@@ -79,21 +79,21 @@ const previewPrisma = [
     companyLogos: [
       {
         alt: "skim",
-        src: "images/icons/icon-logo-skim.svg",
+        src: "/images/icons/icon-logo-skim.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-fix-triple", "cl-prisma"],
       },
       {
         alt: "lensa",
-        src: "images/icons/icon-logo-lensa.svg",
+        src: "/images/icons/icon-logo-lensa.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-fix", "cl-prisma"],
       },
       {
         alt: "prisma",
-        src: "images/icons/icon-logo-prisma.svg",
+        src: "/images/icons/icon-logo-prisma.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-prisma"],
@@ -120,14 +120,14 @@ const previewPrisma = [
     companyLogos: [
       {
         alt: "lensa",
-        src: "images/icons/icon-logo-lensa.svg",
+        src: "/images/icons/icon-logo-lensa.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-fix", "cl-prisma"],
       },
       {
         alt: "prisma",
-        src: "images/icons/icon-logo-prisma.svg",
+        src: "/images/icons/icon-logo-prisma.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-prisma"],
@@ -154,7 +154,7 @@ const previewPrisma = [
     companyLogos: [
       {
         alt: "prisma",
-        src: "images/icons/icon-logo-prisma.svg",
+        src: "/images/icons/icon-logo-prisma.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-prisma"],
@@ -181,14 +181,14 @@ const previewPrisma = [
     companyLogos: [
       {
         alt: "lensa",
-        src: "images/icons/icon-logo-lensa.svg",
+        src: "/images/icons/icon-logo-lensa.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-fix", "cl-prisma"],
       },
       {
         alt: "prisma",
-        src: "images/icons/icon-logo-prisma.svg",
+        src: "/images/icons/icon-logo-prisma.svg",
         width: "32px",
         height: "32px",
         additionalClass: ["cl-prisma"],
