@@ -11,7 +11,7 @@ const Credits = forwardRef(({ card }, ref) => (
         during the development process.
       </div>
     </div>
-    <div className="section-row">
+    <div className="section-row ci-c-row-fix">
       <CardTextGroups cards={card} CardComponent={CardText} />
     </div>
   </div>

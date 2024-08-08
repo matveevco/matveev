@@ -7,7 +7,7 @@ const useCurrentSection = () => {
 
   const updateCurrentSection = useCallback(() => {
     const checkAndInitialize = () => {
-      const sections = document.querySelectorAll(".section, .visible-nav");
+      const sections = document.querySelectorAll(".nav-i");
 
       if (sections.length === 0) {
         console.error("Sections not found in the document");
@@ -25,7 +25,7 @@ const useCurrentSection = () => {
           .map((entry) => entry.target);
 
         const visibleNavSection = intersectingSections.find((section) =>
-          section.classList.contains("visible-nav"),
+          section.classList.contains("nav-i"),
         );
 
         setCurrentSection(
@@ -40,7 +40,7 @@ const useCurrentSection = () => {
     };
 
     const intervalId = setInterval(() => {
-      if (document.querySelectorAll(".section, .visible-nav").length > 0) {
+      if (document.querySelectorAll(".nav-i").length > 0) {
         clearInterval(intervalId);
         checkAndInitialize();
       }

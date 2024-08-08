@@ -1,14 +1,15 @@
-import React, { useEffect, lazy, Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate,
-  useLocation,
-} from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { NavigationProvider } from "./components/automation/hooks/NavigationContext";
+import useRouteState from "./components/automation/hooks/useRouteState";
 import "./global.css";
 import "./index.css";
+import "./mobile.css";
+import App from "./components/App";
+import ArticleLayout from "./components/system/templates/ArticleLayout";
+import NoMatch from "./components/system/templates/NoMatch";
 import NavTop from "./components/system/molecules/NavigationTop";
 
 const NavSide = lazy(
@@ -18,28 +19,8 @@ const NavBottom = lazy(
   () => import("./components/system/molecules/NavigationBottom"),
 );
 
-import App from "./components/App";
-import ArticleLayout from "./components/system/templates/ArticleLayout";
-import NoMatch from "./components/system/templates/NoMatch";
-import {
-  NavigationProvider,
-  addNavigation,
-} from "./components/automation/functions/addNavigationContext";
-
-const MainApp = () => {
-  const location = useLocation();
-  const { setIsApp } = addNavigation();
-  const isAppRoute = location.pathname === "/";
-  const isArticleRoute = location.pathname.startsWith("/article/");
-  const isNoMatchRoute = !isAppRoute && !isArticleRoute;
-
-  useEffect(() => {
-    setIsApp(isAppRoute || isNoMatchRoute);
-  }, [isAppRoute, isArticleRoute, isNoMatchRoute, setIsApp]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
+const General = () => {
+  useRouteState();
 
   return (
     <>
@@ -55,6 +36,7 @@ const MainApp = () => {
         <Route path="/article/:articleID" element={<ArticleLayout />} />
         <Route path="*" element={<NoMatch />} />
       </Routes>
+      <Analytics />
     </>
   );
 };
@@ -65,7 +47,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <NavigationProvider>
-        <MainApp />
+        <General />
       </NavigationProvider>
     </BrowserRouter>
   </React.StrictMode>,

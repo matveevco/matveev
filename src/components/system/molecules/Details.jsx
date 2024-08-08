@@ -3,7 +3,7 @@ import DetailsCompany from "./DetailsCompany";
 import DetailsTags from "./DetailsTags";
 import DetailsCaptions from "./DetailsCaptions";
 
-const Details = ({ useLink = true, content, animate }) => {
+const Details = ({ useLink = true, content, animate, index, newIndex }) => {
   const {
     link,
     title,
@@ -23,7 +23,14 @@ const Details = ({ useLink = true, content, animate }) => {
 
   return (
     <WrapperComponent {...wrapperProps}>
-      <div className="section-info-top">
+      <div
+        className="section-info-top"
+        style={{
+          position: "relative",
+          left: newIndex === index ? "0px" : "-40px",
+          transition: "left 0.35s ease-out",
+        }}
+      >
         <DetailsCompany
           companyLogos={companyLogos}
           companyName={companyName}
@@ -34,7 +41,14 @@ const Details = ({ useLink = true, content, animate }) => {
           <DetailsTags animate={animate} tags={tags} />
         </div>
       </div>
-      <div className="section-info-bottom">
+      <div
+        className="section-info-bottom"
+        style={{
+          position: "relative",
+          left: newIndex === index ? "0px" : "-40px",
+          transition: "left 0.45s ease-out",
+        }}
+      >
         <h3>{subTitle}</h3>
         <div className="section-info-row">
           {awesomeness.map((text, index) => (

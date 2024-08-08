@@ -1,4 +1,4 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useRef } from "react";
 import ButtonCopy from "../atoms/ButtonCopy";
 import DetailsCompany from "./DetailsCompany";
 import DetailsTags from "./DetailsTags";
@@ -33,7 +33,7 @@ const HeaderArticle = forwardRef(
     }
 
     return (
-      <div className="content-info compHide" ref={ref}>
+      <div className="content-info compHide " ref={ref}>
         <div className="section-info-top content-info-left">
           <DetailsCompany
             companyLogos={companyLogos || []}
@@ -47,7 +47,7 @@ const HeaderArticle = forwardRef(
             <DetailsTags animate={animateChange} tags={tags} />
           </div>
         </div>
-        <div className="content-info-right">
+        <div className="content-info-right cir-b-fix">
           <ButtonCopy
             title="Share"
             link={linkButton}

@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { addNavigation } from "../../automation/functions/addNavigationContext";
+import { useNavigation } from "../../automation/hooks/NavigationContext";
 import useScrollProgress from "../../automation/hooks/useScrollProgress";
 import SmallButton from "../atoms/SmallButton";
 
@@ -11,11 +11,11 @@ const NavTop = () => {
     scrollToTop,
     handleNavigation,
     currentSection,
-  } = addNavigation();
+  } = useNavigation();
   const scrollWidth = useScrollProgress();
 
   const showTopNav = useMemo(
-    () => currentSection && currentSection.includes("visible-nav"),
+    () => currentSection && currentSection.includes("nav-i"),
     [currentSection],
   );
 
@@ -42,27 +42,31 @@ const NavTop = () => {
             title="Aleksei Matveev"
             className="bs-nlt-fix"
           />
-          <div
-            className={`separator s-a-default ${showTopNav ? showSeparator : ""}`}
-          ></div>
+          {isApp && (
+            <div
+              className={`separator s-a-default ${showTopNav ? showSeparator : ""}`}
+            ></div>
+          )}
         </div>
-        <div className={`nav-link-vis ${showTopNav ? showNavLinkVis : ""}`}>
-          <SmallButton
-            onClick={() => handleNavigation("works")}
-            title="Works"
-            className="bs-nlt-fix"
-          />
-          <SmallButton
-            onClick={() => handleNavigation("about")}
-            title="About"
-            className="bs-nlt-fix"
-          />
-          <SmallButton
-            onClick={() => handleNavigation("contacts")}
-            title="Contacts"
-            className="bs-nlt-fix"
-          />
-        </div>
+        {isApp && (
+          <div className={`nav-link-vis ${showTopNav ? showNavLinkVis : ""}`}>
+            <SmallButton
+              onClick={() => handleNavigation("works")}
+              title="Works"
+              className="bs-nlt-fix"
+            />
+            <SmallButton
+              onClick={() => handleNavigation("about")}
+              title="About"
+              className="bs-nlt-fix"
+            />
+            <SmallButton
+              onClick={() => handleNavigation("contacts")}
+              title="Contacts"
+              className="bs-nlt-fix"
+            />
+          </div>
+        )}
       </div>
       {!isApp && (
         <div

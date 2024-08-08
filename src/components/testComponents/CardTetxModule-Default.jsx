@@ -7,44 +7,24 @@ import useScrollHandler from "../../automation/hooks/useScrollHandler";
 import useAnimateChange from "../../automation/hooks/useAnimateChange";
 
 const CardTextModule = forwardRef(
-  (
-    {
-      content,
-      isActive,
-      scrollDirection,
-      idSection,
-      classSection,
-      index,
-      newIndex,
-    },
-    ref,
-  ) => {
-    const rowRef = useRef(null);
+  ({ content, isActive, scrollDirection }, ref) => {
+    const containerRef = useRef(null);
     const { currentContent, animateChange } = useAnimateChange(
       content[0],
       content,
     );
 
-    useUpdateHeight(rowRef);
-    useScrollHandler(rowRef, isActive, scrollDirection);
+    useUpdateHeight(containerRef);
+    useScrollHandler(containerRef, isActive, scrollDirection);
 
     return (
-      <div
-        className={`section visible-nav sd ${classSection}`}
-        id={idSection}
-        ref={ref}
-        style={{
-          opacity: newIndex === index ? 1 : 0,
-          zIndex: newIndex === index ? 3 : 2,
-        }}
-      >
-        <Details
-          content={currentContent}
-          animate={animateChange}
-          index={index}
-          newIndex={newIndex}
-        />
-        <div ref={rowRef} className={`section-row section-row-${index}`}>
+      <div className="section section-dark visible-nav" ref={ref}>
+        <Details content={currentContent} animate={animateChange} />
+        <div
+          ref={containerRef}
+          className="section-row"
+          style={{ overflowY: "auto" }}
+        >
           <CardTextGroups
             cards={currentContent.card}
             CardComponent={CardText}

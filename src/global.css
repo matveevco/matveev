@@ -1,15 +1,16 @@
-html {
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     scroll-behavior: smooth;
-    overflow-y: scroll;
 }
 
 body {
-    overflow-y: scroll;
-    margin: 0;
     line-height: normal;
     -webkit-font-smoothing: antialiased;
     background-color: var(--color-tint-orange-100);
-    /* transition: background-color 1s; */
+    transition: background-color 1s;
 }
 
 @font-face {
@@ -36,21 +37,33 @@ body {
     --font-wtf-italic: "WTF Italic", sans-serif;
 
     --title-large: 80px;
-    --title-medium: 64px;
-    --title-small: 40px;
-    --body-text: 24px;
-    --body-article: 24px;
-    --caption: 20px;
-    --button: 24px;
-    --button-small: 14px;
+    --title-large-x2: 72px;
+    --title-large-x3: 64px;
+    --title-large-x4: 44px;
 
-    --title-large-m: 36px;
-    --title-medium-m: 28px;
-    --title-small-m: 20px;
-    --body-text-m: 16px;
-    --body-article-m: 16px;
-    --caption-m: 16px;
-    --button-m: 20px;
+    --title-medium: 64px;
+    --title-medium-x2: 52px;
+    --title-medium-x3: 40px;
+    --title-medium-x4: 36px;
+
+    --title-small: 40px;
+    --title-small-x2: 32px;
+    --title-small-x3: 24px;
+
+    --body-text: 24px;
+    --body-text-x2: 20px;
+    --body-text-x3: 16px;
+
+    --body-article: 24px;
+    --body-article-x2: 20px;
+
+    --caption: 20px;
+    --caption-x2: 16px;
+
+    --button: 24px;
+    --button-x2: 20px;
+
+    --button-small: 14px;
 
     /* colors */
     --color-tint-pink-100: rgba(237, 226, 237, 1);

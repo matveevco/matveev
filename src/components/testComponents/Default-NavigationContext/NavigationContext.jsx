@@ -5,13 +5,13 @@ import React, {
   useState,
   useEffect,
 } from "react";
-import useDarkSection from "../hooks/useDarkSection";
-import useScroll from "../hooks/useScroll";
-import useNavigationHandler from "../hooks/useNavigationHandler";
-import useIntersectionObserver from "../hooks/useIntersectionObserver";
-import useCurrentSection from "../hooks/useCurrentSection";
-import useScrollStopEffect from "../hooks/useScrollStopEffect";
-import usePopStateEffect from "../hooks/usePopStateEffect";
+import useDarkSection from "./useDarkSection";
+import useScroll from "./useScroll";
+import useNavigationHandler from "./useNavigationHandler";
+import useIntersectionObserver from "./useIntersectionObserver";
+import useCurrentSection from "./useCurrentSection";
+import useScrollStopEffect from "./useScrollStopEffect";
+import usePopStateEffect from "./usePopStateEffect";
 
 const NavigationContext = createContext();
 

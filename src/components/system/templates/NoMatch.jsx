@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { addNavigation } from "../../automation/functions/addNavigationContext";
-import { useColorChangeEffect } from "../../automation/functions/addColorChange";
+import { useNavigation } from "../../automation/hooks/NavigationContext";
+import { useColorChangeEffect } from "../../automation/hooks/useColorChange";
 
 const NoMatch = () => {
   useColorChangeEffect("s-dark");

@@ -1,17 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 const useIntersectionFadeIn = (ref) => {
   const [lastScrollTop, setLastScrollTop] = useState(0);
 
-  useEffect(() => {
-    const initializeObserver = () => {
-      const element = ref.current;
-
-      if (!element) {
-        console.error("Ref is not attached to any element");
-        return;
-      }
-
+  const initializeObserver = useCallback(
+    (element) => {
       const handleIntersect = (entries) => {
         const scrollTop = window.scrollY || document.documentElement.scrollTop;
 
@@ -22,18 +15,15 @@ const useIntersectionFadeIn = (ref) => {
             entry.target.classList.add("compVisible");
             entry.target.classList.remove("compHideT");
           } else {
-            if (isScrollingDown) {
-              if (entry.boundingClientRect.top < 0) {
-                entry.target.classList.add("compHideT");
-              }
-              entry.target.classList.remove("compVisible");
-            } else {
-              if (entry.boundingClientRect.bottom > window.innerHeight) {
-                entry.target.classList.remove("compVisible", "compHideT");
-              } else {
-                entry.target.classList.remove("compVisible");
-              }
+            if (isScrollingDown && entry.boundingClientRect.top > 0) {
+              entry.target.classList.add("compHideT");
+            } else if (
+              !isScrollingDown &&
+              entry.boundingClientRect.bottom < window.innerHeight
+            ) {
+              entry.target.classList.add("compHideT");
             }
+            entry.target.classList.remove("compVisible");
           }
         });
 
@@ -49,21 +39,26 @@ const useIntersectionFadeIn = (ref) => {
       return () => {
         observer.disconnect();
       };
-    };
+    },
+    [lastScrollTop],
+  );
 
-    const mutationObserver = new MutationObserver(() => {
-      if (ref.current) {
-        initializeObserver();
-        mutationObserver.disconnect();
-      }
-    });
+  useEffect(() => {
+    if (ref.current) {
+      initializeObserver(ref.current);
+    } else {
+      const observer = new MutationObserver(() => {
+        if (ref.current) {
+          initializeObserver(ref.current);
+          observer.disconnect();
+        }
+      });
 
-    mutationObserver.observe(document.body, { childList: true, subtree: true });
+      observer.observe(document.body, { childList: true, subtree: true });
 
-    return () => {
-      mutationObserver.disconnect();
-    };
-  }, [ref, lastScrollTop]);
+      return () => observer.disconnect();
+    }
+  }, [ref, initializeObserver]);
 
   return null;
 };

@@ -16,6 +16,8 @@ const ArticleDynamicLoader = ({ componentName, data }) => {
   const fadeInRef = useRef(null);
   useIntersectionFadeIn(fadeInRef);
 
+  console.log(fadeInRef);
+
   if (!Component) {
     return null;
   }

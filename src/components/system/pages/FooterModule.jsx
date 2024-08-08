@@ -3,7 +3,7 @@ import Button from "../atoms/Button";
 import ButtonCopy from "../atoms/ButtonCopy";
 
 const FooterModule = forwardRef((props, ref) => (
-  <div id="contacts" className="heading section-dark" ref={ref}>
+  <div className="heading section-dark hf" ref={ref}>
     <div className="heading-row">
       <h1>
         Imagine all the{" "}

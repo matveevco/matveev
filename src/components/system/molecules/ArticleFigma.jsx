@@ -20,7 +20,7 @@ const Figma = forwardRef(({ shareLink, iframeLink }, ref) => (
         rel="noopener noreferrer"
       />
     </div>
-    <div className="section-row">
+    <div className="section-row ci-f-fix">
       <Squircle
         className="section-img si-figma"
         cornerRadius={40}

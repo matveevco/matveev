@@ -2,16 +2,16 @@ import React, { useEffect, lazy, Suspense, startTransition } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigation } from "../../automation/hooks/NavigationContext";
 import { useColorChangeEffect } from "../../automation/hooks/useColorChange";
-import useHeaderArticleData from "../../automation/hooks/useHeaderArticleData";
+import articles from "../../data/articleData";
+import preview from "../../data/previewData";
 import ArticleDynamicLoader from "../organisms/ArticleDynamicLoader";
 
 const FooterModule = lazy(() => import("../pages/FooterModule"));
 
 const ArticleLayout = () => {
-  const { navRef, resetDarkSectionOn } = useNavigation();
+  const { navRef, resetDarkSectionOn, handleNavigation } = useNavigation();
   const { articleID } = useParams();
-  const { articleComponents, componentsToLoad } =
-    useHeaderArticleData(articleID);
+  const articleComponents = articles[articleID];
 
   useColorChangeEffect();
 
@@ -21,7 +21,33 @@ const ArticleLayout = () => {
     });
   }, [resetDarkSectionOn]);
 
-  if (!articleComponents) {
+  const headerData = preview
+    ? preview.find((info) => info.link === articleID)
+    : null;
+
+  const headerArticleFromArticles = articleComponents
+    ? articleComponents.find((comp) => comp.componentName === "HeaderArticle")
+    : null;
+
+  const headerArticleData =
+    headerData && headerArticleFromArticles
+      ? {
+          componentName: "HeaderArticle",
+          ...headerData,
+          ...headerArticleFromArticles,
+        }
+      : null;
+
+  const componentsToLoad = headerArticleData
+    ? [
+        headerArticleData,
+        ...articleComponents.filter(
+          (comp) => comp.componentName !== "HeaderArticle",
+        ),
+      ]
+    : [];
+
+  if (!articleComponents || !headerData) {
     return null;
   }
 

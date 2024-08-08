@@ -4,18 +4,38 @@ const useScrollProgress = () => {
   const [scrollWidth, setScrollWidth] = useState(0);
 
   const handleScroll = useCallback(() => {
-    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-    const totalHeight = scrollHeight - clientHeight;
-    const scrolledHeight = scrollTop;
-    const width = (scrolledHeight / totalHeight) * 100;
-    setScrollWidth(width);
+    const bodyTrack = document.querySelector(".body-track");
+    if (bodyTrack) {
+      const { scrollTop, scrollHeight, clientHeight } = bodyTrack;
+      const totalHeight = scrollHeight - clientHeight;
+      const scrolledHeight = scrollTop;
+      const width = (scrolledHeight / totalHeight) * 100;
+      setScrollWidth(width);
+    }
   }, []);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    let ticking = false;
+
+    const handleScrollThrottled = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    const bodyTrack = document.querySelector(".body-track");
+    if (bodyTrack) {
+      bodyTrack.addEventListener("scroll", handleScrollThrottled);
+    }
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (bodyTrack) {
+        bodyTrack.removeEventListener("scroll", handleScrollThrottled);
+      }
     };
   }, [handleScroll]);
 
