@@ -13,25 +13,27 @@ const CardImage = ({ content, useLink }) => {
     : { className: classes };
 
   return (
-    <Squircle
-      as={WrapperComponent}
-      {...wrapperProps}
-      cornerRadius={40}
-      cornerSmoothing={1}
-      preserveSmoothing={true}
-    >
-      <img
-        className="object-image"
-        loading="lazy"
-        src={imageSrc}
-        alt={imageAlt}
-        width={imageWidth}
-        height={imageHeight}
-      />
-      <div className="button-icon bi-dark">
-        <IconArrowRotate />
-      </div>
-    </Squircle>
+    <div>
+      <Squircle
+        as={WrapperComponent}
+        {...wrapperProps}
+        cornerRadius={40}
+        cornerSmoothing={1}
+        preserveSmoothing={true}
+      >
+        <img
+          className="object-image"
+          loading="lazy"
+          src={imageSrc}
+          alt={imageAlt}
+          width={imageWidth}
+          height={imageHeight}
+        />
+        <div className="button-icon bi-dark">
+          <IconArrowRotate />
+        </div>
+      </Squircle>
+    </div>
   );
 };
 
