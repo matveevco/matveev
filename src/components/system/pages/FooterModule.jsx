@@ -29,7 +29,7 @@ const FooterModule = forwardRef((props, ref) => (
       />
       <Button
         title="LinkedIn"
-        link=""
+        link="https://www.linkedin.com/in/matveevco/"
         icon="rotate"
         additionalClass="bi-dark"
         target="_blank"

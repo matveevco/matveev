@@ -51,6 +51,7 @@ const HeaderArticle = forwardRef(
           <ButtonCopy
             title="Share"
             link={linkButton}
+            additionalClass="bi-dark"
             target="_blank"
             rel="noopener noreferrer"
           />

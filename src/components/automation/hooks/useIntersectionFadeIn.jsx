@@ -31,7 +31,7 @@ const useIntersectionFadeIn = (ref) => {
       };
 
       const observer = new IntersectionObserver(handleIntersect, {
-        threshold: 0.4,
+        threshold: 0.2,
       });
 
       observer.observe(element);

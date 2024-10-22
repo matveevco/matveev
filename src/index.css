@@ -269,8 +269,9 @@ h3 {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: var(--padding-2xl) var(--padding-3l) var(--padding-xl);
+    justify-content: flex-end;
+    padding: 0 var(--padding-3l) var(--padding-xl);
+    /* padding: var(--padding-2xl) var(--padding-3l) var(--padding-xl); */
     box-sizing: border-box;
     gap: var(--gap-xxxl);
     position: relative !important;
@@ -395,7 +396,7 @@ h3 {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: var(--gap-s);
+    gap: var(--gap-m);
 }
 
 .button-link {
@@ -405,8 +406,8 @@ h3 {
 .button {
     font-family: var(--font-wtf-regular);
     font-size: var(--button);
-    color: var(--color-white-100);
-    background-color: var(--color-dark-100);
+    color: var(--color-dark-100);
+    background-color: var(--color-dark-8);
     padding: var(--padding-m) var(--padding-m) var(--padding-m) var(--padding-l);
     gap: var(--gap-m);
     text-decoration: none;
@@ -457,17 +458,17 @@ h3 {
 }
 
 .button:hover {
-    background-color: var(--color-dark-90);
+    background-color: var(--color-dark-10);
     transition: background-color 0.1s ease-out;
 }
 
 .button:hover .button-icon {
-    border: 1px solid var(--color-white-20);
+    border: 1px solid var(--color-dark-20);
     transition: border 0.1s ease-out;
 }
 
 .button:active .button-icon {
-    border: 1px solid var(--color-white-10);
+    border: 1px solid var(--color-dark-10);
 }
 
 .button:active .button-icon .icon-fill {
@@ -746,11 +747,11 @@ h3 {
 }
 
 .cl-vtb {
-    background-color: var(--color-tint-blue-100);
+    background-color: transparent;
 }
 
 .cl-linkmuse {
-    background-color: var(--color-tint-pink-100);
+    background-color: transparent;
 }
 
 .icon-logo {
@@ -1055,22 +1056,32 @@ h3 {
     padding: 0;
 }
 
+.section-dark .bi-dark {
+    background-color: var(--color-white-8);
+    border: 1px solid var(--color-white-8);
+    transition: border 0.2s ease-out;
+}
+
+.section-dark .bi-dark .icon-fill path {
+    fill: var(--color-white-100);
+}
+
 .section-dark .button-row .button {
-    color: var(--color-dark-100);
-    background-color: var(--color-white-100);
+    color: var(--color-white-100);
+    background-color: var(--color-white-8);
 }
 
 .section-dark .button:hover .bi-dark {
-    border: 1px solid var(--color-dark-20);
+    border: 1px solid var(--color-white-20);
     transition: border 0.1s ease-out;
 }
 
 .section-dark .button:active .bi-dark {
-    border: 1px solid var(--color-dark-10);
+    border: 1px solid var(--color-white-10);
 }
 
 .section-dark .button:hover {
-    background-color: var(--color-white-90);
+    background-color: var(--color-white-10);
     transition: background-color 0.1s ease-out;
 }
 
@@ -1275,12 +1286,12 @@ h3 {
 }
 
 .credits:hover .section-img-button .button-icon {
-    border: 1px solid var(--color-dark-20);
+    border: 1px solid var(--color-white-20);
     transition: border 0.1s ease-out;
 }
 
 .credits:active .section-img-button .button-icon {
-    border: 1px solid var(--color-dark-10);
+    border: 1px solid var(--color-white-10);
 }
 
 .credits:active .section-img-button .button-icon .icon-fill {

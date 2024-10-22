@@ -3,7 +3,7 @@ import Button from "../atoms/Button";
 
 const HeaderModule = () => {
   return (
-    <div className="heading s-orange">
+    <div className="heading hf s-orange">
       <div className="heading-row">
         <h1>
           Hi, I’m Aleksei a{" "}
@@ -12,7 +12,7 @@ const HeaderModule = () => {
           </span>
         </h1>
         <h1>
-          My passion is to gather and analyse data to{" "}
+          My passion is to gather and analyse data to{" "}
           <span className="highlight-gradient-one-text">
             drive products
           </span>{" "}
@@ -26,13 +26,15 @@ const HeaderModule = () => {
           title="Download CV"
           link=""
           icon="down"
+          additionalClass="bi-dark"
           target="_blank"
           rel="noopener noreferrer"
         />
         <Button
           title="LinkedIn"
-          link=""
+          link="https://www.linkedin.com/in/matveevco/"
           icon="rotate"
+          additionalClass="bi-dark"
           target="_blank"
           rel="noopener noreferrer"
         />

@@ -4,187 +4,190 @@ const articlePrismaFAQ = [
     linkButton: "/",
   },
   {
-    componentName: "Image",
-    imageSRC: "/images/articles/prisma-faq/iA1.webp",
+    imageSRC: "/images/articleContent/pl-a1-faq/iA1.webp",
     imageWidth: "3072px",
     imageHeight: "1520px",
+    componentName: "Image",
   },
   {
+    title: "The problem of «Understandability» in the product",
+    content: [
+      "It is known that users begin to have questions about using the product, the answers to which they can only get from tech support. But what if there are more than a million users and the support team runs out of resources for a quick response?",
+      "Different solutions can be provided, depending on the type and frequency of the problem. However, if we generalise, we can be helped by Onboarding, Tooltips, Badges, Popups, and Bottom Sheets — any interaction that doesn't complicate the experience and informs the user about a feature as clearly as possible.",
+      "Some will say that instead of information complications, it is better to make everything clear and convenient at once, but «Understandability» cannot be tracked either qualitatively or quantitatively. There is always a group of people who either don't understand what and how it works or aren't interested in how it can work.",
+      "For this purpose, products develop a separate section dedicated to frequently asked questions, where information about the product and its functions is placed, i.e., F.A.Q.",
+    ],
     componentName: "Paragraph",
-    title: "The user's path to payment",
+  },
+  {
+    title: "Workload on tech support",
     content:
-      "Once the user installs the app, there is a definite path to payment, with the user's objectives and value identified, there is a good chance that they will come back to the app and eventually make a payment. But how do you explain the value of a product if it's not visible or little noticeable at the first interaction? Through activation, more specifically onboarding.",
+      "Lensa has a fairly simple editor interface, in which it is hard to get lost because of the familiar behavioural patterns of similar apps. By exploring the app in real time, and trying out certain features, it should be easy to learn it.",
+    componentName: "Paragraph",
   },
   {
+    imageSRC: "/images/articleContent/pl-a1-faq/iA2.webp",
+    imageWidth: "3072px",
+    imageHeight: "1520px",
     componentName: "Image",
-    imageSRC: "/images/articles/prisma-faq/iA2.svg",
-    imageWidth: "1278px",
-    imageHeight: "432px",
   },
   {
-    componentName: "Paragraph",
     content: [
-      "The success of onboarding (aka First-Time User Experience, FTUE) is determined by the percentage of users who figure out how to use the app in the first session (The audience that interacts with onboarding is 100%).",
-      "Therefore, in order to better communicate the functionality of the app and motivate people to use it, we resorted to experimenting with new onboarding in Prisma, where we decided to display not only styles, but also additional features of the app - frames, background swapping, segmentation, with a separate focus on having unique portrait styles.",
+      "However, it isn't that simple. The problem came about because of two factors.",
+      "Firstly, the workload on the support team exceeded the acceptable capabilities. Secondly, there were many questions that couldn't be answered by the usual interaction, so the implementation of F.A.Q. was an elegant solution.",
     ],
-  },
-  {
-    componentName: "Paragraph_and_Image",
-    imageSRC: "/images/articles/prisma-faq/iA3.webp",
-    imageWidth: "1520px",
-    imageHeight: "1520px",
-    title: "Hypothesis about user motivation",
-    content: [
-      "We knew from current data that Prisma onboarding was most often interacted with in step two and step three by 40.5% and 25.9% of users respectively.",
-      "We planned to continue tracking CR (Conversion Rate) in the walkthrough up to the trial subscription. We were also curious about the impact of the updated version on the interaction with the app's functionality, such as whether saving photos using the tools increases.",
-    ],
-  },
-  {
-    componentName: "Paragraph",
-    content: [
-      "So, we put together an interactive prototype with feature visualisations. Given that the toolset of the app had time to expand, it was crucial for us to explain all this in simple and clear language.",
-      "Our main hypothesis was that the user would be more interested in going through the steps, more loyal to the purchase decision, and more motivated to use the photo settings for a better result if they could try out the application tools right in the onboarding stages without much difficulty.",
-    ],
-  },
-  {
-    componentName: "Paragraph_and_Image",
-    imageSRC: "/images/articles/prisma-faq/iA4.webp",
-    imageWidth: "1520px",
-    imageHeight: "1520px",
-    title: "The hypothesis was initially arrived at because of:",
-    contentList: {
-      list: [
-        "A successful experiment with onboarding in Lensa;",
-        "Good performance in using the new portrait styles (And we wanted to tell everyone who hasn't tried them yet);",
-        "Fears of a dramatic effect with the purchase of traffic.",
-      ],
-    },
-  },
-  {
-    componentName: "Paragraph_and_Image",
-    imageSRC: "/images/articles/prisma-faq/iA5.webp",
-    imageWidth: "1520px",
-    imageHeight: "1520px",
-    title: "Interaction experience",
-    content: [
-      "For a more appropriate view of the changes in the photo, cards were chosen, alternating active actions as the scenario unfolded, so as not to be static and boring. And although the onboarding was rebuilt from scratch, it still replicated the classic interaction experience, making the negative consequences of the update, like getting lost and misunderstood, quite impossible for us to avoid.",
-      "In addition to telling the story of the tools visually, copywriting was also promoted and descriptions were added to reveal product features to new users, but in moderation. As we knew from previous experiments, almost no one in our audience read long texts, and if they did, they ended up not remembering the information we wanted to convey to them.",
-    ],
-  },
-  {
-    componentName: "Paragraph",
-    title: "Reducing CR in trial subscriptions",
-    content: [
-      "We ran the experiment on 50% of the audience as an A/B test, which ran for 3 weeks and affected around 600k users. The expected results didn't materialise, but to understand what exactly went wrong we should look at the numbers.",
-      "We noticed a strong increase in onboarding skips from the second and third step by a factor of 1.39 from 56% to 78% and 1.09 from 83% to 91% respectively. This was most likely influenced by informing users about the steps with dots at the bottom of the screen. Many customers don't want to go into detail, but instead have a desire to start using the app as soon as possible, so this is perfectly normal behaviour.",
-      "Skipping steps like this also led to a 2.62x reduction in trial subscription CR, from 13.1% to 5%, because users couldn't assess whether to subscribe to an app, they weren't even familiar with yet.",
-    ],
-  },
-  {
-    componentName: "Image",
-    imageSRC: "/images/articles/prisma-faq/iA6.svg",
-    imageWidth: "1278px",
-    imageHeight: "432px",
-  },
-  {
-    componentName: "Paragraph",
     contentList: {
       content:
-        "But there were some good results related to the audience who had gone through onboarding in full. For example, users who viewed how features were applied in the editor were more likely to save photos using the tools and subsequently had a positive RR (Retention Rate). When comparing the overall data and the data of this group, we can see an increase in the following metrics:",
+        "The final goal was to reduce the number of routine support tickets by developing a section in the settings where the user could find answers to the most popular questions:",
       list: [
-        "Applying style to the photo by a factor of 1.04 from 79% to 82.4%;",
-        "Use of portrait styles 1.31 times from 19% to 25%;",
-        "Use of frames 1.2 times from 9% to 11%;",
-        "Use of segmentation 1.1 times from 51% to 57%;",
-        "Changing backgrounds 1.06 times from 47% to 50%.",
+        "How to edit photos;",
+        "How to manage subscriptions;",
+        "Why there are no necessary functions;",
+        "Why something doesn't work.",
       ],
     },
-  },
-  {
-    componentName: "Image",
-    imageSRC: "/images/articles/prisma-faq/iA7.svg",
-    imageWidth: "1278px",
-    imageHeight: "432px",
-  },
-  {
     componentName: "Paragraph",
-    title: "Integration of internal onboarding",
-    content: [
-      "The experiment was unsuccessful because we were losing a large proportion of clients who missed the training. This update was negatively impacting both business and product metrics, but we couldn't get customers to stop, or remove the skip button, because the main goal of product design at Prisma Labs was product friendliness and responsiveness.",
-      "So, we decided to launch a second experiment afterwards, which had been lying on the shelf for a long time and needed only minor tweaks. They didn't want to take it on for a long time because of the large backlog for testing, but at that moment everything worked out perfectly.",
-      "The experiment consisted of removing external onboarding, which most users miss, and integrating internal onboarding, which immersed the client into the application's functionality with the client's own hands.",
-    ],
   },
   {
-    componentName: "Paragraph_and_Image",
-    imageSRC: "/images/articles/prisma-faq/iA8.webp",
+    imageSRC: "/images/articleContent/pl-a1-faq/iA3.webp",
     imageWidth: "1520px",
     imageHeight: "1520px",
-    title:
-      "Humans tend to remember things in practice, so the hypothesis consisted of several steps:",
-    contentList: {
-      list: [
-        "The user enters the app without an imposed instruction or subscription sale;",
-        "The user selects the photo they want to edit;",
-        "The user enters the editor where we help them diversify the photo with different features;",
-        "The user remembers what is where by clicking on the tools and applying them;",
-        "The user saves the result, shares it with their friends and starts the circle all over again, but without our tips because they've got it all figured out;",
-        "Experiments with photos evoke positive emotions in the user, and when they reach certain limits in the app, they sign up for a trial period or buy a full subscription.",
-      ],
-    },
+    componentName: "Paragraph_and_Image",
   },
   {
-    componentName: "Paragraph",
-    content:
-      "The Photo Instruction Flow was redesigned for the current version of the product and ran a 4-week A/B test on 50% of the audience. Metrics decided to track the same, as these were the ones predicted to grow significantly.",
-  },
-  {
-    componentName: "Paragraph",
-    title: "Successful onboarding without skipping steps",
-    content:
-      "In this version, onboarding did not involve skipping steps and trial subscriptions, so there was no point in tracking these metrics. But trial subscriptions increased 1.35-fold from 13.1% to 17.8%, and bounce rates after the trial decreased 1.29-fold from 42% to 32.5%.",
-  },
-  {
-    componentName: "Image",
-    imageSRC: "/images/articles/prisma-faq/iA9.svg",
-    imageWidth: "1278px",
-    imageHeight: "432px",
-  },
-  {
-    componentName: "Paragraph",
+    title: "Foundations for creating F.A.Q",
     contentList: {
       content:
-        "Not only did conversion to subscriptions increase, but also tool usage:",
+        "All requirements were formed based on F.A.Q. research of other applications:",
       list: [
-        "Applying a style to a photo 1.12x from 79% to 89.1%;",
-        "Use of portrait styles 2.21 times from 19% to 42%;",
-        "Use of frames 1.9 times from 9% to 17%;",
-        "Use of segmentation 1.35 times from 51% to 69.2%;",
-        "Change of background 1.31 times from 47% to 62%.",
+        "Some divided support into sections (chat, feedback and questions/answers);",
+        "Others used articles (what's new and searchable guides by topic).",
       ],
     },
+    componentName: "Paragraph",
   },
   {
+    imageSRC: "/images/articleContent/pl-a1-faq/iA4.webp",
+    imageWidth: "3072px",
+    imageHeight: "1520px",
     componentName: "Image",
-    imageSRC: "/images/articles/prisma-faq/iA10.svg",
+  },
+  {
+    contentList: {
+      content: "We wanted something that:",
+      list: [
+        "Accessible in a minimum number of steps;",
+        "Presents simply and straightforwardly;",
+        "Presents in large units with topics, a list of questions and answers;",
+        "Contains emoji as an evaluation metric;",
+        "Drives the user to the support team if an answer hasn't been found;",
+        "Can provide ongoing support and maintain relevance independent of release.",
+      ],
+    },
+    componentName: "Paragraph",
+  },
+  {
+    title: "Discussion of implementation",
+    content:
+      "By the time of discussions, all the copywriting for the F.A.Q. was already finished, so the main discussions were about implementation: whether to upload all the assets to the server or to store them in a downloadable build, and how to visualise them: a one-page sheet with a search or an accordion for each question.",
+    componentName: "Paragraph",
+  },
+  {
+    imageSRC: "/images/articleContent/pl-a1-faq/iA5.webp",
+    imageWidth: "3072px",
+    imageHeight: "1520px",
+    componentName: "Image",
+  },
+  {
+    content:
+      "While the benefits of keeping everything in the build exceeded the disadvantages, the visualisation bounced from one to the other until it was decided to use paginated navigation through grouped tables on iOS and lists on Android, replicating the native settings from which the questions were to be accessed.",
+    componentName: "Paragraph",
+  },
+  {
+    imageSRC: "/images/articleContent/pl-a1-faq/iA6.webp",
+    imageWidth: "3072px",
+    imageHeight: "1520px",
+    componentName: "Image",
+  },
+  {
+    title: "Technical implementation",
+    content:
+      "The section was full of features: 5 topics that clearly explain all the features of the application, 17 questions, more than 30 answers and images available in a couple of actions.",
+    componentName: "Paragraph",
+  },
+  {
+    imageSRC: "/images/articleContent/pl-a1-faq/iA7.webp",
+    imageWidth: "3072px",
+    imageHeight: "1520px",
+    componentName: "Image",
+  },
+  {
+    content: [
+      "During the technical implementation, F.A.Q. managed to grow almost 2 times and got an additional functionality called «Question Tree», which helps to navigate through F.A.Q. topics faster and is activated only when the user communicates with the support team.",
+      "In the future, it is planned to expand the functionality with experiments to improve user experience and work with commercial offers.",
+    ],
+    componentName: "Paragraph",
+  },
+  {
+    imageSRC: "/images/articleContent/pl-a1-faq/iA8.webp",
+    imageWidth: "3072px",
+    imageHeight: "1520px",
+    componentName: "Image",
+  },
+  {
+    title: "F.A.Q usage analysis",
+    content: [
+      "After the release of F.A.Q. it became much easier for the technical support to handle Lensa requests. The figures clearly show the number of requests for «Subscription is 2x less, from ~330 to ~130 tickets per month» and «Face Detection is 4x less, from ~40 to ~10 tickets per month».",
+      "It also became known that between March and May, ~5,000 unique users clicked on at least one of the F.A.Q. questions. (that's about 2% of all active new users), while the cumulative number of visits to all topics and questions already exceeds 3,000,000 requests.",
+    ],
+    contentList: {
+      content: "The most frequently read topics are:",
+      list: [
+        "Subscription - 39%;",
+        "Get to know Lensa - 39%;",
+        "I have a suggestion - 32%;",
+        "Some features aren't active - 23%;",
+        "Video - 17%.",
+      ],
+    },
+    componentName: "Paragraph",
+  },
+  {
+    imageSRC: "/images/articleContent/pl-a1-faq/iA9.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    componentName: "Image",
   },
   {
+    contentList: {
+      content: "Inside the Subscription topic, the most popular questions are:",
+      list: [
+        "Cancellation (58% of those who have interacted with subscription units);",
+        "The Trial (51% of those who have interacted with subscription units).",
+      ],
+    },
     componentName: "Paragraph",
-    content:
-      "As a result, we were able not only to increase the figures, but also to prove that it is possible to approach the problem from different angles. We will be able to find out how this solution will prove itself when increasing the functionality in the product only in the future.",
+  },
+  {
+    imageSRC: "/images/articleContent/pl-a1-faq/iA10.svg",
+    imageWidth: "1278px",
+    imageHeight: "432px",
+    componentName: "Image",
+  },
+  {
+    content: [
+      "Notably, of those who explored the Cancellation unit, 8% cancelled their subscription during the day (~100 out of ~1200).",
+      "In addition, the average ARR app score increased after release from 3.44 to 3.55, although the ANR app score itself is still 4.9.",
+    ],
+    componentName: "Paragraph",
   },
   {
     componentName: "Separator",
   },
   {
     componentName: "Figma",
-    shareLink:
-      "https://www.figma.com/design/2DqkI2r83wguUSkcBrAbKI/Prisma-Labs%3A-Why-F.A.Q.-is-important-and-how-we-have-integrated-it.?node-id=1-131&t=YjbVdia0B9dDREE2-1",
-    iframeLink:
-      // "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2F2DqkI2r83wguUSkcBrAbKI%2FPrisma-Labs%253A-Why-F.A.Q.-is-important-and-how-we-have-integrated-it.%3Fnode-id%3D1-131%26t%3DWN3qp109FIQGi79o-1",
-      "",
+    shareLink: "link",
+    iframeLink: "embedLink",
   },
   {
     componentName: "Separator",
@@ -193,45 +196,59 @@ const articlePrismaFAQ = [
     componentName: "Credits",
     card: [
       {
-        cardLogos: [
-          {
-            alt: "photo",
-            src: "/images/avatars/ava-am.webp",
-            width: "240px",
-            height: "240px",
-          },
-        ],
-        link: "https://www.linkedin.com/in/matveevco/",
         cardTitle: "Aleksei Matveev",
         cardDescription: "Senior Product Designer",
+        link: "https://www.linkedin.com/in/matveevco/",
+        cardLogos: [
+          {
+            src: "/images/articleAvatars/iA1.webp",
+            alt: "photo",
+            width: "288px",
+            height: "288px",
+          },
+        ],
         cardCaption: "LinkedIn",
       },
       {
+        cardTitle: "Sofiia Malyshko",
+        cardDescription: "Customer Support Specialist",
+        link: "https://www.linkedin.com/in/sofiia-malyshko/",
         cardLogos: [
           {
+            src: "/images/articleAvatars/iA2.webp",
             alt: "photo",
-            src: "/images/avatars/ava-ak.webp",
-            width: "240px",
-            height: "240px",
+            width: "288px",
+            height: "288px",
           },
         ],
-        link: "https://www.linkedin.com/in/alexkeda/",
+        cardCaption: "LinkedIn",
+      },
+      {
         cardTitle: "Aliaksei Keda",
         cardDescription: "Chief Design Officer",
+        link: "https://www.linkedin.com/in/alexkeda/",
+        cardLogos: [
+          {
+            src: "/images/articleAvatars/iA3.webp",
+            alt: "photo",
+            width: "288px",
+            height: "288px",
+          },
+        ],
         cardCaption: "LinkedIn",
       },
       {
+        cardTitle: "Aliona Slobodianiuk",
+        cardDescription: "Chief Product Officer",
+        link: "https://www.linkedin.com/in/aliona-slobodianiuk-product-lead/",
         cardLogos: [
           {
+            src: "/images/articleAvatars/iA4.webp",
             alt: "photo",
-            src: "/images/avatars/ava-as.webp",
-            width: "240px",
-            height: "240px",
+            width: "288px",
+            height: "288px",
           },
         ],
-        link: "https://www.linkedin.com/in/alena-slobodianiuk-a3250794/",
-        cardTitle: "Alena Slobodianiuk",
-        cardDescription: "Chief Product Officer",
         cardCaption: "LinkedIn",
       },
     ],

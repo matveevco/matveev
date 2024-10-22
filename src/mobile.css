@@ -15,9 +15,9 @@
         font-size: var(--body-text-x2);
     }
 
-    .hf {
+    /* .hf {
         height: auto;
-    }
+    } */
 
     .heading {
         padding: var(--padding-2xl) var(--padding-3m) var(--padding-xl);
@@ -107,9 +107,9 @@
         padding: 5px 0 0;
     }
 
-    .hf {
+    /* .hf {
         height: auto;
-    }
+    } */
 
     .heading {
         padding: var(--padding-2xl) var(--padding-m) var(--padding-xl);
@@ -281,6 +281,9 @@
         top: auto;
         left: auto;
     }
+    .s-dark .sd {
+        border-top: 1px solid var(--color-white-10);
+    }
 
     .sd {
         position: relative;
@@ -288,6 +291,7 @@
         top: auto;
         left: auto;
         opacity: 1 !important;
+        border-top: 1px solid var(--color-dark-10);
     }
 
     .section-row {

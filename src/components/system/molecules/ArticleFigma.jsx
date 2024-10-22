@@ -15,6 +15,7 @@ const Figma = forwardRef(({ shareLink, iframeLink }, ref) => (
       <Button
         title="Open Figma"
         link={shareLink}
+        additionalClass="bi-dark"
         icon="rotate"
         target="_blank"
         rel="noopener noreferrer"

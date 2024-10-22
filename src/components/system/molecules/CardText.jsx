@@ -14,7 +14,9 @@ const CardText = ({ content }) => {
     link,
   } = content;
 
-  const isPhotoActive = cardLogos.some((logo) => logo.src.includes("avatars"));
+  const isPhotoActive = cardLogos.some((logo) =>
+    logo.src.includes("articleAvatars"),
+  );
 
   const WrapperComponent = link ? "a" : "div";
   const wrapperProps = link
@@ -29,9 +31,11 @@ const CardText = ({ content }) => {
       };
 
   const companyLogos = cardLogos.filter(
-    (logo) => !logo.src.includes("avatars"),
+    (logo) => !logo.src.includes("articleAvatars"),
   );
-  const avatarLogos = cardLogos.filter((logo) => logo.src.includes("avatars"));
+  const avatarLogos = cardLogos.filter((logo) =>
+    logo.src.includes("articleAvatars"),
+  );
 
   return (
     <Squircle
