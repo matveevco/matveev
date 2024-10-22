@@ -16,6 +16,7 @@ export default defineConfig({
       ],
     }),
   ],
+  publicDir: "public",
   css: {
     postcss: {
       plugins: [
