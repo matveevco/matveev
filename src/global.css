@@ -72,14 +72,25 @@ body {
     --color-tint-blue-80: rgba(222, 228, 237, 0.8);
     --color-tint-orange-100: rgba(241, 238, 235, 1);
     --color-tint-orange-80: rgba(241, 238, 235, 0.8);
+
     --color-accent-red-100: rgba(226, 11, 11, 1);
     --color-accent-green-100: rgba(11, 137, 0, 1);
+
     --color-accent-pink-100: rgba(239, 88, 239, 1);
     --color-accent-pink-40: rgba(239, 88, 239, 0.4);
+    --color-accent-pink-default: rgba(203, 194, 203, 1);
+    --color-accent-pink-hover: rgba(220, 159, 220, 1);
+
     --color-accent-blue-100: rgba(0, 99, 255, 1);
     --color-accent-blue-40: rgba(0, 99, 255, 0.4);
+    --color-accent-blue-default: rgba(190, 196, 203, 1);
+    --color-accent-blue-hover: rgba(124, 163, 226, 1);
+
     --color-accent-orange-100: rgba(255, 128, 0, 1);
     --color-accent-orange-40: rgba(255, 128, 0, 0.4);
+    --color-accent-orange-default: rgba(207, 204, 201, 1);
+    --color-accent-orange-hover: rgba(229, 180, 131, 1);
+
     --color-dark-100: rgba(13, 13, 13, 1);
     --color-dark-90: rgba(13, 13, 13, 0.9);
     --color-dark-80: rgba(13, 13, 13, 0.8);
@@ -88,6 +99,7 @@ body {
     --color-dark-20: rgba(13, 13, 13, 0.2);
     --color-dark-10: rgba(13, 13, 13, 0.1);
     --color-dark-8: rgba(13, 13, 13, 0.08);
+
     --color-white-100: rgba(255, 255, 255, 1);
     --color-white-90: rgba(255, 255, 255, 0.9);
     --color-white-40: rgba(255, 255, 255, 0.4);
@@ -95,11 +107,6 @@ body {
     --color-white-20: rgba(255, 255, 255, 0.2);
     --color-white-10: rgba(255, 255, 255, 0.1);
     --color-white-8: rgba(255, 255, 255, 0.08);
-
-    /* blur */
-    --blur-20: blur(20px);
-    --blur-50: blur(50px);
-    --blur-100: blur(100px);
 
     /* padding */
     --padding-3xl: 372px;

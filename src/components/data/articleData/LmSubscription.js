@@ -194,8 +194,10 @@ const articleLmSubscription = [
   },
   {
     componentName: "Figma",
-    shareLink: "link",
-    iframeLink: "embedLink",
+    shareLink:
+      "https://www.figma.com/design/5XT2IbDalaUnGdt72WVM3v/Linkmuse%3A-Experimenting-with-the-subscription-model?node-id=0-1&t=RPc1Bx3Txx4ipUV9-1",
+    iframeLink:
+      "https://embed.figma.com/design/5XT2IbDalaUnGdt72WVM3v/Linkmuse%3A-Experimenting-with-the-subscription-model?node-id=0-1&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
   {
     componentName: "Separator",

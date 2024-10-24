@@ -101,8 +101,10 @@ const articleLmAuthentication = [
   },
   {
     componentName: "Figma",
-    shareLink: "link",
-    iframeLink: "embedLink",
+    shareLink:
+      "https://www.figma.com/design/HODcCQl7ykV546zDo6xEQ1/Linkmuse%3A-Simplifying-sign-up-and-log-in-scenarios?node-id=1-2&t=rhaw793qgPwkY8QQ-1",
+    iframeLink:
+      "https://embed.figma.com/design/HODcCQl7ykV546zDo6xEQ1/Linkmuse%3A-Simplifying-sign-up-and-log-in-scenarios?node-id=1-2&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
   {
     componentName: "Separator",

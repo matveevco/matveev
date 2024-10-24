@@ -211,8 +211,10 @@ const articleVTBInHouse = [
     componentName: "Separator",
   },
   {
-    shareLink: "link",
-    iframeLink: "embedLink",
+    shareLink:
+      "https://www.figma.com/design/6cdkPFGZ5BeJjJyc2EPFjC/VTB-Bank%3A-Increasing-business-opportunities?node-id=1-130&t=QVRAs2zi5Irnss3H-1",
+    iframeLink:
+      "https://embed.figma.com/design/6cdkPFGZ5BeJjJyc2EPFjC/VTB-Bank%3A-Increasing-business-opportunities?node-id=1-130&embed-host=share&theme=dark&page-selector=false&footer=false",
     componentName: "Figma",
   },
   {

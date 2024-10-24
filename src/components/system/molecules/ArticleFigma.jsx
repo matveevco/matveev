@@ -36,7 +36,7 @@ const Figma = forwardRef(({ shareLink, iframeLink }, ref) => (
           src={iframeLink}
           title="Figma Design Preview"
         ></iframe>
-        <div className="figma-link"></div>
+        {/* <div className="figma-link"></div> */}
       </Squircle>
     </div>
   </div>

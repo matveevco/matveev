@@ -173,8 +173,10 @@ const articlePrismaOnboarding = [
   },
   {
     componentName: "Figma",
-    shareLink: "link",
-    iframeLink: "embedLink",
+    shareLink:
+      "https://www.figma.com/design/bS5XlxRwiWZpffYuScZfHT/Prisma-Labs%3A-Updating-onboarding-through-an-experiment?node-id=0-1&t=hs2GlZHUlqzMGkPW-1",
+    iframeLink:
+      "https://embed.figma.com/design/bS5XlxRwiWZpffYuScZfHT/Prisma-Labs%3A-Updating-onboarding-through-an-experiment?node-id=0-1&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
   {
     componentName: "Separator",

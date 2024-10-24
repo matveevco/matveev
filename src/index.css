@@ -109,14 +109,9 @@ h3 {
 }
 
 .nav-content {
-    /* backdrop-filter: var(--blur-50);
-    -webkit-backdrop-filter: var(--blur-50);
-    background-color: var(--color-tint-orange-80); */
     padding: var(--padding-2m) var(--padding-3l);
     width: 100%;
-    transition:
-        /* background-color 0.2s ease-out, */ position 0.4s
-        ease-out;
+    transition: position 0.4s ease-out;
 }
 
 .bs-nlt-fix {
@@ -625,14 +620,28 @@ h3 {
     object-fit: cover;
     box-sizing: border-box;
     image-rendering: -webkit-optimize-contrast;
-    transition: scale 0.3s ease-out;
+    opacity: 1;
+    transition:
+        scale 0.3s ease-out,
+        opacity 0.3s ease-out;
+}
+
+.object-image.hidden {
+    opacity: 0;
+}
+
+.spinner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .section-img .button-icon {
     position: absolute;
     margin: 0 var(--padding-m) var(--padding-m) 0;
-    backdrop-filter: var(--blur-20);
-    -webkit-backdrop-filter: var(--blur-20);
 }
 
 .section-img-group {
@@ -822,6 +831,11 @@ h3 {
     transition: scale 0.3s ease-out;
 }
 
+.prisma .bi-dark {
+    background-color: var(--color-accent-orange-default);
+    transition: background 0.4s ease-out;
+}
+
 .prisma:hover {
     background-color: var(--color-accent-orange-40);
     transition: background-color 0.2s ease-out;
@@ -829,12 +843,18 @@ h3 {
 
 .prisma:hover .section-img-button .bi-dark {
     border: 1px solid var(--color-dark-20);
-    transition: border 0.1s ease-out;
+    background-color: var(--color-accent-orange-hover);
+    transition:
+        background 0.2s ease-out,
+        border 0.2s ease-out;
 }
 
 .prisma:hover .bi-dark {
     border: 1px solid var(--color-dark-20);
-    transition: border 0.1s ease-out;
+    background-color: var(--color-accent-orange-hover);
+    transition:
+        background 0.2s ease-out,
+        border 0.2s ease-out;
 }
 
 .prisma:active .section-img-button .bi-dark {
@@ -849,6 +869,11 @@ h3 {
     transform: scale(0.9);
 }
 
+.vtb .bi-dark {
+    background-color: var(--color-accent-blue-default);
+    transition: background 0.4s ease-out;
+}
+
 .vtb:hover {
     background-color: var(--color-accent-blue-40);
     transition: background-color 0.2s ease-out;
@@ -856,12 +881,18 @@ h3 {
 
 .vtb:hover .section-img-button .bi-dark {
     border: 1px solid var(--color-dark-20);
-    transition: border 0.1s ease-out;
+    background-color: var(--color-accent-blue-hover);
+    transition:
+        background 0.2s ease-out,
+        border 0.2s ease-out;
 }
 
 .vtb:hover .bi-dark {
     border: 1px solid var(--color-dark-20);
-    transition: border 0.1s ease-out;
+    background-color: var(--color-accent-blue-hover);
+    transition:
+        background 0.2s ease-out,
+        border 0.2s ease-out;
 }
 
 .vtb:active .section-img-button .bi-dark {
@@ -876,6 +907,11 @@ h3 {
     transform: scale(0.9);
 }
 
+.lm .bi-dark {
+    background-color: var(--color-accent-pink-default);
+    transition: background 0.4s ease-out;
+}
+
 .lm:hover {
     background-color: var(--color-accent-pink-40);
     transition: background-color 0.2s ease-out;
@@ -883,12 +919,18 @@ h3 {
 
 .lm:hover .section-img-button .bi-dark {
     border: 1px solid var(--color-dark-20);
-    transition: border 0.1s ease-out;
+    background-color: var(--color-accent-pink-hover);
+    transition:
+        background 0.2s ease-out,
+        border 0.2s ease-out;
 }
 
 .lm:hover .bi-dark {
     border: 1px solid var(--color-dark-20);
-    transition: border 0.1s ease-out;
+    background-color: var(--color-accent-pink-hover);
+    transition:
+        background 0.2s ease-out,
+        border 0.2s ease-out;
 }
 
 .lm:active .section-img-button .bi-dark {
@@ -1286,12 +1328,12 @@ h3 {
 }
 
 .credits:hover .section-img-button .button-icon {
-    border: 1px solid var(--color-white-20);
+    border: 1px solid var(--color-dark-20);
     transition: border 0.1s ease-out;
 }
 
 .credits:active .section-img-button .button-icon {
-    border: 1px solid var(--color-white-10);
+    border: 1px solid var(--color-dark-10);
 }
 
 .credits:active .section-img-button .button-icon .icon-fill {
@@ -1333,7 +1375,7 @@ h3 {
 }
 
 .figma {
-    padding: 16px;
+    /* padding: 16px; */
     border: 0px !important;
     width: 100%;
     z-index: 2;
@@ -1375,11 +1417,77 @@ h3 {
 }
 /* SCROLL */
 
-.content-info .section-row .section-img-group .section-img .button-icon {
+/* .content-info .section-row .section-img-group .section-img .button-icon {
     backdrop-filter: none;
     -webkti-backdrop-filter: none;
-}
+} */
 
 .hf {
     height: 100vh;
+}
+
+.inline-svg {
+    width: 1.1em;
+    height: 1em;
+    vertical-align: -0.14em;
+}
+
+.is-fix {
+    width: 2em;
+}
+
+/* .company-group-text {
+    white-space: nowrap;
+} */
+
+.hg-default {
+    align-self: stretch;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+.hg-blur {
+    position: absolute;
+    margin: 0 !important;
+    top: 8px;
+    left: 0px;
+    filter: blur(10px);
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+.hg-img {
+    position: absolute;
+    display: flex;
+    bottom: 70px;
+    left: calc(50% - 186px);
+    object-fit: cover;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+    scale: 0.9;
+    transition:
+        bottom 0.4s ease-out,
+        opacity 0.4s ease-out,
+        scale 0.4s ease-out;
+}
+.hg-item {
+    position: relative;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.hg-default:hover + .hg-blur {
+    opacity: 0.4;
+    transition: opacity 0.2s ease-out;
+}
+
+.hg-default:hover ~ .hg-img {
+    opacity: 1;
+    bottom: 106px;
+    scale: 1;
+    transition:
+        bottom 0.2s ease-out,
+        opacity 0.2s ease-out,
+        scale 0.2s ease-out;
 }

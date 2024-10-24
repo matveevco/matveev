@@ -200,8 +200,10 @@ const articleVTBStart = [
     componentName: "Separator",
   },
   {
-    shareLink: "link",
-    iframeLink: "embedLink",
+    shareLink:
+      "https://www.figma.com/design/ZQy0FnyIdmveoSpK7dyiV3/VTB-Bank%3A-Digitalising-the-registry-process-in-SMEs?node-id=1-139&t=DtvRmncISZJMo9zj-1",
+    iframeLink:
+      "https://embed.figma.com/design/ZQy0FnyIdmveoSpK7dyiV3/VTB-Bank%3A-Digitalising-the-registry-process-in-SMEs?node-id=1-139&embed-host=share&theme=dark&page-selector=false&footer=false",
     componentName: "Figma",
   },
   {

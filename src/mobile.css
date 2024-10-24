@@ -260,7 +260,7 @@
     }
 
     .heading {
-        padding: var(--padding-xl) var(--padding-s) var(--padding-xl);
+        padding: var(--padding-2xl) var(--padding-s) var(--padding-xl);
         gap: var(--gap-2l);
     }
 

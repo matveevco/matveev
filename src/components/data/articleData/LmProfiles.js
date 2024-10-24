@@ -147,8 +147,10 @@ const articleLmProfiles = [
   },
   {
     componentName: "Figma",
-    shareLink: "link",
-    iframeLink: "embedLink",
+    shareLink:
+      "https://www.figma.com/design/EDQkSrTBCeFRPIxUugbigA/Linkmuse%3A-Unifying-user-profiles-and-search-results?node-id=1-2&t=JEXz9w7gIY9zK19D-1",
+    iframeLink:
+      "https://embed.figma.com/design/EDQkSrTBCeFRPIxUugbigA/Linkmuse%3A-Unifying-user-profiles-and-search-results?node-id=1-2&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
   {
     componentName: "Separator",

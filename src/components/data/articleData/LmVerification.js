@@ -220,8 +220,10 @@ const articleLmVerification = [
   },
   {
     componentName: "Figma",
-    shareLink: "link",
-    iframeLink: "embedLink",
+    shareLink:
+      "https://www.figma.com/design/2bIigARL5oJ2qzr9QuWkON/Linkmuse%3A-Implementing-portfolio-and-profile-verification?node-id=1-2&t=UmAvmTWfbnwbqum4-1",
+    iframeLink:
+      "https://embed.figma.com/design/2bIigARL5oJ2qzr9QuWkON/Linkmuse%3A-Implementing-portfolio-and-profile-verification?node-id=1-2&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
   {
     componentName: "Separator",

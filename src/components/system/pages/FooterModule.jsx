@@ -7,15 +7,8 @@ const FooterModule = forwardRef((props, ref) => (
     <div className="heading-row">
       <h1>
         Imagine all the{" "}
-        <span className="highlight-gradient-one-text">awesome stuff </span>
+        <span className="highlight-gradient-one-text">awesome things </span>
         <span className="line-break">we can create together.</span>
-      </h1>
-      <h1>
-        Whipped up with{" "}
-        <span className="line-break">
-          <span className="highlight-gradient-two-text">mad love </span>on
-          React.
-        </span>
       </h1>
     </div>
     <div className="button-row">

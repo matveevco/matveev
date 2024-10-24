@@ -193,8 +193,10 @@ const articleLmCastings = [
   },
   {
     componentName: "Figma",
-    shareLink: "link",
-    iframeLink: "embedLink",
+    shareLink:
+      "https://www.figma.com/design/xxCL1PEPUON7dt73gBnXSF/Linkmuse%3A-Updating-listing-logic-and-response-to-castings?node-id=0-1&t=e4DwZ3VjyAwf6VQA-1",
+    iframeLink:
+      "https://embed.figma.com/design/xxCL1PEPUON7dt73gBnXSF/Linkmuse%3A-Updating-listing-logic-and-response-to-castings?node-id=0-1&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
   {
     componentName: "Separator",

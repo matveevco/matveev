@@ -186,8 +186,10 @@ const articlePrismaFAQ = [
   },
   {
     componentName: "Figma",
-    shareLink: "link",
-    iframeLink: "embedLink",
+    shareLink:
+      "https://www.figma.com/design/2DqkI2r83wguUSkcBrAbKI/Prisma-Labs%3A-Integrating-the-Frequently-Asked-Questions-section?node-id=1-131&t=E2GAWlLdNcV2dkau-1",
+    iframeLink:
+      "https://embed.figma.com/design/2DqkI2r83wguUSkcBrAbKI/Prisma-Labs%3A-Integrating-the-Frequently-Asked-Questions-section?node-id=1-131&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
   {
     componentName: "Separator",
