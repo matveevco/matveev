@@ -17,23 +17,30 @@ const InfoModule = forwardRef((props, ref) => (
       <HighlightImage
         hgLink="https://zero10.ar"
         hgText="AR Experience"
-        hgImage="iHG2"
-        hgType="two"
+        hgSource="iHG2"
+        hgSourceType="webm"
+        hgCount="two"
       />
       in retail, and at <IconLogoPrisma />
       Prisma Labs, I was experimenting with{" "}
       <HighlightImage
         hgLink="https://prisma-ai.com"
         hgText="AI Editors."
-        hgImage="iHG3"
-        hgType="one"
+        hgSource="iHG3"
+        hgSourceType="webp"
+        hgCount="one"
       />
       Btw, I'm fascinated by the possibilities of combining the aesthetics of
       form and functionality into a cohesive whole.
     </h1>
     <h1>
       Also as my products{" "}
-      <HighlightImage hgText="I develop" hgImage="iHG4" hgType="three" />
+      <HighlightImage
+        hgText="I develop"
+        hgSource="iHG4"
+        hgSourceType="webm"
+        hgCount="three"
+      />
       some apps, one of them is the <IconLogoCHSL />*
     </h1>
     <div className="info-body-text" style={{ color: "var(--color-white-40)" }}>

@@ -1443,8 +1443,6 @@ h3 {
 .hg-default {
     align-self: stretch;
     position: relative;
-    z-index: 1;
-    cursor: pointer;
 }
 .hg-blur {
     position: absolute;
@@ -1475,11 +1473,40 @@ h3 {
     position: relative;
     white-space: nowrap;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.hg-default:hover + .hg-blur {
+.hg-default:hover {
+    background: linear-gradient(
+        45deg,
+        var(--color-white-30),
+        var(--color-white-30),
+        var(--color-white-30),
+        var(--color-white-30)
+    );
+    -webkit-background-clip: text;
+}
+
+/* .hg-default:hover + .hg-blur {
     opacity: 0.4;
     transition: opacity 0.2s ease-out;
+} */
+
+.hgIcon {
+    display: flex;
+    right: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 8px;
+    opacity: 0;
+    transition:
+        opacity 0.2s ease-out,
+        top 0.2s ease-out,
+        right 0.2s ease-out;
+}
+
+.hgIcon path {
+    fill: var(--color-white-40);
 }
 
 .hg-default:hover ~ .hg-img {
@@ -1490,4 +1517,14 @@ h3 {
         bottom 0.2s ease-out,
         opacity 0.2s ease-out,
         scale 0.2s ease-out;
+}
+
+.hg-default:hover ~ .hgIcon {
+    opacity: 1;
+    top: 4px;
+    right: -4px;
+    transition:
+        opacity 0.2s ease-out,
+        top 0.2s ease-out,
+        right 0.2s ease-out;
 }
