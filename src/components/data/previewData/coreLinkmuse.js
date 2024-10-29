@@ -18,12 +18,12 @@ const previewLinkmuse = [
       },
     ],
     additionalClass: [""],
-    title: "Experimenting with the subscription model",
+    title: "Experimenting with the subscription model",
     tags: ["March 2020", "6 min read", "3 credits"],
     subTitle: "Awesomeness",
     awesomeness: [
-      "",
-      "In the first days of the pilot test, when we were tracking conversions, bounce rates, and feedback, over 100 plans were purchased",
+      "With industry-standard metrics where average conversion to purchase is 1-2% and high 3-5%, our subscriber conversion was 1.5% of the monthly audience and was ~230 purchases with an ARPU of $4.99/month",
+      "Retention Rate was higher than expected at 82%, with a benchmark of 75-85%",
     ],
   },
   {
@@ -50,7 +50,7 @@ const previewLinkmuse = [
     subTitle: "Awesomeness",
     awesomeness: [
       "The demand for this service exceeded the team's expectations, with more than 20 requests per week",
-      "This helped us increase our monthly organic traffic and engagement by 2.7x to ~8000 visits and 1.6x to ~15000 unique users respectively",
+      "This helped us increase our monthly organic traffic and engagement by 2.7x to ~8000 visits and 1.6x to ~15000 unique users respectively",
     ],
   },
   {
@@ -72,11 +72,11 @@ const previewLinkmuse = [
       },
     ],
     additionalClass: [""],
-    title: "Simplifying sign-up and log-in scenarios",
+    title: "Simplifying sign-up and log-in scenarios",
     tags: ["August 2019", "4 min read", "4 credits"],
     subTitle: "Awesomeness",
     awesomeness: [
-      "Remarkable 2.5x increase in registration start conversion to 9.2% and a 3.5x increase in registration completion to 3.6%",
+      "Remarkable 2.5x increase in registration start conversion to 9.2% and a 3.5x increase in registration completion to 3.6%",
       "The changes also affected authorisation, with bounce rates decreasing 5.5x to 0.04% and conversion rates increasing 2.5x to 11.9%",
     ],
   },
@@ -99,7 +99,7 @@ const previewLinkmuse = [
       },
     ],
     additionalClass: [""],
-    title: "Unifying user-profiles and search results",
+    title: "Unifying user-profiles and search results",
     tags: ["May 2019", "4 min read", "4 credits"],
     subTitle: "Awesomeness",
     awesomeness: [
@@ -126,11 +126,11 @@ const previewLinkmuse = [
       },
     ],
     additionalClass: [""],
-    title: "Updating listing logic and response to castings",
+    title: "Updating listing logic and response to castings",
     tags: ["December 2018", "5 min read", "5 credits"],
     subTitle: "Awesomeness",
     awesomeness: [
-      "CR to casting creation increased by 3 x to 61.38%, while the bounce rate dropped by 8x to 3.1%",
+      "CR to casting creation increased by 3 x to 61.38%, while the bounce rate dropped by 8x to 3.1%",
       "The average listing session duration increased 1.5x to 4.5 minutes and the average number of responses per week increased 1.9x from ~3600 to ~6800",
     ],
   },

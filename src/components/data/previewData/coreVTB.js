@@ -22,7 +22,7 @@ const previewVTB = [
     tags: ["September 2020", "6 min read", "6 credits"],
     subTitle: "Awesomeness",
     awesomeness: [
-      "Reduction of steps to fill out the application form (for Limited Liability Company from 18 to 6, for Individual Entrepreneur from 10 to 5)",
+      "Reduction of steps to fill out the application form (for Limited Liability Company from 18 to 6, for Individual Entrepreneur from 10 to 5)",
       "Reduction of time for filling out the application form (for LLC almost 5x to 6-8 minutes, for IE almost 8x to 3-5 minutes)",
     ],
   },
@@ -45,11 +45,11 @@ const previewVTB = [
       },
     ],
     additionalClass: [""],
-    title: "Working on mistakes by customer research",
+    title: "Working on mistakes by customer research",
     tags: ["August 2020", "5 min read", "5 credits"],
     subTitle: "Awesomeness",
     awesomeness: [
-      "The research helped us find a lot of patterns and solve a lot of hidden problems because we gathered a huge number of insights and comments from customers of 8 different banks",
+      "The research helped us find a lot of patterns and solve a lot of hidden problems because we gathered a huge number of insights and comments from customers of 8 different banks",
       "Both the temporary VTB Start product and the VTB in-house solution were significantly affected by the research",
     ],
   },
@@ -77,7 +77,7 @@ const previewVTB = [
     subTitle: "Awesomeness",
     awesomeness: [
       "Incredible increase in conversion rates to full online registration (Application Form + Manager + FTS). So, LLCs were completed 4x more often, about ~5.3k/month, and IEs 6x more often, about ~14k/month",
-      "The rates of incomplete online registration decreased. For example, for LLCs, it became 1.5x less to ~2.1k/month, and for IEs, it became 2x less to ~2.3k/month",
+      "The rates of incomplete online registration decreased. For example, for LLCs, it became 1.5x less to ~2.1k/month, and for IEs, it became 2x less to ~2.3k/month",
     ],
   },
 ];

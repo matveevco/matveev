@@ -11,11 +11,11 @@ const previewPublic = [
       },
     ],
     additionalClass: [""],
-    title: "A minor contribution to the common cause",
+    title: "A modest contribution to the collective effort",
     tags: ["2021 - 2022", "8 articles"],
     subTitle: "Noteworthy",
     awesomeness: [
-      "Over 7,000 reads cumulatively, which means a lot to me, and helps me improve my skills to write the following articles",
+      "The articles have accumulated over 7,000 reads, which means a lot to me and helps me enhance my skills for future writings",
     ],
     card: [
       {

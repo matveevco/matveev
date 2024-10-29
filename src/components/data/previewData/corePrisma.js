@@ -166,7 +166,6 @@ const previewPrisma = [
     subTitle: "Awesomeness",
     awesomeness: [
       "The trial subscription increased 1.35x from 13.1% to 17.8%, and the bounce rate after the trial decreased 1.29x from 42% to 32.5%",
-      "Applying a style to a photo by 1.12x from 79% to 89.1%",
     ],
   },
   {

@@ -7,41 +7,44 @@ import HighlightImage from "../atoms/HighlightImage";
 const InfoModule = forwardRef((props, ref) => (
   <div className="heading heading-about section-dark" ref={ref}>
     <h1>
-      I've been immersed in design since 16, studying applied computer science
-      and 3D modelling at the same time. Gradually improving, I moved from
-      consulting to building products used by millions of people worldwide.
+      I’ve been immersed in design since I was 16, studying applied computer
+      science and 3D modeling simultaneously. As I honed my skills, I
+      transitioned from consulting to building products used by millions
+      worldwide.
     </h1>
     <h1>
-      Thus, at <IconLogoZero10 />
-      ZERO10 I was creating new{" "}
+      Currently, at <IconLogoZero10 />
+      ZERO10, I’m creating innovative{" "}
       <HighlightImage
         hgLink="https://zero10.ar"
-        hgText="AR Experience"
+        hgText="AR experiences"
         hgSource="iHG2"
         hgSourceType="webm"
         hgCount="two"
       />
-      in retail, and at <IconLogoPrisma />
-      Prisma Labs, I was experimenting with{" "}
+      {""}
+      in retail. Previously, at <IconLogoPrisma />
+      Prisma Labs, I experimented with{" "}
       <HighlightImage
         hgLink="https://prisma-ai.com"
-        hgText="AI Editors."
+        hgText="AI editors."
         hgSource="iHG3"
         hgSourceType="webp"
         hgCount="one"
       />
-      Btw, I'm fascinated by the possibilities of combining the aesthetics of
-      form and functionality into a cohesive whole.
+      {""}I am fascinated by the possibilities of blending aesthetics
+      and functionality into a cohesive whole.
     </h1>
     <h1>
-      Also as my products{" "}
+      I also develop my{" "}
       <HighlightImage
-        hgText="I develop"
+        hgText="own products,"
         hgSource="iHG4"
         hgSourceType="webm"
         hgCount="three"
       />
-      some apps, one of them is the <IconLogoCHSL />*
+      {""}
+      including the <IconLogoCHSL />* app.
     </h1>
     <div className="info-body-text" style={{ color: "var(--color-white-40)" }}>
       *Release date: late 2024

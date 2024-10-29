@@ -15,7 +15,7 @@ const previewGains = [
     tags: ["2019 - 2024", "4 articles"],
     subTitle: "Noteworthy",
     awesomeness: [
-      "AR products of ZERO10 have been recognised globally in the fashion business and have won various awards",
+      "ZERO10’s AR products have gained global recognition in the fashion industry, winning multiple awards",
     ],
     card: [
       {

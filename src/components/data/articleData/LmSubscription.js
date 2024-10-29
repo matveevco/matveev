@@ -184,7 +184,18 @@ const articleLmSubscription = [
   },
   {
     content: [
-      "In the first days of the pilot test, when we were tracking conversions, bounce rates, and feedback, over 100 plans were purchased. For the available traffic, available benefits and set prices, this was an unexpectedly high result.",
+      "We tested the new functionality for a month and had positive results. With industry-standard metrics where average conversion to purchase is 1-2% and high 3-5%, our subscriber conversion was 1.5% of the monthly audience and was ~230 purchases with an ARPU of $4.99/month. Retention Rate was higher than expected at 82%, with a benchmark of 75-85%.",
+    ],
+    componentName: "Paragraph",
+  },
+  {
+    imageSRC: "/images/articleContent/lm-a5-subscription/iA11.svg",
+    imageWidth: "1278px",
+    imageHeight: "432px",
+    componentName: "Image",
+  },
+  {
+    content: [
       "There was no clear gradation, people bought «Standard» for a month, «Premium» for a year, or used a promo code for a week, so we will be able to give a forecast on further purchases only after a while. For now, we need to test new hypotheses and not stop at the achieved result.",
     ],
     componentName: "Paragraph",

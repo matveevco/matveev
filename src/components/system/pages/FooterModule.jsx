@@ -6,9 +6,9 @@ const FooterModule = forwardRef((props, ref) => (
   <div className="heading section-dark hf" ref={ref}>
     <div className="heading-row">
       <h1>
-        Imagine all the{" "}
-        <span className="highlight-gradient-one-text">awesome things </span>
-        <span className="line-break">we can create together.</span>
+        Imagine the{" "}
+        <span className="highlight-gradient-one-text">incredible things</span>{" "}
+        <span className="line-break">we could create together.</span>
       </h1>
     </div>
     <div className="button-row">
