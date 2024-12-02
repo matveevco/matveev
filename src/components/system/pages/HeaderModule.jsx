@@ -19,7 +19,7 @@ const HeaderModule = () => {
       <div className="button-row">
         <Button
           title="Download CV"
-          link="/Aleksei_Matveev_CV.pdf?v=2"
+          link="/Aleksei_Matveev_CV.pdf?v=3"
           icon="down"
           additionalClass="bi-dark"
           target="_blank"
