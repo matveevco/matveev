@@ -2,17 +2,19 @@ const articleVTBResearch = [
   {
     componentName: "HeaderArticle",
     linkButton: "/",
+    content: [
+      "Research is an essential part of the product process, which is able not only to find and fix unseen or unobvious problems but also to fundamentally change the vector of product development.",
+    ],
   },
   {
     imageSRC: "/images/articleContent/vtb-a2-research/iA1.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
-    title: "Fixing hidden problems through research",
     content: [
-      "Research is an essential part of the product process, which is able not only to find and fix unseen or unobvious problems but also to fundamentally change the vector of product development.",
       "In our case, the research involved two products similar in functionality, but different in scale and importance for the company, so methods and hypotheses moved seamlessly from one service to another.",
     ],
     componentName: "Paragraph",
@@ -21,6 +23,7 @@ const articleVTBResearch = [
     imageSRC: "/images/articleContent/vtb-a2-research/iA2.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
     componentName: "Image",
   },
   {
@@ -91,8 +94,9 @@ const articleVTBResearch = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a2-research/iA3.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -109,8 +113,9 @@ const articleVTBResearch = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a2-research/iA4.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -131,8 +136,9 @@ const articleVTBResearch = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a2-research/iA5.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -148,8 +154,9 @@ const articleVTBResearch = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a2-research/iA6.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -158,15 +165,12 @@ const articleVTBResearch = [
     componentName: "Paragraph",
   },
   {
-    componentName: "Separator",
-  },
-  {
     componentName: "Credits",
     card: [
       {
         cardTitle: "Aleksei Matveev",
         cardDescription: "Lead Product Designer",
-        link: "https://www.linkedin.com/in/matveevco/",
+        link: "https://www.linkedin.com/in/aeeeae/",
         cardLogos: [
           {
             src: "/images/articleAvatars/iA1.webp",

@@ -1,37 +1,20 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { NavigationProvider } from "./components/automation/hooks/NavigationContext";
-import useRouteState from "./components/automation/hooks/useRouteState";
-import "./global.css";
-import "./index.css";
 import "./mobile.css";
+import "./ae-global.css";
+import "./ae-index.css";
 import App from "./components/App";
 import ArticleLayout from "./components/system/templates/ArticleLayout";
 import NoMatch from "./components/system/templates/NoMatch";
-import NavTop from "./components/system/molecules/NavigationTop";
-
-const NavSide = lazy(
-  () => import("./components/system/molecules/NavigationSide"),
-);
-const NavBottom = lazy(
-  () => import("./components/system/molecules/NavigationBottom"),
-);
+import FixedNav from "./components/system/molecules/FixedNav";
 
 const General = () => {
-  useRouteState();
-
   return (
     <>
-      <NavTop />
-      <Suspense fallback={null}>
-        <NavSide />
-      </Suspense>
-      <Suspense fallback={null}>
-        <NavBottom />
-      </Suspense>
+      <FixedNav />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/article/:articleID" element={<ArticleLayout />} />
@@ -48,9 +31,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <NavigationProvider>
-        <General />
-      </NavigationProvider>
+      <General />
     </BrowserRouter>
   </React.StrictMode>,
 );

@@ -2,19 +2,19 @@ const articleVTBInHouse = [
   {
     componentName: "HeaderArticle",
     linkButton: "/",
-  },
-  {
-    imageSRC: "/images/articleContent/vtb-a3-inhouse/iA1.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
-    componentName: "Image",
-  },
-  {
-    title: "Re-using scenarios and improving functionality",
     content: [
       "Sooner or later, every large bank working with small and medium-sized businesses, to keep or gain new customers, comes to create its in-house services/microservices.",
       "Such a task has also come up for VTB Bank - to create a remote process of business registration with consequent account opening. Providing digital services for businesses through the bank's alternative channels. Implementing technologies as part of government initiatives in relation to business registration procedures.",
     ],
+  },
+  {
+    imageSRC: "/images/articleContent/vtb-a3-inhouse/iA1.webp",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
+    componentName: "Image",
+  },
+  {
     contentList: {
       content: "The objectives of this task were also ambitious:",
       list: [
@@ -30,8 +30,9 @@ const articleVTBInHouse = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a3-inhouse/iA2.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -62,6 +63,7 @@ const articleVTBInHouse = [
     imageSRC: "/images/articleContent/vtb-a3-inhouse/iA3.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
     componentName: "Image",
   },
   {
@@ -99,8 +101,9 @@ const articleVTBInHouse = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a3-inhouse/iA4.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -124,8 +127,9 @@ const articleVTBInHouse = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a3-inhouse/iA5.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -135,8 +139,9 @@ const articleVTBInHouse = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a3-inhouse/iA6.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -147,8 +152,9 @@ const articleVTBInHouse = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a3-inhouse/iA7.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -158,8 +164,9 @@ const articleVTBInHouse = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a3-inhouse/iA8.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -170,8 +177,9 @@ const articleVTBInHouse = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a3-inhouse/iA9.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -181,9 +189,10 @@ const articleVTBInHouse = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a3-inhouse/iA10.webp",
-    imageWidth: "1520px",
-    imageHeight: "1520px",
-    componentName: "Paragraph_and_Image",
+    imageWidth: "1260px",
+    imageHeight: "1178px",
+    imageMargin: "oi-around-short",
+    componentName: "Image",
   },
   {
     content:
@@ -192,8 +201,9 @@ const articleVTBInHouse = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a3-inhouse/iA11.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -203,22 +213,10 @@ const articleVTBInHouse = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a3-inhouse/iA12.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
-  },
-  {
-    componentName: "Separator",
-  },
-  {
-    shareLink:
-      "https://www.figma.com/design/6cdkPFGZ5BeJjJyc2EPFjC/VTB-Bank%3A-Increasing-business-opportunities?node-id=1-130&t=QVRAs2zi5Irnss3H-1",
-    iframeLink:
-      "https://embed.figma.com/design/6cdkPFGZ5BeJjJyc2EPFjC/VTB-Bank%3A-Increasing-business-opportunities?node-id=1-130&embed-host=share&theme=dark&page-selector=false&footer=false",
-    componentName: "Figma",
-  },
-  {
-    componentName: "Separator",
   },
   {
     componentName: "Credits",
@@ -226,7 +224,7 @@ const articleVTBInHouse = [
       {
         cardTitle: "Aleksei Matveev",
         cardDescription: "Lead Product Designer",
-        link: "https://www.linkedin.com/in/matveevco/",
+        link: "https://www.linkedin.com/in/aeeeae/",
         cardLogos: [
           {
             src: "/images/articleAvatars/iA1.webp",
@@ -304,6 +302,11 @@ const articleVTBInHouse = [
         cardCaption: "LinkedIn",
       },
     ],
+  },
+  {
+    iframeLink:
+      "https://embed.figma.com/design/6cdkPFGZ5BeJjJyc2EPFjC/VTB-Bank%3A-Increasing-business-opportunities?node-id=1-130&embed-host=share&theme=dark&page-selector=false&footer=false",
+    componentName: "Figma",
   },
 ];
 

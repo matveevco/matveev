@@ -2,32 +2,31 @@ const articleLmAuthentication = [
   {
     componentName: "HeaderArticle",
     linkButton: "/",
+    content: [
+      "User activation in a service is the most important stage in the life of a product, where there are also: viewing and/or generating content, creating habits or purchases.",
+      "It will be simpler and more user-friendly to complete registration/authorisation if the user can quickly perform a targeted action, move on to the next steps and most likely recommend the service to their social circle.",
+    ],
   },
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a3-auth/iA1.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
   },
   {
     componentName: "Paragraph",
-    title: "Overcoming barriers to improve activity",
     content: [
-      "User activation in a service is the most important stage in the life of a product, where there are also: viewing and/or generating content, creating habits or purchases.",
-      "It will be simpler and more user-friendly to complete registration/authorisation if the user can quickly perform a targeted action, move on to the next steps and most likely recommend the service to their social circle.",
       "If there were no special problems with authorisation in the service, registration left much to be desired. Two logical branches and several screens caused users to refuse to complete the path and greatly reduced the already low activity.",
+      "While the conversion rate at the start of registration was 3.5%, it was already 0.98% at the end. Bounce rates were 1.56%. Conversion to authorisation was 4.5% with a 0.24% bounce rate. To increase conversion rates and decrease bounce rates, we needed to change scenarios and experiment with simplifying authentication methods.",
     ],
   },
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a3-auth/iA2.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
-  },
-  {
-    componentName: "Paragraph",
-    content:
-      "While the conversion rate at the start of registration was 3.5%, it was already 0.98% at the end. Bounce rates were 1.56%. Conversion to authorisation was 4.5% with a 0.24% bounce rate. To increase conversion rates and decrease bounce rates, we needed to change scenarios and experiment with simplifying authentication methods.",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -50,8 +49,9 @@ const articleLmAuthentication = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a3-auth/iA3.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -61,8 +61,9 @@ const articleLmAuthentication = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a3-auth/iA4.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-full-top",
   },
   {
     componentName: "Paragraph",
@@ -72,10 +73,11 @@ const articleLmAuthentication = [
     ],
   },
   {
-    componentName: "Paragraph_and_Image",
+    componentName: "Image",
     imageSRC: "/images/articleContent/lm-a3-auth/iA5.webp",
-    imageWidth: "1520px",
-    imageHeight: "1520px",
+    imageWidth: "1260px",
+    imageHeight: "1178px",
+    imageMargin: "oi-around-short",
   },
   {
     componentName: "Paragraph",
@@ -90,24 +92,12 @@ const articleLmAuthentication = [
     imageSRC: "/images/articleContent/lm-a3-auth/iA6.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
   },
   {
     componentName: "Paragraph",
     content:
       "While we are still collecting feedback to test the new hypothesis, we already have plans to remove post-registration and create a single point of authentication by phone number.",
-  },
-  {
-    componentName: "Separator",
-  },
-  {
-    componentName: "Figma",
-    shareLink:
-      "https://www.figma.com/design/HODcCQl7ykV546zDo6xEQ1/Linkmuse%3A-Simplifying-sign-up-and-log-in-scenarios?node-id=1-2&t=rhaw793qgPwkY8QQ-1",
-    iframeLink:
-      "https://embed.figma.com/design/HODcCQl7ykV546zDo6xEQ1/Linkmuse%3A-Simplifying-sign-up-and-log-in-scenarios?node-id=1-2&embed-host=share&theme=dark&page-selector=false&footer=false",
-  },
-  {
-    componentName: "Separator",
   },
   {
     componentName: "Credits",
@@ -121,7 +111,7 @@ const articleLmAuthentication = [
             height: "288px",
           },
         ],
-        link: "https://www.linkedin.com/in/matveevco/",
+        link: "https://www.linkedin.com/in/aeeeae/",
         cardTitle: "Aleksei Matveev",
         cardDescription: "Senior Product Designer",
         cardCaption: "LinkedIn",
@@ -137,7 +127,7 @@ const articleLmAuthentication = [
         ],
         link: "https://www.linkedin.com/in/dima-melentev-7557635a/",
         cardTitle: "Dima Melentev",
-        cardDescription: "UX Researcher / UX Architect",
+        cardDescription: "UX Researcher",
         cardCaption: "LinkedIn",
       },
       {
@@ -154,20 +144,12 @@ const articleLmAuthentication = [
         cardDescription: "Head of Product",
         cardCaption: "LinkedIn",
       },
-      {
-        cardLogos: [
-          {
-            alt: "photo",
-            src: "/images/articleAvatars/iA12.webp",
-            width: "288px",
-            height: "288px",
-          },
-        ],
-
-        cardTitle: "Dmitry Kuznetsov",
-        cardDescription: "Project Manager",
-      },
     ],
+  },
+  {
+    componentName: "Figma",
+    iframeLink:
+      "https://embed.figma.com/design/HODcCQl7ykV546zDo6xEQ1/Linkmuse%3A-Simplifying-sign-up-and-log-in-scenarios?node-id=1-2&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
 ];
 

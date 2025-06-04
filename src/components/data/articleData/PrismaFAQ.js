@@ -2,18 +2,20 @@ const articlePrismaFAQ = [
   {
     componentName: "HeaderArticle",
     linkButton: "/",
-  },
-  {
-    imageSRC: "/images/articleContent/pl-a1-faq/iA1.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
-    componentName: "Image",
-  },
-  {
-    title: "The problem of «Understandability» in the product",
     content: [
       "It is known that users begin to have questions about using the product, the answers to which they can only get from tech support. But what if there are more than a million users and the support team runs out of resources for a quick response?",
       "Different solutions can be provided, depending on the type and frequency of the problem. However, if we generalise, we can be helped by Onboarding, Tooltips, Badges, Popups, and Bottom Sheets — any interaction that doesn't complicate the experience and informs the user about a feature as clearly as possible.",
+    ],
+  },
+  {
+    imageSRC: "/images/articleContent/pl-a1-faq/iA1.webp",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
+    componentName: "Image",
+  },
+  {
+    content: [
       "Some will say that instead of information complications, it is better to make everything clear and convenient at once, but «Understandability» cannot be tracked either qualitatively or quantitatively. There is always a group of people who either don't understand what and how it works or aren't interested in how it can work.",
       "For this purpose, products develop a separate section dedicated to frequently asked questions, where information about the product and its functions is placed, i.e., F.A.Q.",
     ],
@@ -27,8 +29,9 @@ const articlePrismaFAQ = [
   },
   {
     imageSRC: "/images/articleContent/pl-a1-faq/iA2.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-bottom",
     componentName: "Image",
   },
   {
@@ -50,9 +53,10 @@ const articlePrismaFAQ = [
   },
   {
     imageSRC: "/images/articleContent/pl-a1-faq/iA3.webp",
-    imageWidth: "1520px",
-    imageHeight: "1520px",
-    componentName: "Paragraph_and_Image",
+    imageWidth: "1260px",
+    imageHeight: "1178px",
+    imageMargin: "oi-around-short",
+    componentName: "Image",
   },
   {
     title: "Foundations for creating F.A.Q",
@@ -68,8 +72,9 @@ const articlePrismaFAQ = [
   },
   {
     imageSRC: "/images/articleContent/pl-a1-faq/iA4.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -94,8 +99,9 @@ const articlePrismaFAQ = [
   },
   {
     imageSRC: "/images/articleContent/pl-a1-faq/iA5.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -106,7 +112,8 @@ const articlePrismaFAQ = [
   {
     imageSRC: "/images/articleContent/pl-a1-faq/iA6.webp",
     imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageHeight: "1326px",
+    imageMargin: "oi-full-top",
     componentName: "Image",
   },
   {
@@ -118,7 +125,8 @@ const articlePrismaFAQ = [
   {
     imageSRC: "/images/articleContent/pl-a1-faq/iA7.webp",
     imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageHeight: "1326px",
+    imageMargin: "oi-full-top",
     componentName: "Image",
   },
   {
@@ -130,8 +138,9 @@ const articlePrismaFAQ = [
   },
   {
     imageSRC: "/images/articleContent/pl-a1-faq/iA8.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-bottom",
     componentName: "Image",
   },
   {
@@ -156,6 +165,7 @@ const articlePrismaFAQ = [
     imageSRC: "/images/articleContent/pl-a1-faq/iA9.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
     componentName: "Image",
   },
   {
@@ -172,6 +182,7 @@ const articlePrismaFAQ = [
     imageSRC: "/images/articleContent/pl-a1-faq/iA10.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
     componentName: "Image",
   },
   {
@@ -182,25 +193,12 @@ const articlePrismaFAQ = [
     componentName: "Paragraph",
   },
   {
-    componentName: "Separator",
-  },
-  {
-    componentName: "Figma",
-    shareLink:
-      "https://www.figma.com/design/2DqkI2r83wguUSkcBrAbKI/Prisma-Labs%3A-Integrating-the-Frequently-Asked-Questions-section?node-id=1-131&t=E2GAWlLdNcV2dkau-1",
-    iframeLink:
-      "https://embed.figma.com/design/2DqkI2r83wguUSkcBrAbKI/Prisma-Labs%3A-Integrating-the-Frequently-Asked-Questions-section?node-id=1-131&embed-host=share&theme=dark&page-selector=false&footer=false",
-  },
-  {
-    componentName: "Separator",
-  },
-  {
     componentName: "Credits",
     card: [
       {
         cardTitle: "Aleksei Matveev",
         cardDescription: "Senior Product Designer",
-        link: "https://www.linkedin.com/in/matveevco/",
+        link: "https://www.linkedin.com/in/aeeeae/",
         cardLogos: [
           {
             src: "/images/articleAvatars/iA1.webp",
@@ -211,20 +209,20 @@ const articlePrismaFAQ = [
         ],
         cardCaption: "LinkedIn",
       },
-      {
-        cardTitle: "Sofiia Malyshko",
-        cardDescription: "Customer Support Specialist",
-        link: "https://www.linkedin.com/in/sofiia-malyshko/",
-        cardLogos: [
-          {
-            src: "/images/articleAvatars/iA2.webp",
-            alt: "photo",
-            width: "288px",
-            height: "288px",
-          },
-        ],
-        cardCaption: "LinkedIn",
-      },
+      // {
+      //   cardTitle: "Sofiia Malyshko",
+      //   cardDescription: "Customer Support Specialist",
+      //   link: "https://www.linkedin.com/in/sofiia-malyshko/",
+      //   cardLogos: [
+      //     {
+      //       src: "/images/articleAvatars/iA2.webp",
+      //       alt: "photo",
+      //       width: "288px",
+      //       height: "288px",
+      //     },
+      //   ],
+      //   cardCaption: "LinkedIn",
+      // },
       {
         cardTitle: "Aliaksei Keda",
         cardDescription: "Chief Design Officer",
@@ -254,6 +252,11 @@ const articlePrismaFAQ = [
         cardCaption: "LinkedIn",
       },
     ],
+  },
+  {
+    componentName: "Figma",
+    iframeLink:
+      "https://embed.figma.com/design/2DqkI2r83wguUSkcBrAbKI/Prisma-Labs%3A-Integrating-the-Frequently-Asked-Questions-section?node-id=1-131&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
 ];
 

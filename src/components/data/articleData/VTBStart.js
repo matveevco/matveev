@@ -2,18 +2,20 @@ const articleVTBStart = [
   {
     componentName: "HeaderArticle",
     linkButton: "/",
-  },
-  {
-    imageSRC: "/images/articleContent/vtb-a1-start/iA1.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
-    componentName: "Image",
-  },
-  {
-    title: "Competition among banks and market players",
     content: [
       "We all know that business starts with registration, but not everyone knows that a bank invests significant efforts to engage and retain an audience so that later on a customer decides to register and open an account with it.",
       "Besides the fact that the bank's main competitor in business registration is the Federal Tax Service, players in the domestic market are also competing with them.",
+    ],
+  },
+  {
+    imageSRC: "/images/articleContent/vtb-a1-start/iA1.webp",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
+    componentName: "Image",
+  },
+  {
+    content: [
       "Until a certain point in time, VTB Bank could only register a business offline, in an office or sales location, but after all the tools moved online, like its competitor banks, VTB Bank began to digitalise. Thus, the VTB Start service was launched, a temporary (trial) product aimed at current and future customers of the bank who wish to open a business with VTB Bank.",
     ],
     componentName: "Paragraph",
@@ -26,8 +28,9 @@ const articleVTBStart = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a1-start/iA2.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -46,8 +49,9 @@ const articleVTBStart = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a1-start/iA3.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -57,8 +61,9 @@ const articleVTBStart = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a1-start/iA4.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -71,8 +76,9 @@ const articleVTBStart = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a1-start/iA5.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -90,8 +96,9 @@ const articleVTBStart = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a1-start/iA6.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -101,8 +108,9 @@ const articleVTBStart = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a1-start/iA7.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -112,8 +120,9 @@ const articleVTBStart = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a1-start/iA8.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -126,8 +135,9 @@ const articleVTBStart = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a1-start/iA9.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -144,6 +154,7 @@ const articleVTBStart = [
     imageSRC: "/images/articleContent/vtb-a1-start/iA10.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
     componentName: "Image",
   },
   {
@@ -159,8 +170,9 @@ const articleVTBStart = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a1-start/iA11.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -170,9 +182,10 @@ const articleVTBStart = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a1-start/iA12.webp",
-    imageWidth: "1520px",
-    imageHeight: "1520px",
-    componentName: "Paragraph_and_Image",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-around-short",
+    componentName: "Image",
   },
   {
     content:
@@ -181,8 +194,9 @@ const articleVTBStart = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a1-start/iA13.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -192,22 +206,10 @@ const articleVTBStart = [
   },
   {
     imageSRC: "/images/articleContent/vtb-a1-start/iA14.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
-  },
-  {
-    componentName: "Separator",
-  },
-  {
-    shareLink:
-      "https://www.figma.com/design/ZQy0FnyIdmveoSpK7dyiV3/VTB-Bank%3A-Digitalising-the-registry-process-in-SMEs?node-id=1-139&t=DtvRmncISZJMo9zj-1",
-    iframeLink:
-      "https://embed.figma.com/design/ZQy0FnyIdmveoSpK7dyiV3/VTB-Bank%3A-Digitalising-the-registry-process-in-SMEs?node-id=1-139&embed-host=share&theme=dark&page-selector=false&footer=false",
-    componentName: "Figma",
-  },
-  {
-    componentName: "Separator",
   },
   {
     componentName: "Credits",
@@ -215,7 +217,7 @@ const articleVTBStart = [
       {
         cardTitle: "Aleksei Matveev",
         cardDescription: "Lead Product Designer",
-        link: "https://www.linkedin.com/in/matveevco/",
+        link: "https://www.linkedin.com/in/aeeeae/",
         cardLogos: [
           {
             src: "/images/articleAvatars/iA1.webp",
@@ -293,6 +295,11 @@ const articleVTBStart = [
         cardCaption: "LinkedIn",
       },
     ],
+  },
+  {
+    iframeLink:
+      "https://embed.figma.com/design/ZQy0FnyIdmveoSpK7dyiV3/VTB-Bank%3A-Digitalising-the-registry-process-in-SMEs?node-id=1-139&embed-host=share&theme=dark&page-selector=false&footer=false",
+    componentName: "Figma",
   },
 ];
 

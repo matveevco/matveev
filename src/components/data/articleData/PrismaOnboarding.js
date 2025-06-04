@@ -2,17 +2,19 @@ const articlePrismaOnboarding = [
   {
     componentName: "HeaderArticle",
     linkButton: "/",
+    content: [
+      "After installing the app, the user goes through a certain journey to payment. There is a good chance that the user solving his/her task and finding value in the app will return periodically and eventually make a purchase. But how to explain the value of the product if it isn't visible or hardly noticeable at the first interaction? Through activation, or more specifically onboarding.",
+    ],
   },
   {
     imageSRC: "/images/articleContent/pl-a2-onboarding/iA1.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
     componentName: "Image",
   },
   {
-    title: "User journey to payment",
     content: [
-      "After installing the app, the user goes through a certain journey to payment. There is a good chance that the user solving his/her task and finding value in the app will return periodically and eventually make a purchase. But how to explain the value of the product if it isn't visible or hardly noticeable at the first interaction? Through activation, or more specifically onboarding.",
       "The success of onboarding (aka First-Time User Experience, FTUE) is determined by the percentage of users who figure out how to use the app in the first session (the audience that interacts with onboarding is 100%).",
       "Therefore, in order to tell more about the app's functionality and motivate users to use it, we decided to experiment with the new onboarding in Prisma, in which we chose to display not only styles but also additional features of the app - frames, background replacement, segmentation, with a special focus on the presence of unique portrait styles.",
     ],
@@ -24,10 +26,14 @@ const articlePrismaOnboarding = [
       "From the current data, we knew that Prisma onboarding was most often interacted with in the second and third steps by 40.5% and 25.9% of users, respectively.",
       "We planned to continue to track CR (Conversion Rate) in the progression up to the trial subscription. We were also interested in the impact of the updated version on interaction with the app's functionality, such as whether photo saves increase using the tools.",
     ],
+    componentName: "Paragraph",
+  },
+  {
     imageSRC: "/images/articleContent/pl-a2-onboarding/iA2.webp",
-    imageWidth: "1520px",
-    imageHeight: "1520px",
-    componentName: "Paragraph_and_Image",
+    imageWidth: "1260px",
+    imageHeight: "1178px",
+    imageMargin: "oi-full-short",
+    componentName: "Image",
   },
   {
     content: [
@@ -46,8 +52,9 @@ const articlePrismaOnboarding = [
   },
   {
     imageSRC: "/images/articleContent/pl-a2-onboarding/iA3.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-full-bottom",
     componentName: "Image",
   },
   {
@@ -60,8 +67,9 @@ const articlePrismaOnboarding = [
   },
   {
     imageSRC: "/images/articleContent/pl-a2-onboarding/iA4.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-full-bottom",
     componentName: "Image",
   },
   {
@@ -77,6 +85,7 @@ const articlePrismaOnboarding = [
     imageSRC: "/images/articleContent/pl-a2-onboarding/iA5.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
     componentName: "Image",
   },
   {
@@ -99,6 +108,7 @@ const articlePrismaOnboarding = [
     imageSRC: "/images/articleContent/pl-a2-onboarding/iA6.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
     componentName: "Image",
   },
   {
@@ -123,8 +133,9 @@ const articlePrismaOnboarding = [
   },
   {
     imageSRC: "/images/articleContent/pl-a2-onboarding/iA7.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-bottom",
     componentName: "Image",
   },
   {
@@ -142,6 +153,7 @@ const articlePrismaOnboarding = [
     imageSRC: "/images/articleContent/pl-a2-onboarding/iA8.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
     componentName: "Image",
   },
   {
@@ -161,6 +173,7 @@ const articlePrismaOnboarding = [
     imageSRC: "/images/articleContent/pl-a2-onboarding/iA9.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
     componentName: "Image",
   },
   {
@@ -169,25 +182,12 @@ const articlePrismaOnboarding = [
     componentName: "Paragraph",
   },
   {
-    componentName: "Separator",
-  },
-  {
-    componentName: "Figma",
-    shareLink:
-      "https://www.figma.com/design/bS5XlxRwiWZpffYuScZfHT/Prisma-Labs%3A-Updating-onboarding-through-an-experiment?node-id=0-1&t=hs2GlZHUlqzMGkPW-1",
-    iframeLink:
-      "https://embed.figma.com/design/bS5XlxRwiWZpffYuScZfHT/Prisma-Labs%3A-Updating-onboarding-through-an-experiment?node-id=0-1&embed-host=share&theme=dark&page-selector=false&footer=false",
-  },
-  {
-    componentName: "Separator",
-  },
-  {
     componentName: "Credits",
     card: [
       {
         cardTitle: "Aleksei Matveev",
         cardDescription: "Senior Product Designer",
-        link: "https://www.linkedin.com/in/matveevco/",
+        link: "https://www.linkedin.com/in/aeeeae/",
         cardLogos: [
           {
             src: "/images/articleAvatars/iA1.webp",
@@ -227,6 +227,11 @@ const articlePrismaOnboarding = [
         cardCaption: "LinkedIn",
       },
     ],
+  },
+  {
+    componentName: "Figma",
+    iframeLink:
+      "https://embed.figma.com/design/bS5XlxRwiWZpffYuScZfHT/Prisma-Labs%3A-Updating-onboarding-through-an-experiment?node-id=0-1&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
 ];
 

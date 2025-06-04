@@ -1,11 +1,11 @@
 import { useMemo } from "react";
 import articles from "../../data/articleData";
-import preview from "../../data/previewData";
+import selectedWork from "../../data/previewData/selectedWork";
 
 const useHeaderArticleData = (articleID) => {
   const articleComponents = articles[articleID];
-  const headerData = preview
-    ? preview.find((info) => info.link === articleID)
+  const headerData = selectedWork
+    ? selectedWork.find((info) => info.link === articleID)
     : null;
 
   const headerArticleFromArticles = articleComponents

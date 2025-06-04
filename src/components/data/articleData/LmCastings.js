@@ -2,20 +2,17 @@ const articleLmCastings = [
   {
     componentName: "HeaderArticle",
     linkButton: "/",
-  },
-  {
-    componentName: "Image",
-    imageSRC: "/images/articleContent/lm-a1-castings/iA1.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
-  },
-  {
-    componentName: "Paragraph",
-    title: "Finding talented performers",
     content: [
       "Regardless of its scale, every product has a key feature, which is its foundation. That feature, or rather a unique feature of Linkmuse, was the castings.",
       "Castings were a listing of cards with titles, descriptions and fees. They also implied the ability to respond to them. All castings were created and published by agents, casting directors, production, and agencies in need of talented performers.",
     ],
+  },
+  {
+    componentName: "Image",
+    imageSRC: "/images/articleContent/lm-a1-castings/iA1.webp",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -30,6 +27,7 @@ const articleLmCastings = [
     imageSRC: "/images/articleContent/lm-a1-castings/iA2.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
   },
   {
     componentName: "Paragraph",
@@ -51,8 +49,9 @@ const articleLmCastings = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a1-castings/iA3.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -72,8 +71,9 @@ const articleLmCastings = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a1-castings/iA4.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -83,8 +83,9 @@ const articleLmCastings = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a1-castings/iA5.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -94,8 +95,9 @@ const articleLmCastings = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a1-castings/iA6.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-bottom",
   },
   {
     componentName: "Paragraph",
@@ -116,17 +118,22 @@ const articleLmCastings = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a1-castings/iA7.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
-    componentName: "Paragraph_and_Image",
-    imageSRC: "/images/articleContent/lm-a1-castings/iA8.webp",
-    imageWidth: "1520px",
-    imageHeight: "1520px",
+    componentName: "Paragraph",
     title: "More accessibility for customers",
     content:
       "Although the detailed casting page was useful for performers, it was more focused on customers who had all the previously fragmented functionality in one place.",
+  },
+  {
+    componentName: "Image",
+    imageSRC: "/images/articleContent/lm-a1-castings/iA8.webp",
+    imageWidth: "1260px",
+    imageHeight: "1178px",
+    imageMargin: "oi-around-short",
   },
   {
     componentName: "Paragraph",
@@ -136,8 +143,9 @@ const articleLmCastings = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a1-castings/iA9.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -153,6 +161,7 @@ const articleLmCastings = [
     imageSRC: "/images/articleContent/lm-a1-castings/iA10.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
   },
   {
     componentName: "Paragraph",
@@ -163,8 +172,9 @@ const articleLmCastings = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a1-castings/iA11.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -174,8 +184,9 @@ const articleLmCastings = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a1-castings/iA12.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -185,21 +196,9 @@ const articleLmCastings = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a1-castings/iA13.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
-  },
-  {
-    componentName: "Separator",
-  },
-  {
-    componentName: "Figma",
-    shareLink:
-      "https://www.figma.com/design/xxCL1PEPUON7dt73gBnXSF/Linkmuse%3A-Updating-listing-logic-and-response-to-castings?node-id=0-1&t=e4DwZ3VjyAwf6VQA-1",
-    iframeLink:
-      "https://embed.figma.com/design/xxCL1PEPUON7dt73gBnXSF/Linkmuse%3A-Updating-listing-logic-and-response-to-castings?node-id=0-1&embed-host=share&theme=dark&page-selector=false&footer=false",
-  },
-  {
-    componentName: "Separator",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Credits",
@@ -213,7 +212,7 @@ const articleLmCastings = [
             height: "288px",
           },
         ],
-        link: "https://www.linkedin.com/in/matveevco/",
+        link: "https://www.linkedin.com/in/aeeeae/",
         cardTitle: "Aleksei Matveev",
         cardDescription: "Senior Product Designer",
         cardCaption: "LinkedIn",
@@ -243,7 +242,7 @@ const articleLmCastings = [
         ],
         link: "https://www.linkedin.com/in/dima-melentev-7557635a/",
         cardTitle: "Dima Melentev",
-        cardDescription: "UX Researcher / UX Architect",
+        cardDescription: "UX Researcher",
         cardCaption: "LinkedIn",
       },
       {
@@ -269,11 +268,16 @@ const articleLmCastings = [
             height: "288px",
           },
         ],
-
         cardTitle: "Dmitry Kuznetsov",
         cardDescription: "Project Manager",
+        cardCaption: "LinkedIn",
       },
     ],
+  },
+  {
+    componentName: "Figma",
+    iframeLink:
+      "https://embed.figma.com/design/xxCL1PEPUON7dt73gBnXSF/Linkmuse%3A-Updating-listing-logic-and-response-to-castings?node-id=0-1&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
 ];
 

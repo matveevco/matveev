@@ -1,0 +1,117 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: var(--font-stsh);
+    font-feature-settings:
+        "liga" 1,
+        "ordn" 1,
+        "ss03" 1,
+        "kern" 1;
+    font-variant-ligatures: common-ligatures discretionary-ligatures;
+    font-kerning: normal;
+}
+
+body {
+    line-height: normal;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--color-white-100);
+}
+
+h1 {
+    letter-spacing: -0.03em;
+    line-height: 120%;
+    font-size: var(--h-40);
+    font-weight: 599;
+    font-family: var(--font-stsh) !important;
+    color: var(--color-black-100);
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h2 {
+    letter-spacing: -0.03em;
+    line-height: 112%;
+    font-size: var(--h-32);
+    font-weight: 599;
+    font-family: var(--font-stsh) !important;
+    color: var(--color-black-100);
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h3 {
+    letter-spacing: -0.02em;
+    line-height: 112%;
+    font-size: var(--h-21);
+    font-weight: 599;
+    font-family: var(--font-stsh) !important;
+    color: var(--color-black-100);
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+p {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+@font-face {
+    font-family: "Satoshi";
+    src: url("/fonts/Satoshi.eot");
+    src:
+        url("/fonts/Satoshi.eot?#iefix") format("embedded-opentype"),
+        url("/fonts/Satoshi.woff2") format("woff2"),
+        url("/fonts/Satoshi.woff") format("woff"),
+        url("/fonts/Satoshi.ttf") format("truetype");
+    font-display: swap;
+}
+
+:root {
+    --font-stsh: "Satoshi";
+
+    --h-40: 40px;
+    --h-32: 32px;
+    --h-21: 21px;
+    --t-19: 19px;
+    --t-17: 17px;
+    --t-15: 15px;
+
+    --color-black-100: rgba(13, 13, 13, 1);
+    --color-black-92: rgba(13, 13, 13, 0.92);
+    --color-black-72: rgba(13, 13, 13, 0.72);
+    --color-black-56: rgba(13, 13, 13, 0.56);
+    --color-black-36: rgba(13, 13, 13, 0.36);
+    --color-black-16: rgba(13, 13, 13, 0.16);
+    --color-black-8: rgba(13, 13, 13, 0.08);
+
+    --color-white-100: rgba(255, 255, 255, 1);
+    --color-white-72: rgba(255, 255, 255, 0.72);
+    --color-white-48: rgba(255, 255, 255, 0.48);
+    --color-white-4: rgba(255, 255, 255, 0.04);
+
+    --color-gray-100: rgba(236, 236, 236, 1);
+    --color-gray-90: rgba(245, 245, 245, 1);
+    --color-gray-80: rgba(127, 127, 127, 1);
+
+    --color-accent-100: rgba(0, 99, 255, 1);
+    --color-accent-tint-100: rgba(224, 236, 255, 1);
+
+    /* padding */
+    --padding-24: 24px;
+    --padding-20: 20px;
+    --padding-12: 12px;
+    --padding-8: 8px;
+    --padding-6: 6px;
+
+    /* gap */
+    --gap-96: 96px;
+    --gap-24: 24px;
+    --gap-20: 20px;
+    --gap-16: 16px;
+    --gap-12: 12px;
+    --gap-8: 8px;
+    --gap-4: 4px;
+}

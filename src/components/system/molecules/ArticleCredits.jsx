@@ -1,20 +1,47 @@
-import React, { forwardRef } from "react";
-import CardText from "./CardText";
-import CardTextGroups from "../organisms/CardTextGroups";
+import { forwardRef } from "react";
+import UniButtonArrow from "../atoms/UniButtonArrow";
 
 const Credits = forwardRef(({ card }, ref) => (
-  <div ref={ref} className="content-info ci-fix compHide">
-    <div className="content-info-left cil-fix">
-      <h3>Credits</h3>
-      <div className="info-body-article">
+  <>
+    <div className="db-container">
+      <h2>Credits</h2>
+      <div className="db-body-text">
         Get to know the people who supported and co-operated with each other
         during the development process.
       </div>
     </div>
-    <div className="section-row ci-c-row-fix">
-      <CardTextGroups cards={card} CardComponent={CardText} />
+
+    <div className="dbg-3">
+      {card.map((content, index) => {
+        const {
+          cardLogos = [],
+          cardTitle,
+          cardDescription,
+          cardCaption,
+          link,
+        } = content;
+        const logo = cardLogos[0] || {};
+        return (
+          <div key={index} className="db-credits-card">
+            <img
+              className="dbcc-image"
+              alt={logo.alt}
+              src={logo.src}
+              width={logo.width}
+              height={logo.height}
+            />
+            <div className="dbcc-text">
+              <div className="dbcc-top">
+                <h3>{cardTitle}</h3>
+                <div className="caption">{cardDescription}</div>
+              </div>
+              <UniButtonArrow link={link} text={cardCaption} />
+            </div>
+          </div>
+        );
+      })}
     </div>
-  </div>
+  </>
 ));
 
 export default Credits;

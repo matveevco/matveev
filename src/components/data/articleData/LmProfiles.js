@@ -2,19 +2,21 @@ const articleLmProfiles = [
   {
     componentName: "HeaderArticle",
     linkButton: "/",
+    content: [
+      "From the moment the service was created, there were two separate roles of «Customer» and «Performer», which combined different professions: from casting director to producer, from model to photographer.",
+      "Users had a choice of 17 professions with different profiles, access and opportunities. However, being a mass user in the media industry, we realised that this list needed to be increased to keep up with competitors and not lose potential clients.",
+    ],
   },
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a2-profiles/iA1.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
-    title: "A step towards needs",
     content: [
-      "From the moment the service was created, there were two separate roles of «Customer» and «Performer», which combined different professions: from casting director to producer, from model to photographer.",
-      "Users had a choice of 17 professions with different profiles, access and opportunities. However, being a mass user in the media industry, we realised that this list needed to be increased to keep up with competitors and not lose potential clients.",
       "In order to systematically increase the number of professions, the update had to include the possibility of their subsequent scaling without involving additional resources. Among other things, the update had to avoid confusion about professions and their roles, as well as motivate users to fill in the details in their profiles.",
     ],
   },
@@ -50,8 +52,9 @@ const articleLmProfiles = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a2-profiles/iA2.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -74,8 +77,9 @@ const articleLmProfiles = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a2-profiles/iA3.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -91,8 +95,9 @@ const articleLmProfiles = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a2-profiles/iA4.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -102,8 +107,9 @@ const articleLmProfiles = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a2-profiles/iA5.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -128,8 +134,9 @@ const articleLmProfiles = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a2-profiles/iA6.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
   },
   {
     componentName: "Paragraph",
@@ -139,21 +146,9 @@ const articleLmProfiles = [
   {
     componentName: "Image",
     imageSRC: "/images/articleContent/lm-a2-profiles/iA7.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
-  },
-  {
-    componentName: "Separator",
-  },
-  {
-    componentName: "Figma",
-    shareLink:
-      "https://www.figma.com/design/EDQkSrTBCeFRPIxUugbigA/Linkmuse%3A-Unifying-user-profiles-and-search-results?node-id=1-2&t=JEXz9w7gIY9zK19D-1",
-    iframeLink:
-      "https://embed.figma.com/design/EDQkSrTBCeFRPIxUugbigA/Linkmuse%3A-Unifying-user-profiles-and-search-results?node-id=1-2&embed-host=share&theme=dark&page-selector=false&footer=false",
-  },
-  {
-    componentName: "Separator",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-bottom",
   },
   {
     componentName: "Credits",
@@ -167,7 +162,7 @@ const articleLmProfiles = [
             height: "288px",
           },
         ],
-        link: "https://www.linkedin.com/in/matveevco/",
+        link: "https://www.linkedin.com/in/aeeeae/",
         cardTitle: "Aleksei Matveev",
         cardDescription: "Senior Product Designer",
         cardCaption: "LinkedIn",
@@ -183,7 +178,7 @@ const articleLmProfiles = [
         ],
         link: "https://www.linkedin.com/in/dima-melentev-7557635a/",
         cardTitle: "Dima Melentev",
-        cardDescription: "UX Researcher / UX Architect",
+        cardDescription: "UX Researcher",
         cardCaption: "LinkedIn",
       },
       {
@@ -200,20 +195,12 @@ const articleLmProfiles = [
         cardDescription: "Head of Product",
         cardCaption: "LinkedIn",
       },
-      {
-        cardLogos: [
-          {
-            alt: "photo",
-            src: "/images/articleAvatars/iA12.webp",
-            width: "288px",
-            height: "288px",
-          },
-        ],
-
-        cardTitle: "Dmitry Kuznetsov",
-        cardDescription: "Project Manager",
-      },
     ],
+  },
+  {
+    componentName: "Figma",
+    iframeLink:
+      "https://embed.figma.com/design/EDQkSrTBCeFRPIxUugbigA/Linkmuse%3A-Unifying-user-profiles-and-search-results?node-id=1-2&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
 ];
 

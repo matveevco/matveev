@@ -2,20 +2,17 @@ const articleLmSubscription = [
   {
     componentName: "HeaderArticle",
     linkButton: "/",
-  },
-  {
-    imageSRC: "/images/articleContent/lm-a5-subscription/iA1.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
-    componentName: "Image",
-  },
-  {
-    title: "Subscription as an evolution of the service",
     content: [
       "After four years of the product's operation, the team had an idea to change the service from a completely free model to a freemium one. The motivation was the desire to validate the hypothesis about the product's value for the audience.",
       "The idea included expanding and simplifying the functionality, as well as designing the pricing, analysing the user experience and rethinking the logic.",
     ],
-    componentName: "Paragraph",
+  },
+  {
+    imageSRC: "/images/articleContent/lm-a5-subscription/iA1.webp",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
+    componentName: "Image",
   },
   {
     title: "Psychology of pricing",
@@ -27,8 +24,9 @@ const articleLmSubscription = [
   },
   {
     imageSRC: "/images/articleContent/lm-a5-subscription/iA2.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -57,6 +55,7 @@ const articleLmSubscription = [
     imageSRC: "/images/articleContent/lm-a5-subscription/iA3.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
     componentName: "Image",
   },
   {
@@ -86,8 +85,9 @@ const articleLmSubscription = [
   },
   {
     imageSRC: "/images/articleContent/lm-a5-subscription/iA4.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -104,8 +104,9 @@ const articleLmSubscription = [
   },
   {
     imageSRC: "/images/articleContent/lm-a5-subscription/iA5.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -133,8 +134,9 @@ const articleLmSubscription = [
   },
   {
     imageSRC: "/images/articleContent/lm-a5-subscription/iA6.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -144,8 +146,9 @@ const articleLmSubscription = [
   },
   {
     imageSRC: "/images/articleContent/lm-a5-subscription/iA7.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -156,8 +159,9 @@ const articleLmSubscription = [
   },
   {
     imageSRC: "/images/articleContent/lm-a5-subscription/iA8.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -167,8 +171,9 @@ const articleLmSubscription = [
   },
   {
     imageSRC: "/images/articleContent/lm-a5-subscription/iA9.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -177,10 +182,14 @@ const articleLmSubscription = [
       "To significantly reduce negative user feedback when we launched the subscription model, we told the audience how useful subscriptions are and how they work everywhere.",
       "We didn't forget about people who might be coming to us for the first time and people who might doubt the usefulness of upgrading their plan, so we added a promo code for 7 free days of the «Premium» plan.",
     ],
+    componentName: "Paragraph",
+  },
+  {
     imageSRC: "/images/articleContent/lm-a5-subscription/iA10.webp",
-    imageWidth: "1520px",
-    imageHeight: "1520px",
-    componentName: "Paragraph_and_Image",
+    imageWidth: "1260px",
+    imageHeight: "1178px",
+    imageMargin: "oi-full-short",
+    componentName: "Image",
   },
   {
     content: [
@@ -192,6 +201,7 @@ const articleLmSubscription = [
     imageSRC: "/images/articleContent/lm-a5-subscription/iA11.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
     componentName: "Image",
   },
   {
@@ -199,19 +209,6 @@ const articleLmSubscription = [
       "There was no clear gradation, people bought «Standard» for a month, «Premium» for a year, or used a promo code for a week, so we will be able to give a forecast on further purchases only after a while. For now, we need to test new hypotheses and not stop at the achieved result.",
     ],
     componentName: "Paragraph",
-  },
-  {
-    componentName: "Separator",
-  },
-  {
-    componentName: "Figma",
-    shareLink:
-      "https://www.figma.com/design/5XT2IbDalaUnGdt72WVM3v/Linkmuse%3A-Experimenting-with-the-subscription-model?node-id=0-1&t=RPc1Bx3Txx4ipUV9-1",
-    iframeLink:
-      "https://embed.figma.com/design/5XT2IbDalaUnGdt72WVM3v/Linkmuse%3A-Experimenting-with-the-subscription-model?node-id=0-1&embed-host=share&theme=dark&page-selector=false&footer=false",
-  },
-  {
-    componentName: "Separator",
   },
   {
     componentName: "Credits",
@@ -225,7 +222,7 @@ const articleLmSubscription = [
             height: "288px",
           },
         ],
-        link: "https://www.linkedin.com/in/matveevco/",
+        link: "https://www.linkedin.com/in/aeeeae/",
         cardTitle: "Aleksei Matveev",
         cardDescription: "Senior Product Designer",
         cardCaption: "LinkedIn",
@@ -241,7 +238,7 @@ const articleLmSubscription = [
         ],
         link: "https://www.linkedin.com/in/tshestakova/",
         cardTitle: "Tatiana Shestakova",
-        cardDescription: "Marketing Communications Manager",
+        cardDescription: "Marketing Manager",
         cardCaption: "LinkedIn",
       },
 
@@ -260,6 +257,11 @@ const articleLmSubscription = [
         cardCaption: "LinkedIn",
       },
     ],
+  },
+  {
+    componentName: "Figma",
+    iframeLink:
+      "https://embed.figma.com/design/5XT2IbDalaUnGdt72WVM3v/Linkmuse%3A-Experimenting-with-the-subscription-model?node-id=0-1&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
 ];
 

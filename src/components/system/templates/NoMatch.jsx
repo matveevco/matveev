@@ -1,17 +1,19 @@
-import React, { useEffect } from "react";
-import { useNavigation } from "../../automation/hooks/NavigationContext";
-import { useColorChangeEffect } from "../../automation/hooks/useColorChange";
+import { Helmet } from "react-helmet";
+import FixedFooter from "../molecules/FixedFooter";
+import IconAeee from "../atoms/IconAeee";
 
 const NoMatch = () => {
-  useColorChangeEffect("s-dark");
-
   return (
-    <div className="PNF">
-      <h1>
-        This page{" "}
-        <span className="highlight-gradient-one-text">doesn't exist.</span>
-      </h1>
-    </div>
+    <>
+      <Helmet>
+        <title>Page not found | Aleksei Matveev's Portfolio</title>
+      </Helmet>
+      <div className="not-found">
+        <IconAeee />
+        <h1>Hmm, I swear this page was here a second ago...</h1>
+      </div>
+      <FixedFooter />
+    </>
   );
 };
 

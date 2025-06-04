@@ -2,20 +2,17 @@ const articleLmVerification = [
   {
     componentName: "HeaderArticle",
     linkButton: "/",
-  },
-  {
-    imageSRC: "/images/articleContent/lm-a4-verification/iA1.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
-    componentName: "Image",
-  },
-  {
-    title: "Problems with the moderation of profiles in the performers' base",
     content: [
       "As the base of performers (actors and models) expanded, customers (casting directors and agents) encountered a lack of profile moderation. Their castings were often visited by people who made up appearances and modified photos.",
       "A lot of complaints and suggestions inspired the team to start working on a portfolio verification system, the development of which has taken two years, moving from one functionality to another, but let's talk about everything in order.",
     ],
-    componentName: "Paragraph",
+  },
+  {
+    imageSRC: "/images/articleContent/lm-a4-verification/iA1.webp",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-bottom",
+    componentName: "Image",
   },
   {
     title: "Key verification criteria",
@@ -51,8 +48,9 @@ const articleLmVerification = [
   },
   {
     imageSRC: "/images/articleContent/lm-a4-verification/iA2.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -67,6 +65,7 @@ const articleLmVerification = [
     imageSRC: "/images/articleContent/lm-a4-verification/iA3.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
   },
   {
     title: "Interface complexity and time costs",
@@ -76,8 +75,9 @@ const articleLmVerification = [
   },
   {
     imageSRC: "/images/articleContent/lm-a4-verification/iA4.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -87,8 +87,9 @@ const articleLmVerification = [
   },
   {
     imageSRC: "/images/articleContent/lm-a4-verification/iA5.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -100,8 +101,9 @@ const articleLmVerification = [
   },
   {
     imageSRC: "/images/articleContent/lm-a4-verification/iA6.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -119,8 +121,9 @@ const articleLmVerification = [
   },
   {
     imageSRC: "/images/articleContent/lm-a4-verification/iA7.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -130,8 +133,9 @@ const articleLmVerification = [
   },
   {
     imageSRC: "/images/articleContent/lm-a4-verification/iA8.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -149,8 +153,9 @@ const articleLmVerification = [
   },
   {
     imageSRC: "/images/articleContent/lm-a4-verification/iA9.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -163,8 +168,9 @@ const articleLmVerification = [
   },
   {
     imageSRC: "/images/articleContent/lm-a4-verification/iA10.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -177,6 +183,7 @@ const articleLmVerification = [
     imageSRC: "/images/articleContent/lm-a4-verification/iA11.svg",
     imageWidth: "1278px",
     imageHeight: "432px",
+    imageMargin: "oi-around",
   },
   {
     title: "Enhance user experience",
@@ -188,8 +195,9 @@ const articleLmVerification = [
   },
   {
     imageSRC: "/images/articleContent/lm-a4-verification/iA12.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -200,8 +208,9 @@ const articleLmVerification = [
   },
   {
     imageSRC: "/images/articleContent/lm-a4-verification/iA13.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
   },
   {
@@ -211,22 +220,10 @@ const articleLmVerification = [
   },
   {
     imageSRC: "/images/articleContent/lm-a4-verification/iA14.webp",
-    imageWidth: "3072px",
-    imageHeight: "1520px",
+    imageWidth: "2556px",
+    imageHeight: "1326px",
+    imageMargin: "oi-top",
     componentName: "Image",
-  },
-  {
-    componentName: "Separator",
-  },
-  {
-    componentName: "Figma",
-    shareLink:
-      "https://www.figma.com/design/2bIigARL5oJ2qzr9QuWkON/Linkmuse%3A-Implementing-portfolio-and-profile-verification?node-id=1-2&t=UmAvmTWfbnwbqum4-1",
-    iframeLink:
-      "https://embed.figma.com/design/2bIigARL5oJ2qzr9QuWkON/Linkmuse%3A-Implementing-portfolio-and-profile-verification?node-id=1-2&embed-host=share&theme=dark&page-selector=false&footer=false",
-  },
-  {
-    componentName: "Separator",
   },
   {
     componentName: "Credits",
@@ -240,7 +237,7 @@ const articleLmVerification = [
             height: "288px",
           },
         ],
-        link: "https://www.linkedin.com/in/matveevco/",
+        link: "https://www.linkedin.com/in/aeeeae/",
         cardTitle: "Aleksei Matveev",
         cardDescription: "Senior Product Designer",
         cardCaption: "LinkedIn",
@@ -270,7 +267,7 @@ const articleLmVerification = [
         ],
         link: "https://www.linkedin.com/in/tshestakova/",
         cardTitle: "Tatiana Shestakova",
-        cardDescription: "Marketing Communications Manager",
+        cardDescription: "Marketing Manager",
         cardCaption: "LinkedIn",
       },
       {
@@ -284,7 +281,7 @@ const articleLmVerification = [
         ],
         link: "https://www.linkedin.com/in/dima-melentev-7557635a/",
         cardTitle: "Dima Melentev",
-        cardDescription: "UX Researcher / UX Architect",
+        cardDescription: "UX Researcher",
         cardCaption: "LinkedIn",
       },
       {
@@ -310,11 +307,16 @@ const articleLmVerification = [
             height: "288px",
           },
         ],
-
         cardTitle: "Dmitry Kuznetsov",
         cardDescription: "Project Manager",
+        cardCaption: "LinkedIn",
       },
     ],
+  },
+  {
+    componentName: "Figma",
+    iframeLink:
+      "https://embed.figma.com/design/2bIigARL5oJ2qzr9QuWkON/Linkmuse%3A-Implementing-portfolio-and-profile-verification?node-id=1-2&embed-host=share&theme=dark&page-selector=false&footer=false",
   },
 ];
 
