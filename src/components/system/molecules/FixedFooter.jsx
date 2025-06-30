@@ -1,60 +1,44 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect, Fragment } from "react";
 import IconAeee from "../atoms/IconAeee";
-import IconHeart from "../atoms/IconHeart";
-import IconCaptionDot from "../atoms/IconCaptionDot";
-
-const formatTime = (timeZone) =>
-  new Intl.DateTimeFormat("en-GB", {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-    timeZone,
-  }).format(new Date());
+import TimeZones from "../atoms/TimeZones";
+import CreatedBy from "../atoms/CreatedBy";
 
 const FixedFooter = () => {
-  const [times, setTimes] = useState({
-    london: formatTime("Europe/London"),
-    sf: formatTime("America/Los_Angeles"),
-  });
+  const [columns, setColumns] = useState([[], [], []]);
+
+  const items = [
+    { component: <TimeZones />, key: "timezones" },
+    { component: <IconAeee />, key: "icon" },
+    { component: <CreatedBy />, key: "created" },
+  ];
+
+  const distributeItems = () => {
+    const width = window.innerWidth;
+
+    if (width > 440) {
+      setColumns([
+        [items[0]], // TimeZones
+        [items[1]], // IconAeee
+        [items[2]], // CreatedBy
+      ]);
+    } else {
+      setColumns([[items[1]], [items[0]], [items[2]]]);
+    }
+  };
 
   useEffect(() => {
-    const update = () => {
-      setTimes({
-        london: formatTime("Europe/London"),
-        sf: formatTime("America/Los_Angeles"),
-      });
-    };
-
-    update();
-
-    const now = new Date();
-    const delayToNextMinute =
-      (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
-
-    const timeout = setTimeout(() => {
-      update();
-      const interval = setInterval(update, 60000);
-      return () => clearInterval(interval);
-    }, delayToNextMinute);
-
-    return () => clearTimeout(timeout);
+    distributeItems();
+    window.addEventListener("resize", distributeItems);
+    return () => window.removeEventListener("resize", distributeItems);
   }, []);
 
   return (
     <div className="footer-section">
-      <p className="caption">
-        London {times.london}
-        <IconCaptionDot />
-        San Francisco {times.sf}
-      </p>
-      <IconAeee />
-      <p className="caption c-end">
-        <span>
-          Build on React with <IconHeart />
-        </span>
-        <IconCaptionDot />
-        2018 – 2025
-      </p>
+      {columns.flatMap((column) =>
+        column.map((item) => (
+          <Fragment key={item.key}>{item.component}</Fragment>
+        )),
+      )}
     </div>
   );
 };

@@ -1,0 +1,240 @@
+@media screen and (min-width: 1000px) and (max-width: 1280px) {
+    html,
+    body {
+        font-size: 1.25vw;
+    }
+    .hero-section {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .about-section {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .achieve-section {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .grid-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .gc-28 {
+        grid-column: 2/16;
+    }
+    .gc-37 {
+        grid-column: 4/14;
+    }
+    .dynamyc-body {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .db-container {
+        grid-column: 4/14;
+    }
+    .object-image {
+        grid-column: 2/16;
+    }
+    .oi-full-short {
+        grid-column: 4/14;
+    }
+    .dbg-3 {
+        grid-column: 2/16;
+    }
+    .figma {
+        grid-column: 2/16;
+    }
+}
+
+@media screen and (min-width: 835px) and (max-width: 999px) {
+    html,
+    body {
+        font-size: 1.5vw;
+    }
+    .hero-section {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .about-section {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .achieve-section {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .grid-wrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .gc-28 {
+        grid-column: 2/16;
+    }
+    .gc-37 {
+        grid-column: 4/14;
+    }
+    .dynamyc-body {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .db-container {
+        grid-column: 4/14;
+    }
+    .object-image {
+        grid-column: 2/16;
+    }
+    .oi-full-short {
+        grid-column: 4/14;
+    }
+    .dbg-3 {
+        grid-column: 2/16;
+    }
+    .figma {
+        grid-column: 2/16;
+    }
+}
+
+@media screen and (min-width: 441px) and (max-width: 834px) {
+    html,
+    body {
+        font-size: 2vw;
+    }
+    .hero-section {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .about-section {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .achieve-section {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .grid-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+    .gc-28 {
+        grid-column: 1/17;
+    }
+    .gc-37 {
+        grid-column: 1/17;
+    }
+    .dynamyc-body {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .db-container {
+        grid-column: 4/14;
+    }
+    .object-image {
+        grid-column: 2/16;
+    }
+    .oi-full-short {
+        grid-column: 4/14;
+    }
+    .dbg-3 {
+        grid-column: 2/16;
+    }
+    .figma {
+        grid-column: 2/16;
+    }
+    .cta-section .svg-elem {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    html,
+    body {
+        font-size: 4vw;
+    }
+    .hero-section {
+        gap: var(--gap-48) var(--gap-16);
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .about-section {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .achieve-section {
+        padding: var(--padding-172) var(--padding-24);
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .cta-section {
+        padding: 0 var(--padding-24);
+        align-items: start;
+        height: calc(100vh - 13.67rem);
+    }
+    .footer-section {
+        grid-template-columns: 1fr;
+        gap: var(--gap-16);
+        border-bottom: 1px solid var(--color-gray-100);
+        margin-bottom: var(--gap-96);
+    }
+    .footer-section .svg-elem {
+        justify-self: left;
+        height: 2.02rem;
+        padding-bottom: var(--padding-8);
+    }
+    .footer-section .c-end {
+        justify-content: flex-start;
+    }
+    .grid-wrapper {
+        padding: var(--padding-172) var(--padding-24);
+        grid-template-columns: 1fr;
+    }
+    .gc-28 {
+        grid-column: 1/17;
+    }
+    .gc-37 {
+        grid-column: 1/17;
+    }
+    .dynamyc-body {
+        grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    }
+    .db-container {
+        grid-column: 4/14;
+    }
+    .object-image {
+        grid-column: 2/16;
+    }
+    .oi-full-short {
+        grid-column: 4/14;
+    }
+    .dbg-3 {
+        grid-column: 2/16;
+    }
+    .figma {
+        grid-column: 2/16;
+    }
+    .cta-section .svg-elem {
+        width: 110%;
+        rotate: -15deg;
+        right: -0.6rem;
+    }
+    .flex-row {
+        grid-template-columns: 1fr;
+    }
+    .achieve-grid {
+        grid-template-columns: 1fr;
+    }
+    .svg-elem path {
+        fill: var(--color-gray-90);
+    }
+    h1 {
+        text-align: left;
+    }
+    .scroll-reveal-text {
+        text-align: left;
+    }
+    .about-text {
+        gap: var(--gap-48);
+    }
+    .caption {
+        text-align: left;
+        width: 100%;
+    }
+    .cta-text {
+        align-items: start;
+    }
+    .button-group {
+        padding: var(--padding-4);
+        position: fixed;
+        z-index: 10;
+        left: var(--padding-20);
+        bottom: var(--padding-20);
+        backdrop-filter: blur(10px);
+        border-radius: var(--br-16);
+        background-color: var(--color-white-48);
+        flex-direction: row-reverse;
+    }
+    .ub-email {
+        display: none;
+    }
+}

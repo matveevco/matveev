@@ -1,5 +1,5 @@
 import React, { forwardRef } from "react";
-import { Helmet } from "react-helmet";
+import { Title } from "react-head";
 import IconCaptionDot from "../atoms/IconCaptionDot";
 import UniButtonCopy from "../atoms/UniButtonCopy";
 
@@ -13,9 +13,7 @@ const HeaderArticle = forwardRef(
 
     return (
       <div className="db-container">
-        <Helmet>
-          <title>{title} | Aleksei Matveev's Portfolio</title>
-        </Helmet>
+        <Title>{title} | Aleksei Matveev's Portfolio</Title>
         <div className="db-header">
           <p className="caption">
             {tags.map((tag, index) => (
@@ -35,7 +33,7 @@ const HeaderArticle = forwardRef(
               </div>
             ))}
         </div>
-        <UniButtonCopy text="Share" link={linkButton} />
+        <UniButtonCopy text="Copy Link" link={linkButton} />
       </div>
     );
   },

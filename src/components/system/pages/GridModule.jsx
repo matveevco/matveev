@@ -26,51 +26,51 @@ export default function GridModule() {
             if (hasGciFix) {
               imageVariants = {
                 rest: {
-                  paddingTop: "0em",
-                  paddingRight: "3em",
-                  paddingBottom: "3em",
-                  paddingLeft: "3em",
+                  paddingTop: "0rem",
+                  paddingRight: "2.78rem" /* 48 */,
+                  paddingBottom: "2.78rem" /* 48 */,
+                  paddingLeft: "2.78rem" /* 48 */,
                   transition: { type: "spring", stiffness: 300, damping: 24 },
                 },
                 hover: {
-                  paddingTop: "0em",
-                  paddingRight: "7em",
-                  paddingBottom: "8em",
-                  paddingLeft: "1.5em",
+                  paddingTop: "0rem",
+                  paddingRight: "6.482rem" /* 112 */,
+                  paddingBottom: "7.53rem" /* 130 */,
+                  paddingLeft: "1.39rem" /* 24 */,
                   transition: { type: "spring", stiffness: 300, damping: 16 },
                 },
               };
             } else if (hasGciShort) {
               imageVariants = {
                 rest: {
-                  paddingTop: "2em",
-                  paddingRight: "2em",
-                  paddingBottom: "2em",
-                  paddingLeft: "2em",
+                  paddingTop: "2.084rem" /* 36 */,
+                  paddingRight: "2.084rem" /* 36 */,
+                  paddingBottom: "2.084rem" /* 36 */,
+                  paddingLeft: "2.084rem" /* 36 */,
                   transition: { type: "spring", stiffness: 300, damping: 24 },
                 },
                 hover: {
-                  paddingTop: "8em",
-                  paddingRight: "7em",
-                  paddingBottom: "0em",
-                  paddingLeft: "1.5em",
+                  paddingTop: "7.53rem" /* 130 */,
+                  paddingRight: "6.482rem" /* 112 */,
+                  paddingBottom: "0rem",
+                  paddingLeft: "1.39rem" /* 24 */,
                   transition: { type: "spring", stiffness: 300, damping: 16 },
                 },
               };
             } else {
               imageVariants = {
                 rest: {
-                  paddingTop: "3em",
-                  paddingRight: "3em",
+                  paddingTop: "2.78rem" /* 48 */,
+                  paddingRight: "2.78rem" /* 48 */,
                   paddingBottom: "0em",
-                  paddingLeft: "3em",
+                  paddingLeft: "2.78rem" /* 48 */,
                   transition: { type: "spring", stiffness: 300, damping: 24 },
                 },
                 hover: {
-                  paddingTop: "8em",
-                  paddingRight: "7em",
+                  paddingTop: "7.53rem" /* 130 */,
+                  paddingRight: "6.482rem" /* 112 */,
                   paddingBottom: "0em",
-                  paddingLeft: "1.5em",
+                  paddingLeft: "1.39rem" /* 24 */,
                   transition: { type: "spring", stiffness: 300, damping: 16 },
                 },
               };
@@ -79,21 +79,21 @@ export default function GridModule() {
             const titleVariants = hasGciFix
               ? {
                   rest: {
-                    bottom: 32,
+                    bottom: "1.852rem" /* 32 */,
                     transition: { type: "spring", stiffness: 300, damping: 24 },
                   },
                   hover: {
-                    bottom: 72,
+                    bottom: "4.17rem" /* 72 */,
                     transition: { type: "spring", stiffness: 300, damping: 16 },
                   },
                 }
               : {
                   rest: {
-                    top: -20,
+                    top: "-1.16rem" /* -20 */,
                     transition: { type: "spring", stiffness: 300, damping: 24 },
                   },
                   hover: {
-                    top: 20,
+                    top: "1.16rem" /* 20 */,
                     transition: { type: "spring", stiffness: 300, damping: 16 },
                   },
                 };
@@ -101,21 +101,21 @@ export default function GridModule() {
             const buttonVariants = hasGciFix
               ? {
                   rest: {
-                    bottom: 20,
+                    bottom: "1.16rem" /* 20 */,
                     transition: { type: "spring", stiffness: 300, damping: 24 },
                   },
                   hover: {
-                    bottom: 20,
+                    bottom: "1.16rem" /* 20 */,
                     transition: { type: "spring", stiffness: 300, damping: 16 },
                   },
                 }
               : {
                   rest: {
-                    top: 20,
+                    top: "1.16rem" /* 20 */,
                     transition: { type: "spring", stiffness: 300, damping: 24 },
                   },
                   hover: {
-                    top: 74,
+                    top: "4.283rem" /* 74 */,
                     transition: { type: "spring", stiffness: 300, damping: 16 },
                   },
                 };
@@ -130,14 +130,16 @@ export default function GridModule() {
                 animate="rest"
               >
                 <IconAeee />
-                <motion.img
-                  className="grid-card-img"
-                  src={item.imageSrc}
-                  alt={item.imageAlt}
-                  width={item.imageWidth}
-                  height={item.imageHeight}
-                  variants={imageVariants}
-                />
+                {item.imageSrc && (
+                  <motion.img
+                    className="grid-card-img"
+                    src={item.imageSrc}
+                    alt={item.imageAlt || ""}
+                    width={item.imageWidth}
+                    height={item.imageHeight}
+                    variants={imageVariants}
+                  />
+                )}
                 <motion.div
                   className="grid-card-title"
                   variants={titleVariants}
@@ -163,7 +165,7 @@ export default function GridModule() {
                     className="usmb-wrap usmb-icon"
                     variants={{
                       rest: {
-                        left: -20,
+                        left: "-1.16rem",
                         transition: {
                           type: "spring",
                           stiffness: 300,

@@ -2,7 +2,7 @@ const IconArrow = ({ svgID, svgClass }) => {
   return (
     <svg
       id={svgID}
-      className={svgClass}
+      className={`twenty20 ${svgClass}`}
       width="20"
       height="20"
       viewBox="0 0 20 20"

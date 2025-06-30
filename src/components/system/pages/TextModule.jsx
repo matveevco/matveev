@@ -3,8 +3,7 @@ import ScrollReveal from "../molecules/ScrollReveal";
 const TextModule = () => {
   return (
     <div className="about-section">
-      <div></div>
-      <div className="about-text">
+      <div className="about-text gc-37">
         <ScrollReveal
           baseOpacity={0.36}
           enableBlur={false}
@@ -24,8 +23,8 @@ const TextModule = () => {
           baseRotation={0}
           blurStrength={0}
         >
-          This past year, I’ve been developing several products as a Design
-          Engineer & Co-Founder, learning more about operations, development,
+          This past year, I’ve been developing several products as a Founder &
+          Design Engineer, learning more about operations, development,
           marketing, and research. Before that, I was creating innovative AR
           experiences for fashion retail at ZERO10, working on both B2C and B2B
           directions as part of the core team. Earlier, I was experimenting with
@@ -42,7 +41,6 @@ const TextModule = () => {
           My design language reflects both consistency and innovation.
         </ScrollReveal>
       </div>
-      <div></div>
     </div>
   );
 };

@@ -14,61 +14,57 @@ const renderTags = (tags) =>
 const AchieveModule = () => {
   return (
     <div className="achieve-section">
-      <div></div>
+      <div className="achieve-grid gc-37">
+        <div className="achieve-card">
+          <div className="usmb-wrap">
+            <div className="uni-sm-button">Achievements</div>
+          </div>
+          <div className="achieve-card-column">
+            {selectedGains.map(({ title, tags, link }, index) => {
+              const Tag = link ? "a" : "div";
+              const isLast = index === selectedGains.length - 1;
 
-      <div className="achieve-card">
-        <div className="usmb-wrap">
-          <div className="uni-sm-button">Achievements</div>
+              return (
+                <Fragment key={index}>
+                  <Tag
+                    href={link || undefined}
+                    target="_blank"
+                    className="achieve-card-text"
+                  >
+                    <p className="text-title text-hl">{title}</p>
+                    <p className="caption">{renderTags(tags)}</p>
+                  </Tag>
+                  {!isLast && <div className="achieve-divider" />}
+                </Fragment>
+              );
+            })}
+          </div>
         </div>
-        <div className="achieve-card-column">
-          {selectedGains.map(({ title, tags, link }, index) => {
-            const Tag = link ? "a" : "div";
-            const isLast = index === selectedGains.length - 1;
-
-            return (
-              <Fragment key={index}>
-                <Tag
-                  href={link || undefined}
-                  target="_blank"
-                  className="achieve-card-text"
-                >
-                  <p className="text-title text-hl">{title}</p>
-                  <p className="caption">{renderTags(tags)}</p>
-                </Tag>
-                {!isLast && <div className="achieve-divider" />}
-              </Fragment>
-            );
-          })}
-        </div>
-      </div>
-
-      <div className="achieve-card">
-        <div className="usmb-wrap">
-          <div className="uni-sm-button">Contribution</div>
-        </div>
-        <div className="achieve-card-column">
-          {selectedPublic.map(({ title, tags, link }, index) => {
-            const Tag = link ? "a" : "div";
-            const isLast = index === selectedPublic.length - 1;
-
-            return (
-              <Fragment key={index}>
-                <Tag
-                  href={link || undefined}
-                  target="_blank"
-                  className="achieve-card-text"
-                >
-                  <p className="text-title text-hl">{title}</p>
-                  <p className="caption">{renderTags(tags)}</p>
-                </Tag>
-                {!isLast && <div className="achieve-divider" />}
-              </Fragment>
-            );
-          })}
+        <div className="achieve-card">
+          <div className="usmb-wrap">
+            <div className="uni-sm-button">Contribution</div>
+          </div>
+          <div className="achieve-card-column">
+            {selectedPublic.map(({ title, tags, link }, index) => {
+              const Tag = link ? "a" : "div";
+              const isLast = index === selectedPublic.length - 1;
+              return (
+                <Fragment key={index}>
+                  <Tag
+                    href={link || undefined}
+                    target="_blank"
+                    className="achieve-card-text"
+                  >
+                    <p className="text-title text-hl">{title}</p>
+                    <p className="caption">{renderTags(tags)}</p>
+                  </Tag>
+                  {!isLast && <div className="achieve-divider" />}
+                </Fragment>
+              );
+            })}
+          </div>
         </div>
       </div>
-
-      <div></div>
     </div>
   );
 };

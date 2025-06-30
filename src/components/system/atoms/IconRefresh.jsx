@@ -1,7 +1,7 @@
 const IconRefresh = () => {
   return (
     <svg
-      className="icon-refresh"
+      className="icon-refresh twenty20"
       width="20"
       height="20"
       viewBox="0 0 20 20"

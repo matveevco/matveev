@@ -3,39 +3,39 @@ import IconArrow from "./IconArrow";
 
 const arrowLeftVariants = {
   rest: {
-    left: "-14px",
+    left: "-0.8rem",
     transition: { type: "spring", stiffness: 300, damping: 24 },
   },
   hover: {
-    left: "14px",
+    left: "0.8rem",
     transition: { type: "spring", stiffness: 300, damping: 16 },
   },
 };
 
 const arrowRightVariants = {
   rest: {
-    right: "14px",
+    right: "0.8rem",
     transition: { type: "spring", stiffness: 300, damping: 24 },
   },
   hover: {
-    right: "-14px",
+    right: "-0.8rem",
     transition: { type: "spring", stiffness: 300, damping: 16 },
   },
 };
 
 const buttonVariants = {
   rest: {
-    paddingTop: "12px",
-    paddingRight: "38px",
-    paddingBottom: "12px",
-    paddingLeft: "18px",
+    paddingTop: "0.7rem",
+    paddingRight: "2.431rem",
+    paddingBottom: "0.7rem",
+    paddingLeft: "1.042rem",
     transition: { type: "spring", stiffness: 300, damping: 24 },
   },
   hover: {
-    paddingTop: "12px",
-    paddingRight: "18px",
-    paddingBottom: "12px",
-    paddingLeft: "38px",
+    paddingTop: "0.7rem",
+    paddingRight: "1.042rem",
+    paddingBottom: "0.7rem",
+    paddingLeft: "2.431rem",
     transition: { type: "spring", stiffness: 300, damping: 16 },
   },
 };

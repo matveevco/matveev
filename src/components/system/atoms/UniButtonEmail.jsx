@@ -23,7 +23,7 @@ const UniButton = ({ link, text }) => {
     <div
       href={link}
       rel="noopener noreferrer"
-      className="uni-button"
+      className="uni-button ub-email"
       onClick={handleClick}
       style={{ cursor: "pointer" }}
     >

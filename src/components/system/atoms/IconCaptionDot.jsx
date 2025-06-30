@@ -1,6 +1,7 @@
 const IconCaptionDot = () => {
   return (
     <svg
+      className="six18"
       width="6"
       height="18"
       viewBox="0 0 2 18"

@@ -1,6 +1,7 @@
 const IconBarCity = () => {
   return (
     <svg
+      className="twenty20"
       width="20"
       height="20"
       viewBox="0 0 20 20"

@@ -7,15 +7,16 @@ const CtaModule = () => {
       <div className="cta-text">
         <IconAeee />
         <h1>
-          Let’s build something <span className="line-hl">meaningful</span>.
+          Let's build it <span className="line-hl">right</span>.
         </h1>
         <div className="caption">
-          Great ideas start with simple conversations.
+          Excited to discuss how I can help you succeed. Quality and clear
+          communication are my priorities.
         </div>
       </div>
       <UniButtonArrow
-        text="Let's talk"
-        link="https://calendly.com/matveev-dsgn/30min"
+        text="Schedule a Call"
+        link="https://calendly.com/aeee/30min"
       />
     </div>
   );

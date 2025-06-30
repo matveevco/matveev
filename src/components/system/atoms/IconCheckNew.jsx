@@ -1,7 +1,7 @@
 const IconCheckNew = ({ isBouncing }) => {
   return (
     <svg
-      className={`icon-fill ${isBouncing ? "icon-bounce" : ""}`}
+      className={`twenty20 icon-fill ${isBouncing ? "icon-bounce" : ""}`}
       width="20"
       height="20"
       viewBox="0 0 20 20"

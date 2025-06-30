@@ -37,7 +37,11 @@ const UniButtonCopy = ({ link, text }) => {
     <div
       onClick={handleCopy}
       className="uni-button uni-button-icon"
-      style={{ cursor: "pointer", width: "fit-content" }}
+      style={{
+        cursor: "pointer",
+        width: "6.02rem",
+        justifyContent: "space-between",
+      }}
     >
       {copied ? "Copied" : text}
       <div>

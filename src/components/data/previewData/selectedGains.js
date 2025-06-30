@@ -1,7 +1,7 @@
 const selectedGains = [
   {
     link: "",
-    title: "UK Global Talent in Digital Technology – Tier 1",
+    title: "UK Global Talent in Digital Tech – Tier 1",
     tags: ["Issued by UKHO & Tech Nation", "2022"],
   },
   {

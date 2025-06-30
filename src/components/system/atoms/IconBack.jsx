@@ -1,7 +1,7 @@
 const IconBack = () => {
   return (
     <svg
-      className="icon-back"
+      className="icon-back twenty20"
       width="20"
       height="20"
       viewBox="0 0 20 20"
