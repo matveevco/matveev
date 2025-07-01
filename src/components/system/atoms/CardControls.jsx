@@ -8,10 +8,10 @@ const CardControls = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const images = [
-    "/images/hero/photo.png",
-    "/images/hero/green.png",
-    "/images/hero/red.png",
-    "/images/hero/yellow.png",
+    "/images/hero/map.png",
+    "/images/hero/fun.png",
+    "/images/hero/city.png",
+    "/images/hero/gift.png",
   ];
 
   const icons = [

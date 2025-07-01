@@ -5,7 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HeadProvider } from "react-head";
 
-import "./mobile.css";
+// import "./mobile.css";
 import "./ae-global.css";
 import "./ae-index.css";
 import "./ae-index-mobile.css";
