@@ -34,7 +34,7 @@ const FixedNav = () => {
       <div className="uni-button-group">
         <UniButton
           text="CV"
-          link="/Aleksei_Matveev_(Product_Designer).pdf?v=10"
+          link="/Aleksei-Matveev-Product-Designer.pdf?v=11"
         />
         <UniButton text="LinkedIn" link="https://www.linkedin.com/in/aeeeae/" />
         <UniButtonEmail text="Email" link="matveev.dsgn@gmail.com" />
