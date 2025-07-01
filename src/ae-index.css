@@ -870,10 +870,34 @@
     font-family: var(--font-stsh);
     text-align: center;
     color: var(--color-black-100);
+    /* Принудительный reset для Safari */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1; /* Явное задание opacity */
 }
 
 .word {
     display: inline-block;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* Принудительный reset opacity для каждого слова */
+    opacity: var(--word-opacity, 0.36);
+}
+
+/* Отключение blur на мобильных для производительности */
+@media (max-width: 768px) {
+    .word {
+        filter: none !important;
+    }
+}
+
+/* Дополнительная оптимизация для Safari */
+.scroll-reveal {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 /* about section */
