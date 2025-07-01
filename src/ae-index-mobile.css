@@ -44,7 +44,7 @@
 @media screen and (min-width: 835px) and (max-width: 999px) {
     html,
     body {
-        font-size: 1.5vw;
+        font-size: 1.75vw;
     }
     .hero-section {
         grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
@@ -56,18 +56,18 @@
         grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
     }
     .grid-wrapper {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
     .gc-28 {
-        grid-column: 2/16;
+        grid-column: 1/17;
     }
     .gc-37 {
-        grid-column: 4/14;
+        grid-column: 2/16;
     }
     .dynamyc-body {
         grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
     }
-    .db-container {
+    /* .db-container {
         grid-column: 4/14;
     }
     .object-image {
@@ -78,9 +78,75 @@
     }
     .dbg-3 {
         grid-column: 2/16;
+    } */
+
+    .dbg-3 {
+        grid-column: 1/17;
+        grid-template-columns: 1fr 1fr;
+    }
+    .db-container {
+        grid-column: 2/16;
+    }
+    .object-image {
+        grid-column: 1/17;
+    }
+    .oi-around {
+        padding: 3.5em;
+    }
+    .oi-top {
+        padding: 3.5em 3.5em 0;
+    }
+    .oi-bottom {
+        padding: 0 3.5em 3.5em;
+    }
+    .oi-around-short {
+        padding: 3.5em;
+    }
+    .oi-full-short {
+        grid-column: 2/16;
+        padding: 3.5em 0;
+    }
+    .oi-full-top {
+        padding: 3.5em 0 0;
+    }
+    .oi-full-bottom {
+        padding: 0 0 3.5em;
+    }
+
+    /* .grid-item .svg-elem {
+        display: none;
+    } */
+    .grid-card-img {
+        padding: 7.53rem 6.482rem 0rem 1.39rem !important;
+    }
+    .grid-card-button {
+        top: 4.283rem !important;
+        opacity: 1;
+    }
+    .grid-card-title {
+        top: 1.16rem !important;
+        opacity: 1;
+    }
+    .gci-fix .grid-card-img {
+        padding: 0rem 6.482rem 7.53rem 1.39rem !important;
+    }
+    .gci-fix .grid-card-button {
+        bottom: 1.16rem !important;
+        top: auto !important;
+    }
+    .gci-fix .grid-card-title {
+        bottom: 4.17rem !important;
+        top: auto !important;
+    }
+    .usmb-icon {
+        opacity: 1;
+        left: 0 !important;
     }
     .figma {
-        grid-column: 2/16;
+        width: calc(100% / 0.9);
+        transform: scale(0.9);
+        transform-origin: 0 0;
+        grid-column: 1/17;
     }
 }
 
@@ -102,28 +168,83 @@
         grid-template-columns: 1fr 1fr;
     }
     .gc-28 {
-        grid-column: 1/17;
+        grid-column: 2/16;
     }
     .gc-37 {
-        grid-column: 1/17;
+        grid-column: 2/16;
+    }
+    .flex-row {
+        grid-template-columns: 1fr 1fr;
     }
     .dynamyc-body {
         grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
     }
+    .dbg-3 {
+        grid-column: 1/17;
+        grid-template-columns: 1fr 1fr;
+    }
     .db-container {
-        grid-column: 4/14;
+        grid-column: 2/16;
     }
     .object-image {
-        grid-column: 2/16;
+        grid-column: 1/17;
+    }
+    .oi-around {
+        padding: 2.5em;
+    }
+    .oi-top {
+        padding: 2.5em 2.5em 0;
+    }
+    .oi-bottom {
+        padding: 0 2.5em 2.5em;
+    }
+    .oi-around-short {
+        padding: 2.5em;
     }
     .oi-full-short {
-        grid-column: 4/14;
-    }
-    .dbg-3 {
         grid-column: 2/16;
+        padding: 2.5em 0;
+    }
+    .oi-full-top {
+        padding: 2.5em 0 0;
+    }
+    .oi-full-bottom {
+        padding: 0 0 2.5em;
+    }
+    /* .grid-item .svg-elem {
+        display: none;
+    } */
+    .grid-card-img {
+        padding: 7.53rem 6.482rem 0rem 1.39rem !important;
+    }
+    .grid-card-button {
+        top: 4.283rem !important;
+        opacity: 1;
+    }
+    .grid-card-title {
+        top: 1.16rem !important;
+        opacity: 1;
+    }
+    .gci-fix .grid-card-img {
+        padding: 0rem 6.482rem 7.53rem 1.39rem !important;
+    }
+    .gci-fix .grid-card-button {
+        bottom: 1.16rem !important;
+        top: auto !important;
+    }
+    .gci-fix .grid-card-title {
+        bottom: 4.17rem !important;
+        top: auto !important;
+    }
+    .usmb-icon {
+        opacity: 1;
+        left: 0 !important;
     }
     .figma {
-        grid-column: 2/16;
+        width: calc(100% / 0.9);
+        transform: scale(0.9);
+        transform-origin: 0 0;
+        grid-column: 1/17;
     }
     .cta-section .svg-elem {
         width: 100%;
@@ -149,7 +270,7 @@
     .cta-section {
         padding: 0 var(--padding-24);
         align-items: start;
-        height: calc(100vh - 13.67rem);
+        height: calc(100vh - 20.4rem); /* 13.67rem */
     }
     .footer-section {
         grid-template-columns: 1fr;
@@ -163,7 +284,8 @@
         padding-bottom: var(--padding-8);
     }
     .footer-section .c-end {
-        justify-content: flex-start;
+        justify-content: start;
+        justify-self: left;
     }
     .grid-wrapper {
         padding: var(--padding-172) var(--padding-24);
@@ -177,24 +299,42 @@
     }
     .dynamyc-body {
         grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        gap: var(--gap-48) var(--gap-16);
     }
     .db-container {
-        grid-column: 4/14;
+        grid-column: 1/17;
     }
     .object-image {
-        grid-column: 2/16;
+        grid-column: 1/17;
+    }
+    .oi-around {
+        padding: 1.5em;
+    }
+    .oi-top {
+        padding: 1.5em 1.5em 0;
+    }
+    .oi-bottom {
+        padding: 0 1.5em 1.5em;
+    }
+    .oi-around-short {
+        padding: 1.5em;
     }
     .oi-full-short {
-        grid-column: 4/14;
+        grid-column: 1/17;
+        padding: 1.5em 0;
+    }
+    .oi-full-top {
+        padding: 1.5em 0 0;
+    }
+    .oi-full-bottom {
+        padding: 0 0 1.5em;
     }
     .dbg-3 {
-        grid-column: 2/16;
-    }
-    .figma {
-        grid-column: 2/16;
+        grid-column: 1/17;
+        grid-template-columns: 1fr;
     }
     .cta-section .svg-elem {
-        width: 110%;
+        width: 180%;
         rotate: -15deg;
         right: -0.6rem;
     }
@@ -204,7 +344,7 @@
     .achieve-grid {
         grid-template-columns: 1fr;
     }
-    .svg-elem path {
+    .cta-section .svg-elem path {
         fill: var(--color-gray-90);
     }
     h1 {
@@ -236,5 +376,41 @@
     }
     .ub-email {
         display: none;
+    }
+    /* .grid-item .svg-elem {
+        display: none;
+    } */
+    .grid-card-img {
+        padding: 7.53rem 6.482rem 0rem 1.39rem !important;
+    }
+    .grid-card-button {
+        top: 4.283rem !important;
+        opacity: 1;
+    }
+    .grid-card-title {
+        top: 1.16rem !important;
+        opacity: 1;
+    }
+    .gci-fix .grid-card-img {
+        padding: 0rem 6.482rem 7.53rem 1.39rem !important;
+    }
+    .gci-fix .grid-card-button {
+        bottom: 1.16rem !important;
+        top: auto !important;
+    }
+    .gci-fix .grid-card-title {
+        bottom: 4.17rem !important;
+        top: auto !important;
+    }
+    .usmb-icon {
+        opacity: 1;
+        left: 0 !important;
+    }
+    .figma {
+        width: calc(100% / 0.8);
+        transform: scale(0.8);
+        transform-origin: 0 0;
+        aspect-ratio: 1/1;
+        grid-column: 1/17;
     }
 }

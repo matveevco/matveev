@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import selectedWork from "../../data/previewData/selectedWork";
 import IconArrow from "../atoms/IconArrow";
@@ -7,11 +7,44 @@ import IconCaptionDot from "../atoms/IconCaptionDot";
 import { motion } from "framer-motion";
 
 export default function GridModule() {
-  const columns = [[], [], [], []];
+  const [columns, setColumns] = useState([[], [], [], []]);
 
-  selectedWork.forEach((item, index) => {
-    columns[index % 4].push({ ...item, id: index + 1 });
-  });
+  const distributeItems = () => {
+    const width = window.innerWidth;
+    let columnCount;
+
+    if (width >= 1281) {
+      columnCount = 4;
+    } else if (width >= 999) {
+      columnCount = 3;
+    } else if (width >= 834) {
+      columnCount = 2;
+    } else if (width >= 440) {
+      columnCount = 2;
+    } else {
+      columnCount = 1;
+    }
+
+    const newColumns = Array.from({ length: columnCount }, () => []);
+
+    selectedWork.forEach((item, index) => {
+      const columnIndex = index % columnCount;
+      newColumns[columnIndex].push({ ...item, id: index + 1 });
+    });
+
+    setColumns(newColumns);
+  };
+
+  useEffect(() => {
+    distributeItems();
+
+    const handleResize = () => {
+      distributeItems();
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="grid-wrapper">
@@ -62,14 +95,14 @@ export default function GridModule() {
                 rest: {
                   paddingTop: "2.78rem" /* 48 */,
                   paddingRight: "2.78rem" /* 48 */,
-                  paddingBottom: "0em",
+                  paddingBottom: "0rem",
                   paddingLeft: "2.78rem" /* 48 */,
                   transition: { type: "spring", stiffness: 300, damping: 24 },
                 },
                 hover: {
                   paddingTop: "7.53rem" /* 130 */,
                   paddingRight: "6.482rem" /* 112 */,
-                  paddingBottom: "0em",
+                  paddingBottom: "0rem",
                   paddingLeft: "1.39rem" /* 24 */,
                   transition: { type: "spring", stiffness: 300, damping: 16 },
                 },

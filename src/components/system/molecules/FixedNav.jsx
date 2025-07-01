@@ -41,7 +41,7 @@ const FixedNav = () => {
       </div>
       <UniButtonArrow
         text="Let's talk"
-        link="https://calendly.com/matveev-dsgn/30min"
+        link="https://calendly.com/aeee/30min"
       />
     </div>
   );

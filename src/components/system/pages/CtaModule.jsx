@@ -10,8 +10,8 @@ const CtaModule = () => {
           Let's build it <span className="line-hl">right</span>.
         </h1>
         <div className="caption">
-          Excited to discuss how I can help you succeed. Quality and clear
-          communication are my priorities.
+          <span>Excited to discuss how I can help you succeed.</span>
+          <span>Quality and clear communication are my priorities.</span>
         </div>
       </div>
       <UniButtonArrow

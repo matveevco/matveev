@@ -30,8 +30,8 @@ const HeroModule = () => {
       ]);
     } else if (width > 440) {
       setColumns([
-        [cards[0], cards[1], cards[4]], // CardShow, CardTextTwo, CardControls
-        [cards[2], cards[3], cards[5]], // CardTextOne, CardKeys, CardTextThree
+        [cards[0], cards[5], cards[3]], // CardShow, CardTextTwo, CardControls
+        [cards[2], cards[1], cards[4]], // CardTextOne, CardKeys, CardTextThree
       ]);
     } else {
       setColumns([
